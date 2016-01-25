@@ -13,6 +13,29 @@
 		D3091FB51C56E4C6007CF290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FB31C56E4C6007CF290 /* Main.storyboard */; };
 		D3091FB71C56E4C6007CF290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3091FB61C56E4C6007CF290 /* Assets.xcassets */; };
 		D3091FBA1C56E4C6007CF290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FB81C56E4C6007CF290 /* LaunchScreen.storyboard */; };
+		D3091FC41C56E50A007CF290 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3091FC21C56E50A007CF290 /* Fabric.framework */; };
+		D3091FC51C56E50A007CF290 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3091FC31C56E50A007CF290 /* Crashlytics.framework */; };
+		D3091FC91C56E54A007CF290 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3091FC61C56E54A007CF290 /* TwitterKit.framework */; };
+		D3091FCA1C56E54A007CF290 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D3091FC71C56E54A007CF290 /* TwitterKitResources.bundle */; };
+		D3091FCB1C56E54A007CF290 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3091FC81C56E54A007CF290 /* TwitterCore.framework */; };
+		D3091FDF1C56E5A3007CF290 /* chat_filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FCD1C56E5A3007CF290 /* chat_filled-25.png */; };
+		D3091FE01C56E5A3007CF290 /* Luke.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FCE1C56E5A3007CF290 /* Luke.png */; };
+		D3091FE11C56E5A3007CF290 /* Mark.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FCF1C56E5A3007CF290 /* Mark.png */; };
+		D3091FE21C56E5A3007CF290 /* Matt.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FD01C56E5A3007CF290 /* Matt.png */; };
+		D3091FE31C56E5A3007CF290 /* questionMark.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FD11C56E5A3007CF290 /* questionMark.png */; };
+		D3091FE41C56E5A3007CF290 /* staff-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FD21C56E5A3007CF290 /* staff-25.png */; };
+		D3091FE51C56E5A3007CF290 /* stcatherineschool.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3091FD31C56E5A3007CF290 /* stcatherineschool.jpg */; };
+		D3091FE61C56E5A3007CF290 /* stcBuilding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3091FD41C56E5A3007CF290 /* stcBuilding.jpg */; };
+		D3091FE71C56E5A3007CF290 /* stcBuilding_skinny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3091FD51C56E5A3007CF290 /* stcBuilding_skinny.jpg */; };
+		D3091FE81C56E5A3007CF290 /* StCicon1024x1024-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FD61C56E5A3007CF290 /* StCicon1024x1024-01.png */; };
+		D3091FE91C56E5A3007CF290 /* stCicon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FD71C56E5A3007CF290 /* stCicon120x120.png */; };
+		D3091FEA1C56E5A3007CF290 /* StCicon152x152-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FD81C56E5A3007CF290 /* StCicon152x152-01.png */; };
+		D3091FEB1C56E5A3007CF290 /* StCicon58x58-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FD91C56E5A3007CF290 /* StCicon58x58-01.png */; };
+		D3091FEC1C56E5A3007CF290 /* StCicon76x76-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FDA1C56E5A3007CF290 /* StCicon76x76-01.png */; };
+		D3091FED1C56E5A3007CF290 /* StCicon80x80-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FDB1C56E5A3007CF290 /* StCicon80x80-01.png */; };
+		D3091FEE1C56E5A3007CF290 /* StCicons87x87-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FDC1C56E5A3007CF290 /* StCicons87x87-01.png */; };
+		D3091FEF1C56E5A3007CF290 /* student-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FDD1C56E5A3007CF290 /* student-25.png */; };
+		D3091FF01C56E5A3007CF290 /* warehouse_filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FDE1C56E5A3007CF290 /* warehouse_filled-25.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +47,29 @@
 		D3091FB61C56E4C6007CF290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3091FB91C56E4C6007CF290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3091FBB1C56E4C6007CF290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3091FC21C56E50A007CF290 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		D3091FC31C56E50A007CF290 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		D3091FC61C56E54A007CF290 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		D3091FC71C56E54A007CF290 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		D3091FC81C56E54A007CF290 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		D3091FCD1C56E5A3007CF290 /* chat_filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_filled-25.png"; sourceTree = "<group>"; };
+		D3091FCE1C56E5A3007CF290 /* Luke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Luke.png; sourceTree = "<group>"; };
+		D3091FCF1C56E5A3007CF290 /* Mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mark.png; sourceTree = "<group>"; };
+		D3091FD01C56E5A3007CF290 /* Matt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Matt.png; sourceTree = "<group>"; };
+		D3091FD11C56E5A3007CF290 /* questionMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionMark.png; sourceTree = "<group>"; };
+		D3091FD21C56E5A3007CF290 /* staff-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "staff-25.png"; sourceTree = "<group>"; };
+		D3091FD31C56E5A3007CF290 /* stcatherineschool.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stcatherineschool.jpg; sourceTree = "<group>"; };
+		D3091FD41C56E5A3007CF290 /* stcBuilding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stcBuilding.jpg; sourceTree = "<group>"; };
+		D3091FD51C56E5A3007CF290 /* stcBuilding_skinny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stcBuilding_skinny.jpg; sourceTree = "<group>"; };
+		D3091FD61C56E5A3007CF290 /* StCicon1024x1024-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StCicon1024x1024-01.png"; sourceTree = "<group>"; };
+		D3091FD71C56E5A3007CF290 /* stCicon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stCicon120x120.png; sourceTree = "<group>"; };
+		D3091FD81C56E5A3007CF290 /* StCicon152x152-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StCicon152x152-01.png"; sourceTree = "<group>"; };
+		D3091FD91C56E5A3007CF290 /* StCicon58x58-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StCicon58x58-01.png"; sourceTree = "<group>"; };
+		D3091FDA1C56E5A3007CF290 /* StCicon76x76-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StCicon76x76-01.png"; sourceTree = "<group>"; };
+		D3091FDB1C56E5A3007CF290 /* StCicon80x80-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StCicon80x80-01.png"; sourceTree = "<group>"; };
+		D3091FDC1C56E5A3007CF290 /* StCicons87x87-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StCicons87x87-01.png"; sourceTree = "<group>"; };
+		D3091FDD1C56E5A3007CF290 /* student-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "student-25.png"; sourceTree = "<group>"; };
+		D3091FDE1C56E5A3007CF290 /* warehouse_filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warehouse_filled-25.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3091FC51C56E50A007CF290 /* Crashlytics.framework in Frameworks */,
+				D3091FCB1C56E54A007CF290 /* TwitterCore.framework in Frameworks */,
+				D3091FC41C56E50A007CF290 /* Fabric.framework in Frameworks */,
+				D3091FC91C56E54A007CF290 /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +92,11 @@
 			children = (
 				D3091FAC1C56E4C6007CF290 /* St Catherine School Seattle */,
 				D3091FAB1C56E4C6007CF290 /* Products */,
+				D3091FC61C56E54A007CF290 /* TwitterKit.framework */,
+				D3091FC71C56E54A007CF290 /* TwitterKitResources.bundle */,
+				D3091FC81C56E54A007CF290 /* TwitterCore.framework */,
+				D3091FC21C56E50A007CF290 /* Fabric.framework */,
+				D3091FC31C56E50A007CF290 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +111,7 @@
 		D3091FAC1C56E4C6007CF290 /* St Catherine School Seattle */ = {
 			isa = PBXGroup;
 			children = (
+				D3091FCC1C56E5A3007CF290 /* Assets */,
 				D3091FAD1C56E4C6007CF290 /* AppDelegate.swift */,
 				D3091FAF1C56E4C6007CF290 /* FirstViewController.swift */,
 				D3091FB11C56E4C6007CF290 /* SecondViewController.swift */,
@@ -65,6 +121,31 @@
 				D3091FBB1C56E4C6007CF290 /* Info.plist */,
 			);
 			path = "St Catherine School Seattle";
+			sourceTree = "<group>";
+		};
+		D3091FCC1C56E5A3007CF290 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D3091FCD1C56E5A3007CF290 /* chat_filled-25.png */,
+				D3091FCE1C56E5A3007CF290 /* Luke.png */,
+				D3091FCF1C56E5A3007CF290 /* Mark.png */,
+				D3091FD01C56E5A3007CF290 /* Matt.png */,
+				D3091FD11C56E5A3007CF290 /* questionMark.png */,
+				D3091FD21C56E5A3007CF290 /* staff-25.png */,
+				D3091FD31C56E5A3007CF290 /* stcatherineschool.jpg */,
+				D3091FD41C56E5A3007CF290 /* stcBuilding.jpg */,
+				D3091FD51C56E5A3007CF290 /* stcBuilding_skinny.jpg */,
+				D3091FD61C56E5A3007CF290 /* StCicon1024x1024-01.png */,
+				D3091FD71C56E5A3007CF290 /* stCicon120x120.png */,
+				D3091FD81C56E5A3007CF290 /* StCicon152x152-01.png */,
+				D3091FD91C56E5A3007CF290 /* StCicon58x58-01.png */,
+				D3091FDA1C56E5A3007CF290 /* StCicon76x76-01.png */,
+				D3091FDB1C56E5A3007CF290 /* StCicon80x80-01.png */,
+				D3091FDC1C56E5A3007CF290 /* StCicons87x87-01.png */,
+				D3091FDD1C56E5A3007CF290 /* student-25.png */,
+				D3091FDE1C56E5A3007CF290 /* warehouse_filled-25.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +158,7 @@
 				D3091FA61C56E4C6007CF290 /* Sources */,
 				D3091FA71C56E4C6007CF290 /* Frameworks */,
 				D3091FA81C56E4C6007CF290 /* Resources */,
+				D3091FC11C56E4F3007CF290 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -125,13 +207,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3091FEF1C56E5A3007CF290 /* student-25.png in Resources */,
+				D3091FE01C56E5A3007CF290 /* Luke.png in Resources */,
+				D3091FEA1C56E5A3007CF290 /* StCicon152x152-01.png in Resources */,
+				D3091FE21C56E5A3007CF290 /* Matt.png in Resources */,
+				D3091FCA1C56E54A007CF290 /* TwitterKitResources.bundle in Resources */,
+				D3091FEB1C56E5A3007CF290 /* StCicon58x58-01.png in Resources */,
+				D3091FE91C56E5A3007CF290 /* stCicon120x120.png in Resources */,
+				D3091FE51C56E5A3007CF290 /* stcatherineschool.jpg in Resources */,
+				D3091FE41C56E5A3007CF290 /* staff-25.png in Resources */,
+				D3091FDF1C56E5A3007CF290 /* chat_filled-25.png in Resources */,
 				D3091FBA1C56E4C6007CF290 /* LaunchScreen.storyboard in Resources */,
+				D3091FED1C56E5A3007CF290 /* StCicon80x80-01.png in Resources */,
 				D3091FB71C56E4C6007CF290 /* Assets.xcassets in Resources */,
+				D3091FE31C56E5A3007CF290 /* questionMark.png in Resources */,
+				D3091FE11C56E5A3007CF290 /* Mark.png in Resources */,
+				D3091FEC1C56E5A3007CF290 /* StCicon76x76-01.png in Resources */,
+				D3091FE61C56E5A3007CF290 /* stcBuilding.jpg in Resources */,
+				D3091FE81C56E5A3007CF290 /* StCicon1024x1024-01.png in Resources */,
+				D3091FF01C56E5A3007CF290 /* warehouse_filled-25.png in Resources */,
+				D3091FEE1C56E5A3007CF290 /* StCicons87x87-01.png in Resources */,
 				D3091FB51C56E4C6007CF290 /* Main.storyboard in Resources */,
+				D3091FE71C56E5A3007CF290 /* stcBuilding_skinny.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D3091FC11C56E4F3007CF290 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run fbdc599eb9a6498de5740e2b511581f8b61e53c8 254ff76b7d5d30df2177922043f7fd3679af8a0e873348e7405bde099bfa98c0";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3091FA61C56E4C6007CF290 /* Sources */ = {
@@ -251,7 +368,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "St Catherine School Seattle/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dberge.St-Catherine-School-Seattle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -262,7 +384,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "St Catherine School Seattle/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dberge.St-Catherine-School-Seattle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
