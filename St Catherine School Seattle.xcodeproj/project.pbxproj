@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3091FAE1C56E4C6007CF290 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FAD1C56E4C6007CF290 /* AppDelegate.swift */; };
-		D3091FB01C56E4C6007CF290 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FAF1C56E4C6007CF290 /* FirstViewController.swift */; };
-		D3091FB21C56E4C6007CF290 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FB11C56E4C6007CF290 /* SecondViewController.swift */; };
 		D3091FB51C56E4C6007CF290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FB31C56E4C6007CF290 /* Main.storyboard */; };
 		D3091FB71C56E4C6007CF290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3091FB61C56E4C6007CF290 /* Assets.xcassets */; };
 		D3091FBA1C56E4C6007CF290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FB81C56E4C6007CF290 /* LaunchScreen.storyboard */; };
@@ -36,11 +33,32 @@
 		D3091FEE1C56E5A3007CF290 /* StCicons87x87-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FDC1C56E5A3007CF290 /* StCicons87x87-01.png */; };
 		D3091FEF1C56E5A3007CF290 /* student-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FDD1C56E5A3007CF290 /* student-25.png */; };
 		D3091FF01C56E5A3007CF290 /* warehouse_filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3091FDE1C56E5A3007CF290 /* warehouse_filled-25.png */; };
+		D309200D1C56E6C3007CF290 /* AnnouncementFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FF11C56E6C3007CF290 /* AnnouncementFilter.swift */; };
+		D309200E1C56E6C3007CF290 /* AnnouncementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FF21C56E6C3007CF290 /* AnnouncementsCell.swift */; };
+		D309200F1C56E6C3007CF290 /* AnnouncementsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FF31C56E6C3007CF290 /* AnnouncementsList.swift */; };
+		D30920101C56E6C3007CF290 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FF41C56E6C3007CF290 /* AppDelegate.swift */; };
+		D30920111C56E6C3007CF290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3091FF51C56E6C3007CF290 /* Assets.xcassets */; };
+		D30920121C56E6C3007CF290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FF71C56E6C3007CF290 /* LaunchScreen.storyboard */; };
+		D30920131C56E6C3007CF290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FF91C56E6C3007CF290 /* Main.storyboard */; };
+		D30920141C56E6C3007CF290 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FFB1C56E6C3007CF290 /* Child.swift */; };
+		D30920161C56E6C3007CF290 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3091FFD1C56E6C3007CF290 /* Info.plist */; };
+		D30920171C56E6C3007CF290 /* KidsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FFE1C56E6C3007CF290 /* KidsTableViewCell.swift */; };
+		D30920181C56E6C3007CF290 /* ListOfKids.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FFF1C56E6C3007CF290 /* ListOfKids.swift */; };
+		D30920191C56E6C3007CF290 /* ListOfStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30920001C56E6C3007CF290 /* ListOfStaff.swift */; };
+		D309201A1C56E6C3007CF290 /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30920011C56E6C3007CF290 /* NotificationList.swift */; };
+		D309201B1C56E6C3007CF290 /* NotificationSelectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30920021C56E6C3007CF290 /* NotificationSelectionTVC.swift */; };
+		D309201C1C56E6C3007CF290 /* PinsOnMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30920031C56E6C3007CF290 /* PinsOnMap.swift */; };
+		D309201D1C56E6C3007CF290 /* SaveKidDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30920041C56E6C3007CF290 /* SaveKidDetails.swift */; };
+		D309201E1C56E6C3007CF290 /* SchoolDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D30920051C56E6C3007CF290 /* SchoolDataModel.xcdatamodeld */; };
+		D309201F1C56E6C3007CF290 /* SchoolDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30920071C56E6C3007CF290 /* SchoolDetails.swift */; };
+		D30920211C56E6C3007CF290 /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30920091C56E6C3007CF290 /* Staff.swift */; };
+		D30920221C56E6C3007CF290 /* StaffDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309200A1C56E6C3007CF290 /* StaffDetails.swift */; };
+		D30920231C56E6C3007CF290 /* StaffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309200B1C56E6C3007CF290 /* StaffTableViewCell.swift */; };
+		D30920241C56E6C3007CF290 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309200C1C56E6C3007CF290 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3091FAA1C56E4C6007CF290 /* St Catherine School Seattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "St Catherine School Seattle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3091FAD1C56E4C6007CF290 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3091FAF1C56E4C6007CF290 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		D3091FB11C56E4C6007CF290 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D3091FB41C56E4C6007CF290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,6 +88,28 @@
 		D3091FDC1C56E5A3007CF290 /* StCicons87x87-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StCicons87x87-01.png"; sourceTree = "<group>"; };
 		D3091FDD1C56E5A3007CF290 /* student-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "student-25.png"; sourceTree = "<group>"; };
 		D3091FDE1C56E5A3007CF290 /* warehouse_filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warehouse_filled-25.png"; sourceTree = "<group>"; };
+		D3091FF11C56E6C3007CF290 /* AnnouncementFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementFilter.swift; sourceTree = "<group>"; };
+		D3091FF21C56E6C3007CF290 /* AnnouncementsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsCell.swift; sourceTree = "<group>"; };
+		D3091FF31C56E6C3007CF290 /* AnnouncementsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsList.swift; sourceTree = "<group>"; };
+		D3091FF41C56E6C3007CF290 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3091FF51C56E6C3007CF290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3091FF81C56E6C3007CF290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3091FFA1C56E6C3007CF290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		D3091FFB1C56E6C3007CF290 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		D3091FFD1C56E6C3007CF290 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3091FFE1C56E6C3007CF290 /* KidsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsTableViewCell.swift; sourceTree = "<group>"; };
+		D3091FFF1C56E6C3007CF290 /* ListOfKids.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfKids.swift; sourceTree = "<group>"; };
+		D30920001C56E6C3007CF290 /* ListOfStaff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfStaff.swift; sourceTree = "<group>"; };
+		D30920011C56E6C3007CF290 /* NotificationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationList.swift; sourceTree = "<group>"; };
+		D30920021C56E6C3007CF290 /* NotificationSelectionTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSelectionTVC.swift; sourceTree = "<group>"; };
+		D30920031C56E6C3007CF290 /* PinsOnMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinsOnMap.swift; sourceTree = "<group>"; };
+		D30920041C56E6C3007CF290 /* SaveKidDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveKidDetails.swift; sourceTree = "<group>"; };
+		D30920061C56E6C3007CF290 /* SchoolDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SchoolDataModel.xcdatamodel; sourceTree = "<group>"; };
+		D30920071C56E6C3007CF290 /* SchoolDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolDetails.swift; sourceTree = "<group>"; };
+		D30920091C56E6C3007CF290 /* Staff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
+		D309200A1C56E6C3007CF290 /* StaffDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffDetails.swift; sourceTree = "<group>"; };
+		D309200B1C56E6C3007CF290 /* StaffTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffTableViewCell.swift; sourceTree = "<group>"; };
+		D309200C1C56E6C3007CF290 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +151,28 @@
 		D3091FAC1C56E4C6007CF290 /* St Catherine School Seattle */ = {
 			isa = PBXGroup;
 			children = (
+				D3091FF11C56E6C3007CF290 /* AnnouncementFilter.swift */,
+				D3091FF21C56E6C3007CF290 /* AnnouncementsCell.swift */,
+				D3091FF31C56E6C3007CF290 /* AnnouncementsList.swift */,
+				D3091FF41C56E6C3007CF290 /* AppDelegate.swift */,
+				D3091FF51C56E6C3007CF290 /* Assets.xcassets */,
+				D3091FF61C56E6C3007CF290 /* Base.lproj */,
+				D3091FFB1C56E6C3007CF290 /* Child.swift */,
+				D3091FFD1C56E6C3007CF290 /* Info.plist */,
+				D3091FFE1C56E6C3007CF290 /* KidsTableViewCell.swift */,
+				D3091FFF1C56E6C3007CF290 /* ListOfKids.swift */,
+				D30920001C56E6C3007CF290 /* ListOfStaff.swift */,
+				D30920011C56E6C3007CF290 /* NotificationList.swift */,
+				D30920021C56E6C3007CF290 /* NotificationSelectionTVC.swift */,
+				D30920031C56E6C3007CF290 /* PinsOnMap.swift */,
+				D30920041C56E6C3007CF290 /* SaveKidDetails.swift */,
+				D30920051C56E6C3007CF290 /* SchoolDataModel.xcdatamodeld */,
+				D30920071C56E6C3007CF290 /* SchoolDetails.swift */,
+				D30920091C56E6C3007CF290 /* Staff.swift */,
+				D309200A1C56E6C3007CF290 /* StaffDetails.swift */,
+				D309200B1C56E6C3007CF290 /* StaffTableViewCell.swift */,
+				D309200C1C56E6C3007CF290 /* Utilities.swift */,
 				D3091FCC1C56E5A3007CF290 /* Assets */,
-				D3091FAD1C56E4C6007CF290 /* AppDelegate.swift */,
 				D3091FAF1C56E4C6007CF290 /* FirstViewController.swift */,
 				D3091FB11C56E4C6007CF290 /* SecondViewController.swift */,
 				D3091FB31C56E4C6007CF290 /* Main.storyboard */,
@@ -146,6 +206,15 @@
 				D3091FDE1C56E5A3007CF290 /* warehouse_filled-25.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		D3091FF61C56E6C3007CF290 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				D3091FF71C56E6C3007CF290 /* LaunchScreen.storyboard */,
+				D3091FF91C56E6C3007CF290 /* Main.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,14 +277,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3091FEF1C56E5A3007CF290 /* student-25.png in Resources */,
+				D30920131C56E6C3007CF290 /* Main.storyboard in Resources */,
 				D3091FE01C56E5A3007CF290 /* Luke.png in Resources */,
 				D3091FEA1C56E5A3007CF290 /* StCicon152x152-01.png in Resources */,
 				D3091FE21C56E5A3007CF290 /* Matt.png in Resources */,
+				D30920111C56E6C3007CF290 /* Assets.xcassets in Resources */,
 				D3091FCA1C56E54A007CF290 /* TwitterKitResources.bundle in Resources */,
 				D3091FEB1C56E5A3007CF290 /* StCicon58x58-01.png in Resources */,
 				D3091FE91C56E5A3007CF290 /* stCicon120x120.png in Resources */,
 				D3091FE51C56E5A3007CF290 /* stcatherineschool.jpg in Resources */,
+				D30920121C56E6C3007CF290 /* LaunchScreen.storyboard in Resources */,
 				D3091FE41C56E5A3007CF290 /* staff-25.png in Resources */,
+				D30920161C56E6C3007CF290 /* Info.plist in Resources */,
 				D3091FDF1C56E5A3007CF290 /* chat_filled-25.png in Resources */,
 				D3091FBA1C56E4C6007CF290 /* LaunchScreen.storyboard in Resources */,
 				D3091FED1C56E5A3007CF290 /* StCicon80x80-01.png in Resources */,
@@ -255,9 +328,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3091FB21C56E4C6007CF290 /* SecondViewController.swift in Sources */,
-				D3091FAE1C56E4C6007CF290 /* AppDelegate.swift in Sources */,
-				D3091FB01C56E4C6007CF290 /* FirstViewController.swift in Sources */,
+				D30920101C56E6C3007CF290 /* AppDelegate.swift in Sources */,
+				D309200E1C56E6C3007CF290 /* AnnouncementsCell.swift in Sources */,
+				D30920241C56E6C3007CF290 /* Utilities.swift in Sources */,
+				D30920191C56E6C3007CF290 /* ListOfStaff.swift in Sources */,
+				D309201B1C56E6C3007CF290 /* NotificationSelectionTVC.swift in Sources */,
+				D309201A1C56E6C3007CF290 /* NotificationList.swift in Sources */,
+				D309201F1C56E6C3007CF290 /* SchoolDetails.swift in Sources */,
+				D309201E1C56E6C3007CF290 /* SchoolDataModel.xcdatamodeld in Sources */,
+				D309200D1C56E6C3007CF290 /* AnnouncementFilter.swift in Sources */,
+				D30920171C56E6C3007CF290 /* KidsTableViewCell.swift in Sources */,
+				D30920221C56E6C3007CF290 /* StaffDetails.swift in Sources */,
+				D309201C1C56E6C3007CF290 /* PinsOnMap.swift in Sources */,
+				D30920211C56E6C3007CF290 /* Staff.swift in Sources */,
+				D309200F1C56E6C3007CF290 /* AnnouncementsList.swift in Sources */,
+				D309201D1C56E6C3007CF290 /* SaveKidDetails.swift in Sources */,
+				D30920181C56E6C3007CF290 /* ListOfKids.swift in Sources */,
+				D30920141C56E6C3007CF290 /* Child.swift in Sources */,
+				D30920231C56E6C3007CF290 /* StaffTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +366,22 @@
 				D3091FB91C56E4C6007CF290 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D3091FF71C56E6C3007CF290 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3091FF81C56E6C3007CF290 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D3091FF91C56E6C3007CF290 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3091FFA1C56E6C3007CF290 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -417,6 +521,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D30920051C56E6C3007CF290 /* SchoolDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D30920061C56E6C3007CF290 /* SchoolDataModel.xcdatamodel */,
+			);
+			currentVersion = D30920061C56E6C3007CF290 /* SchoolDataModel.xcdatamodel */;
+			path = SchoolDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D3091FA21C56E4C6007CF290 /* Project object */;
 }
