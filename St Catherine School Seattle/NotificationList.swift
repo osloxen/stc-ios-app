@@ -12,17 +12,23 @@ import TwitterKit
 //class NotificationList: UITableViewController {
 class NotificationList: UITableViewController {
 
+    
+    //TODO:  I don't know what this class is or what it does.  I think I can delete it.  Need to experiment with that.
+    
 
     func getTweetsTesting() {
         super.viewDidLoad()
         
-        
+/*
         let client = TWTRAPIClient()
         //        self.dataSource = TWTRListTimelineDataSource(listSlug: "twitter-syndication-team", listOwnerScreenName: "benward", APIClient: client)
         //        self.dataSource = TWTRUserTimelineDataSource(screenName: "osloxen", APIClient: client)
+
+
         let foo = TWTRSearchTimelineDataSource(searchQuery: "#stcsoccer5", APIClient: client)
         print(foo);
         print(foo.description.decomposedStringWithCanonicalMapping);
+*/
         
     }
 

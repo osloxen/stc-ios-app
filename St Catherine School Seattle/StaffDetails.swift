@@ -14,21 +14,19 @@ class StaffDetails: UIViewController {
     @IBOutlet weak var staffName: UILabel!
     @IBOutlet weak var staffLastName: UILabel!
     @IBOutlet weak var staffTitle: UILabel!
-    @IBOutlet weak var staffWebsite: UILabel!
-    @IBOutlet weak var staffEmail: UILabel!
     @IBOutlet weak var staffImage: UIImageView!
     
     var currentStaffMember = Staff()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
         staffName.text = currentStaffMember.name
         staffLastName.text = currentStaffMember.lastName
         staffTitle.text = currentStaffMember.title
-        staffWebsite.text = currentStaffMember.website
-        staffEmail.text = currentStaffMember.email
         staffImage.image = currentStaffMember.imageData
     }
 
@@ -37,7 +35,25 @@ class StaffDetails: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // NOTE TO FUTURE SELF: This function removes the status bar.  I was having trouble with the view writing on top of the status bar
+    // and then decided rather than fix it that it looked better without a status bar.  I could be wrong.
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
 
+    @IBAction func gotoStaffWebsite(sender: AnyObject) {
+        
+        UIApplication.sharedApplication().openURL(NSURL(string: currentStaffMember.website!)!)
+    }
+    
+    
+    @IBAction func sendEmailToStaff(sender: AnyObject) {
+        
+        UIApplication.sharedApplication().openURL(NSURL(string: "mailto:" + currentStaffMember.email!)!)
+    }
+    
     /*
     // MARK: - Navigation
 

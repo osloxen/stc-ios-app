@@ -221,7 +221,7 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("prepare for segue inside SaveKidDetails");
+//        print("prepare for segue inside SaveKidDetails");
         
         if segue.identifier != "segueShowNotifications" {
             

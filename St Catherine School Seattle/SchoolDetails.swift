@@ -56,13 +56,18 @@ class SchoolDetails: UIViewController, MKMapViewDelegate {
     
     @IBAction func gotoSchoolWebsite(sender: AnyObject) {
         
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://http://www.stcatherineschool.net/")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.stcatherineschool.net/")!)
     }
     
     @IBAction func emailSchool(sender: AnyObject) {
         
         
         UIApplication.sharedApplication().openURL(NSURL(string: "mailto:klitke@stcatherineschool.net")!)
+    }
+    
+    @IBAction func emailAttendance(sender: AnyObject) {
+        
+        UIApplication.sharedApplication().openURL(NSURL(string: "mailto:attendance@stcatherineschool.net")!)
     }
     
     

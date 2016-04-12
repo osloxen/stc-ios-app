@@ -19,32 +19,45 @@ class AnnouncementsList: TWTRTimelineViewController {
         
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
         
-        let client = TWTRAPIClient()
+        self.getAllNotificationsFiltered();
         
-        let filter = AnnouncementsFilter()
+        TWTRTweetView.appearance().backgroundColor = UIColor.cyanColor()
+        TWTRTweetTableViewCell.appearance().backgroundColor = UIColor.blackColor()
         
-        let filteredSearchQuery = filter.getFinalSearchString()
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh notifications")
+        self.refreshControl!.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
 
-        if filteredSearchQuery != "" {
-            
-            self.dataSource = TWTRSearchTimelineDataSource(searchQuery: filteredSearchQuery, APIClient: client)
-        } else {
-            self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "stcgeneral", APIClient: client)
-        }
-        
-        TWTRTweetView.appearance().backgroundColor = UIColor.lightGrayColor()
-        TWTRTweetTableViewCell.appearance().backgroundColor = UIColor.magentaColor()
-        
-        
-
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    func refresh(sender:AnyObject)
+    {
+        self.getAllNotificationsFiltered();
+        self.refreshControl!.endRefreshing();
+    }
     
+    
+    func getAllNotificationsFiltered() {
+        
+        let client = TWTRAPIClient()
+        
+        let filter = AnnouncementsFilter()
+        
+        let filteredSearchQuery = filter.getFinalSearchString()
+        
+        if filteredSearchQuery != "" {
+            
+            self.dataSource = TWTRSearchTimelineDataSource(searchQuery: filteredSearchQuery, APIClient: client)
+        } else {
+            self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "stcgeneral", APIClient: client)
+        }
+
+    }
 
     /*
     // MARK: - Navigation

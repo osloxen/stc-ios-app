@@ -86,10 +86,6 @@ class NotificationSelectionTVC: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
-        print("User selected: ")
-        print(indexPath.row);
-        
         let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
         
         if currentCell.accessoryType == UITableViewCellAccessoryType.None {
@@ -149,9 +145,7 @@ class NotificationSelectionTVC: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        
-        
-        print(updatedNotificationList)
+//        print(updatedNotificationList)
         
         let utilities = Utilities()
         
@@ -178,7 +172,16 @@ class NotificationSelectionTVC: UITableViewController {
             "Volleyball",
             "French Club",
             "Science",
-            "Spanish"
+            "Spanish",
+            "Extended Care",
+            "Study Hall",
+            "Choir",
+            "Coding",
+            "Chess Club",
+            "Math Club",
+            "Friends of the Orphans",
+            "Track",
+            "Cross Country"
         ]
         
         return notificationList

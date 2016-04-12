@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1603" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1713" minimumToolsVersion="Xcode 7.0">
     <entity name="AssetInformation" syncable="YES">
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
@@ -19,13 +19,8 @@
         <attribute name="uniqueId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="School" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="schoolInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AssetInformation" syncable="YES"/>
-    </entity>
     <elements>
         <element name="AssetInformation" positionX="-45" positionY="45" width="128" height="120"/>
         <element name="Person" positionX="-45" positionY="-135" width="128" height="195"/>
-        <element name="School" positionX="304" positionY="-3" width="128" height="75"/>
     </elements>
 </model>

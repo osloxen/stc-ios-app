@@ -91,7 +91,7 @@ class AnnouncementsFilter {
             
             // Putting the simplifiedGrade in this 'if let' statement because of the Lisa/Christy crash
             if let simplifiedGrade: String? = self.simplifyGradeToNumber(kid.valueForKey("grade") as! String)! {
-                print(simplifiedGrade)
+//                print(simplifiedGrade)
                 activityWithGrade += simplifiedGrade!
             }
             
@@ -198,10 +198,15 @@ class AnnouncementsFilter {
         }
 
         // Capture all general school information
+        if finalSearchString.rangeOfString(" AND from:St_Cath_Seattle") == nil {
+            finalSearchString += " AND from:St_Cath_Seattle"
+        }
+/*
+        // Capture all general school information
         if finalSearchString.rangeOfString(" AND from:osloxen") == nil {
             finalSearchString += " AND from:osloxen"
         }
-        
+*/
         return finalSearchString
     }
     

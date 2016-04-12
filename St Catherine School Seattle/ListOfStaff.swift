@@ -17,6 +17,8 @@ class ListOfStaff: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+        
         tableView.delegate = self
         tableView.dataSource = self
 

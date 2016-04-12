@@ -42,7 +42,8 @@ class Staff {
         addMe.lastName = "Schwartz"
         addMe.title = "Principal"
         addMe.email = "pschwartz@stcatherineschool.net"
-        addMe.imageData = UIImage(named: "Luke.png")
+        addMe.imageData = UIImage(named: "pam.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
         allStaffMembers.append(addMe)
         
         addMe = Staff()
@@ -50,42 +51,222 @@ class Staff {
         addMe.lastName = "Bartlett"
         addMe.title = "Office Manager"
         addMe.email = "lbartlett@stcatherineschool.net"
-        addMe.imageData = UIImage(named: "Mark.png")
-        addMe.website = "http://www.stcatherineschool.net/mrskimblepage.html"
+        addMe.imageData = UIImage(named: "leslie.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
         allStaffMembers.append(addMe)
         
         addMe = Staff()
-        addMe.name = "Vanessa"
-        addMe.lastName = "Kimble"
-        addMe.title = "​First Grade Teacher"
-        addMe.email = "vkimble@stcatherineschool.net"
-        addMe.imageData = UIImage(named: "Matt.png")
-        addMe.website = "http://www.stcatherineschool.net/mrskimblepage.html"
+        addMe.name = "Kristin"
+        addMe.lastName = "Litke"
+        addMe.title = "Development Director"
+        addMe.email = "klitke@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "litke.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
         allStaffMembers.append(addMe)
+
+        addMe = Staff()
+        addMe.name = "Chris"
+        addMe.lastName = "Burr"
+        addMe.title = "Secretary"
+        addMe.email = "cburr@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "burr.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
+        allStaffMembers.append(addMe)
+
+        addMe = Staff()
+        addMe.name = "Tammy"
+        addMe.lastName = "Matusak"
+        addMe.title = "Preschool Teacher/Extended Care Director"
+        addMe.email = "tmatusak@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "matusak.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
+        allStaffMembers.append(addMe)
+        
+        addMe = Staff()
+        addMe.name = "Shawna"
+        addMe.lastName = "Molitor"
+        addMe.title = "Preschool Teacher"
+        addMe.email = "smolitor@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "molitor.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
+        allStaffMembers.append(addMe)
+
+        addMe = Staff()
+        addMe.name = "Lorie"
+        addMe.lastName = "Knoblich"
+        addMe.title = "Preschool Assistant Teacher"
+        addMe.email = "lknoblich@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "knoblich.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
+        allStaffMembers.append(addMe)
+
+        addMe = Staff()
+        addMe.name = "Erin"
+        addMe.lastName = "Englert"
+        addMe.title = "Preschool Assistant Teacher"
+        addMe.email = "eenglert@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "englert.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
+        allStaffMembers.append(addMe)
+        
+        addMe = Staff()
+        addMe.name = "Kathy"
+        addMe.lastName = "Moser"
+        addMe.title = "Kindergarten Aide"
+        addMe.email = "kmoser@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "moser.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
+        allStaffMembers.append(addMe)
+        
+        addMe = Staff()
+        addMe.name = "Katie"
+        addMe.lastName = "Hale"
+        addMe.title = "Kindergarten Aide"
+        addMe.email = "khale@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "hale.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
+        allStaffMembers.append(addMe)
+        
+        addMe = Staff()
+        addMe.name = "Constance"
+        addMe.lastName = "Katsandres"
+        addMe.title = "First Grade Aide"
+        addMe.email = "ckatsandres@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "katsandres.jpg")
+        addMe.website = "http://www.stcatherineschool.net"
+        allStaffMembers.append(addMe)
+        
+        /************ SPECIALISTS ******************/
         
         addMe = Staff()
         addMe.name = "Lissa"
         addMe.lastName = "Payne"
         addMe.title = "​Science Specialist - grades 5-8"
         addMe.email = "lpayne@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "payne.jpg")
         addMe.website = "http://www.stcatherineschool.net/mrspaynepage.html"
         allStaffMembers.append(addMe)
         
+        addMe = Staff()
+        addMe.name = "Ms."
+        addMe.lastName = "Hartley"
+        addMe.title = "​Art,  7-8th Language Arts"
+        addMe.email = "mhartley@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "hartley.jpg")
+        addMe.website = "http://www.stcatherineschool.net/mrshartleypage.html"
+        allStaffMembers.append(addMe)
+        
+        addMe = Staff()
+        addMe.name = "Ms."
+        addMe.lastName = "Cox"
+        addMe.title = "​Literacy Specialist"
+        addMe.email = "kcox@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "cox.jpg")
+        addMe.website = "http://www.stcatherineschool.net/mscoxpage.html"
+        allStaffMembers.append(addMe)
+        
+        addMe = Staff()
+        addMe.name = "Señora"
+        addMe.lastName = "Karll"
+        addMe.title = "​Spanish Specialist"
+        addMe.email = "ckarll@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "karll.jpg")
+        addMe.website = "http://www.stcatherineschool.net/mrskarllpage.html"
+        allStaffMembers.append(addMe)
+
+
+/***************** TEACHERS ************************/
+
+        // Kindergarten
+        addMe = Staff()
+        addMe.name = "Elizabeth"
+        addMe.lastName = "Mares"
+        addMe.title = "​Kindergarten Homeroom Teacher"
+        addMe.email = "lmares@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "mares.jpg")
+        addMe.website = "http://www.stcatherineschool.net/mrsmarespage.html"
+        allStaffMembers.append(addMe)
+        
+        // 1st
+        addMe = Staff()
+        addMe.name = "Vanessa"
+        addMe.lastName = "Kimble"
+        addMe.title = "​First Grade Teacher"
+        addMe.email = "vkimble@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "kimble.jpg")
+        addMe.website = "http://www.stcatherineschool.net/mrskimblepage.html"
+        allStaffMembers.append(addMe)
+
+        // 2nd
+        addMe = Staff()
+        addMe.name = "Erin"
+        addMe.lastName = "Eichler"
+        addMe.title = "​Second Grade Teacher"
+        addMe.email = "eeichler@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "eichler.jpg")
+        addMe.website = "http://www.stcatherineschool.net/mseichlerpage.html"
+        allStaffMembers.append(addMe)
+
+        // 3rd
+        addMe = Staff()
+        addMe.name = "Jennifer"
+        addMe.lastName = "Arthur"
+        addMe.title = "​Third Grade Teacher"
+        addMe.email = "jarthur@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "arthur.jpg")
+        addMe.website = "http://www.stcatherineschool.net/msarthurpage.html"
+        allStaffMembers.append(addMe)
+        
+        // 4th
+        addMe = Staff()
+        addMe.name = "Ms."
+        addMe.lastName = "Salisbury"
+        addMe.title = "​Forth Grade Teacher"
+        addMe.email = "csalisbury@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "salisbury.jpg")
+        addMe.website = "http://www.stcatherineschool.net/mssalisburypage.html"
+        allStaffMembers.append(addMe)
+
+        // 5th
+        addMe = Staff()
+        addMe.name = "Mr."
+        addMe.lastName = "Jorgensen"
+        addMe.title = "​Fifth Grade Teacher"
+        addMe.email = "jjorgensen@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "jorgensen.jpg")
+        addMe.website = "http://www.stcatherineschool.net/mrjorgensenpage.html"
+        allStaffMembers.append(addMe)
+
+        // 6th
         addMe = Staff()
         addMe.name = "Renee"
         addMe.lastName = "Acosta"
         addMe.title = "​Sixth Grade Teacher"
         addMe.email = "racosta@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "acosta.jpg")
         addMe.website = "http://www.stcatherineschool.net/msacostapage.html"
         allStaffMembers.append(addMe)
-        
+
+        // 7th
         addMe = Staff()
-        addMe.name = " Jennifer"
-        addMe.lastName = "Arthur"
-        addMe.title = "​Third Grade Teacher"
-        addMe.email = "jarthur@stcatherineschool.net"
-        addMe.website = "http://www.stcatherineschool.net/msarthurpage.html"
+        addMe.name = "Marybeth"
+        addMe.lastName = "Bohm"
+        addMe.title = "​Seventh Grade Teacher"
+        addMe.email = "mbohm@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "bohm.jpg")
+        addMe.website = "http://www.stcatherineschool.net/msbohmpage.html"
         allStaffMembers.append(addMe)
+
+        // 8th
+        addMe = Staff()
+        addMe.name = "Mary Clara"
+        addMe.lastName = "Horrigan"
+        addMe.title = "​Eigth Grade Teacher"
+        addMe.email = "mhorrigan@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "horrigan.jpg")
+        addMe.website = "http://www.stcatherineschool.net/mshorriganpage.html"
+        allStaffMembers.append(addMe)
+        
         
         allStaffMembers.sortInPlace {
             return $0.lastName < $1.lastName

@@ -33,9 +33,15 @@ class ListOfKids: UITableViewController {
         self.updateListOfChildren()
         
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+  
         
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        tableView.separatorColor = UIColor.blackColor()
+//        self.extendedLayoutIncludesOpaqueBars = true;
+        
+//        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+//        tableView.separatorColor = UIColor.blackColor()
+        
+//        tableView.estimatedRowHeight = 185;
+//        tableView.rowHeight = UITableViewAutomaticDimension;
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,9 +83,9 @@ class ListOfKids: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
-        print("User selected: ")
-        print(indexPath.row);
+            //TODO:  What am I doing with this?
+//        print("User selected: ")
+//        print(indexPath.row);
 
     }
 
@@ -179,7 +185,7 @@ class ListOfKids: UITableViewController {
     
     
     
-    
+//TODO: are these supposed to be hooked up?
     
     @IBAction func cancelSaveChildDetails(segue: UIStoryboardSegue) {
         
@@ -187,7 +193,7 @@ class ListOfKids: UITableViewController {
     
     @IBAction func saveChildDetails(segue: UIStoryboardSegue) {
         
-        print("save child details in ListOfKids");
+//        print("save child details in ListOfKids");
         
         let newKidToSave = utilities.saveChildBeforeContinuing(currentKid!)
 
