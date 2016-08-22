@@ -8,9 +8,13 @@
 
 import UIKit
 import TwitterKit
+import GoogleMobileAds
 
 class AnnouncementsList: TWTRTimelineViewController {
     
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +30,17 @@ class AnnouncementsList: TWTRTimelineViewController {
         
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh notifications")
-        self.refreshControl!.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl!.addTarget(self, action: #selector(AnnouncementsList.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        // Maple Leaf ads
+        bannerView.adUnitID = "ca-app-pub-7930951536016138/8110223004"
+        
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
+
 
     }
 
@@ -46,9 +60,11 @@ class AnnouncementsList: TWTRTimelineViewController {
         
         let client = TWTRAPIClient()
         
+        /*
         let filter = AnnouncementsFilter()
         
         let filteredSearchQuery = filter.getFinalSearchString()
+
         
         if filteredSearchQuery != "" {
             
@@ -56,6 +72,9 @@ class AnnouncementsList: TWTRTimelineViewController {
         } else {
             self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "stcgeneral", APIClient: client)
         }
+        */
+        
+        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "stcgeneral", APIClient: client)
 
     }
 

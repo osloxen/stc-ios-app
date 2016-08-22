@@ -171,18 +171,20 @@ class AnnouncementsFilter {
     
     
     
-    func removeFinalOrIfNecessary(var searchString: String) -> String {
+    func removeFinalOrIfNecessary( searchString: String) -> String {
+        
+        var searchStringWithOrRemoved = searchString;
         
         if searchString != "" {
             
             if searchString[searchString.endIndex.predecessor()] == "R" && searchString[searchString.endIndex.predecessor().predecessor()] == "O" {
                 
-                let range = searchString.endIndex.advancedBy(-3)..<searchString.endIndex
-                searchString.removeRange(range)
+                let range = searchString.endIndex.advancedBy(-3)..<searchString.endIndex;
+                searchStringWithOrRemoved.removeRange(range)
             }
         }
         
-        return searchString
+        return searchStringWithOrRemoved;
     }
     
     

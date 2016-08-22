@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ListOfStaff: UITableViewController {
 
     var staffList: [Staff] = []
     
     let staff = Staff()
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,20 @@ class ListOfStaff: UITableViewController {
         tableView.dataSource = self
 
         staffList = staff.getAllStaff()
+        
+//        let bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+
+// AdMob Test banner ad
+//        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        
+// Bruno and Fidel ads
+//        bannerView.adUnitID = "ca-app-pub-7930951536016138/1065281003"
+        
+        // Maple Leaf ads
+        bannerView.adUnitID = "ca-app-pub-7930951536016138/8110223004"
+        
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
 
     }
 
@@ -35,7 +53,7 @@ class ListOfStaff: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

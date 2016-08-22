@@ -65,18 +65,9 @@ class Staff {
         allStaffMembers.append(addMe)
 
         addMe = Staff()
-        addMe.name = "Chris"
-        addMe.lastName = "Burr"
-        addMe.title = "Secretary"
-        addMe.email = "cburr@stcatherineschool.net"
-        addMe.imageData = UIImage(named: "burr.jpg")
-        addMe.website = "http://www.stcatherineschool.net"
-        allStaffMembers.append(addMe)
-
-        addMe = Staff()
         addMe.name = "Tammy"
         addMe.lastName = "Matusak"
-        addMe.title = "Preschool Teacher/Extended Care Director"
+        addMe.title = "Preschool Director/Extended Care Director"
         addMe.email = "tmatusak@stcatherineschool.net"
         addMe.imageData = UIImage(named: "matusak.jpg")
         addMe.website = "http://www.stcatherineschool.net"
@@ -100,33 +91,6 @@ class Staff {
         addMe.website = "http://www.stcatherineschool.net"
         allStaffMembers.append(addMe)
 
-        addMe = Staff()
-        addMe.name = "Erin"
-        addMe.lastName = "Englert"
-        addMe.title = "Preschool Assistant Teacher"
-        addMe.email = "eenglert@stcatherineschool.net"
-        addMe.imageData = UIImage(named: "englert.jpg")
-        addMe.website = "http://www.stcatherineschool.net"
-        allStaffMembers.append(addMe)
-        
-        addMe = Staff()
-        addMe.name = "Kathy"
-        addMe.lastName = "Moser"
-        addMe.title = "Kindergarten Aide"
-        addMe.email = "kmoser@stcatherineschool.net"
-        addMe.imageData = UIImage(named: "moser.jpg")
-        addMe.website = "http://www.stcatherineschool.net"
-        allStaffMembers.append(addMe)
-        
-        addMe = Staff()
-        addMe.name = "Katie"
-        addMe.lastName = "Hale"
-        addMe.title = "Kindergarten Aide"
-        addMe.email = "khale@stcatherineschool.net"
-        addMe.imageData = UIImage(named: "hale.jpg")
-        addMe.website = "http://www.stcatherineschool.net"
-        allStaffMembers.append(addMe)
-        
         addMe = Staff()
         addMe.name = "Constance"
         addMe.lastName = "Katsandres"
@@ -219,7 +183,7 @@ class Staff {
         
         // 4th
         addMe = Staff()
-        addMe.name = "Ms."
+        addMe.name = "Courtney"
         addMe.lastName = "Salisbury"
         addMe.title = "​Forth Grade Teacher"
         addMe.email = "csalisbury@stcatherineschool.net"
@@ -227,11 +191,21 @@ class Staff {
         addMe.website = "http://www.stcatherineschool.net/mssalisburypage.html"
         allStaffMembers.append(addMe)
 
-        // 5th
+        // PE
+        addMe = Staff()
+        addMe.name = "Robin"
+        addMe.lastName = "Donoso"
+        addMe.title = "Fifth Grade Teacher"
+        addMe.email = "rdonoso@stcatherineschool.net"
+        addMe.imageData = UIImage(named: "")
+        addMe.website = "http://www.stcatherineschool.net/rdonoso.html"
+        allStaffMembers.append(addMe)
+
+        // PE
         addMe = Staff()
         addMe.name = "Mr."
         addMe.lastName = "Jorgensen"
-        addMe.title = "​Fifth Grade Teacher"
+        addMe.title = "PE/Music Teacher"
         addMe.email = "jjorgensen@stcatherineschool.net"
         addMe.imageData = UIImage(named: "jorgensen.jpg")
         addMe.website = "http://www.stcatherineschool.net/mrjorgensenpage.html"

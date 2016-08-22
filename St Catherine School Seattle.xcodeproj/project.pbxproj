@@ -31,7 +31,6 @@
 		D30920121C56E6C3007CF290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FF71C56E6C3007CF290 /* LaunchScreen.storyboard */; };
 		D30920131C56E6C3007CF290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FF91C56E6C3007CF290 /* Main.storyboard */; };
 		D30920141C56E6C3007CF290 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FFB1C56E6C3007CF290 /* Child.swift */; };
-		D30920161C56E6C3007CF290 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3091FFD1C56E6C3007CF290 /* Info.plist */; };
 		D30920171C56E6C3007CF290 /* KidsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FFE1C56E6C3007CF290 /* KidsTableViewCell.swift */; };
 		D30920181C56E6C3007CF290 /* ListOfKids.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FFF1C56E6C3007CF290 /* ListOfKids.swift */; };
 		D30920191C56E6C3007CF290 /* ListOfStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30920001C56E6C3007CF290 /* ListOfStaff.swift */; };
@@ -46,6 +45,18 @@
 		D30920231C56E6C3007CF290 /* StaffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309200B1C56E6C3007CF290 /* StaffTableViewCell.swift */; };
 		D30920241C56E6C3007CF290 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309200C1C56E6C3007CF290 /* Utilities.swift */; };
 		D31FE6901CA310E600233E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31FE68F1CA310E600233E64 /* Assets.xcassets */; };
+		D326030D1CBDDE1B00C2FB08 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326030C1CBDDE1B00C2FB08 /* AdSupport.framework */; };
+		D326030F1CBDDE2600C2FB08 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326030E1CBDDE2600C2FB08 /* AudioToolbox.framework */; };
+		D32603111CBDDE2E00C2FB08 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603101CBDDE2E00C2FB08 /* AVFoundation.framework */; };
+		D32603131CBDDE3900C2FB08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603121CBDDE3900C2FB08 /* CoreGraphics.framework */; };
+		D32603151CBDDE4200C2FB08 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603141CBDDE4200C2FB08 /* CoreMedia.framework */; };
+		D32603171CBDDE4D00C2FB08 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603161CBDDE4D00C2FB08 /* CoreTelephony.framework */; };
+		D32603191CBDDE5800C2FB08 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603181CBDDE5800C2FB08 /* EventKit.framework */; };
+		D326031B1CBDDE6000C2FB08 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031A1CBDDE6000C2FB08 /* EventKitUI.framework */; };
+		D326031D1CBDDE6B00C2FB08 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */; };
+		D326031F1CBDDE7500C2FB08 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031E1CBDDE7500C2FB08 /* MessageUI.framework */; };
+		D32603211CBDDE7D00C2FB08 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603201CBDDE7D00C2FB08 /* StoreKit.framework */; };
+		D32603231CBDDE8800C2FB08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */; };
 		D35D98481C766D3400B48C3E /* pam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D35D982D1C766D3400B48C3E /* pam.jpg */; };
 		D35D98491C766D3400B48C3E /* burr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D35D982E1C766D3400B48C3E /* burr.jpg */; };
 		D35D984A1C766D3400B48C3E /* leslie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D35D982F1C766D3400B48C3E /* leslie.jpg */; };
@@ -70,6 +81,8 @@
 		D35D985F1C766D3400B48C3E /* karll.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D35D98441C766D3400B48C3E /* karll.jpg */; };
 		D35D98601C766D3400B48C3E /* payne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D35D98451C766D3400B48C3E /* payne.jpg */; };
 		D35D98611C766D3400B48C3E /* cox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D35D98461C766D3400B48C3E /* cox.jpg */; };
+		D35E7F161D6AC31B00FE4BD2 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35E7F151D6AC31B00FE4BD2 /* GoogleMobileAds.framework */; };
+		D3A7E24F1CBDBFB000251749 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A7E24E1CBDBFB000251749 /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +127,18 @@
 		D309200B1C56E6C3007CF290 /* StaffTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffTableViewCell.swift; sourceTree = "<group>"; };
 		D309200C1C56E6C3007CF290 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		D31FE68F1CA310E600233E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D326030C1CBDDE1B00C2FB08 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		D326030E1CBDDE2600C2FB08 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D32603101CBDDE2E00C2FB08 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D32603121CBDDE3900C2FB08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D32603141CBDDE4200C2FB08 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D32603161CBDDE4D00C2FB08 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D32603181CBDDE5800C2FB08 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		D326031A1CBDDE6000C2FB08 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		D326031E1CBDDE7500C2FB08 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D32603201CBDDE7D00C2FB08 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D35D982D1C766D3400B48C3E /* pam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pam.jpg; sourceTree = "<group>"; };
 		D35D982E1C766D3400B48C3E /* burr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burr.jpg; sourceTree = "<group>"; };
 		D35D982F1C766D3400B48C3E /* leslie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leslie.jpg; sourceTree = "<group>"; };
@@ -138,6 +163,8 @@
 		D35D98441C766D3400B48C3E /* karll.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = karll.jpg; sourceTree = "<group>"; };
 		D35D98451C766D3400B48C3E /* payne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = payne.jpg; sourceTree = "<group>"; };
 		D35D98461C766D3400B48C3E /* cox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cox.jpg; sourceTree = "<group>"; };
+		D35E7F151D6AC31B00FE4BD2 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		D3A7E24E1CBDBFB000251749 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "GoogleMobileAdsSdkiOS-7.7.1/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +172,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35E7F161D6AC31B00FE4BD2 /* GoogleMobileAds.framework in Frameworks */,
+				D32603231CBDDE8800C2FB08 /* SystemConfiguration.framework in Frameworks */,
+				D32603211CBDDE7D00C2FB08 /* StoreKit.framework in Frameworks */,
+				D326031F1CBDDE7500C2FB08 /* MessageUI.framework in Frameworks */,
+				D326031D1CBDDE6B00C2FB08 /* MediaPlayer.framework in Frameworks */,
+				D326031B1CBDDE6000C2FB08 /* EventKitUI.framework in Frameworks */,
+				D32603191CBDDE5800C2FB08 /* EventKit.framework in Frameworks */,
+				D32603171CBDDE4D00C2FB08 /* CoreTelephony.framework in Frameworks */,
+				D32603151CBDDE4200C2FB08 /* CoreMedia.framework in Frameworks */,
+				D32603131CBDDE3900C2FB08 /* CoreGraphics.framework in Frameworks */,
+				D32603111CBDDE2E00C2FB08 /* AVFoundation.framework in Frameworks */,
+				D326030F1CBDDE2600C2FB08 /* AudioToolbox.framework in Frameworks */,
+				D326030D1CBDDE1B00C2FB08 /* AdSupport.framework in Frameworks */,
+				D3A7E24F1CBDBFB000251749 /* GoogleMobileAds.framework in Frameworks */,
 				D3091FC51C56E50A007CF290 /* Crashlytics.framework in Frameworks */,
 				D3091FCB1C56E54A007CF290 /* TwitterCore.framework in Frameworks */,
 				D3091FC41C56E50A007CF290 /* Fabric.framework in Frameworks */,
@@ -158,6 +199,20 @@
 		D3091FA11C56E4C6007CF290 = {
 			isa = PBXGroup;
 			children = (
+				D35E7F151D6AC31B00FE4BD2 /* GoogleMobileAds.framework */,
+				D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */,
+				D32603201CBDDE7D00C2FB08 /* StoreKit.framework */,
+				D326031E1CBDDE7500C2FB08 /* MessageUI.framework */,
+				D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */,
+				D326031A1CBDDE6000C2FB08 /* EventKitUI.framework */,
+				D32603181CBDDE5800C2FB08 /* EventKit.framework */,
+				D32603161CBDDE4D00C2FB08 /* CoreTelephony.framework */,
+				D32603141CBDDE4200C2FB08 /* CoreMedia.framework */,
+				D32603121CBDDE3900C2FB08 /* CoreGraphics.framework */,
+				D32603101CBDDE2E00C2FB08 /* AVFoundation.framework */,
+				D326030E1CBDDE2600C2FB08 /* AudioToolbox.framework */,
+				D326030C1CBDDE1B00C2FB08 /* AdSupport.framework */,
+				D3A7E24E1CBDBFB000251749 /* GoogleMobileAds.framework */,
 				D3091FAC1C56E4C6007CF290 /* St Catherine School Seattle */,
 				D3091FAB1C56E4C6007CF290 /* Products */,
 				D3091FC61C56E54A007CF290 /* TwitterKit.framework */,
@@ -294,7 +349,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Joe Dog Productions";
 				TargetAttributes = {
 					D3091FA91C56E4C6007CF290 = {
@@ -344,7 +399,6 @@
 				D3091FE91C56E5A3007CF290 /* stCicon120x120.png in Resources */,
 				D30920121C56E6C3007CF290 /* LaunchScreen.storyboard in Resources */,
 				D3091FE41C56E5A3007CF290 /* staff-25.png in Resources */,
-				D30920161C56E6C3007CF290 /* Info.plist in Resources */,
 				D35D98571C766D3400B48C3E /* salisbury.jpg in Resources */,
 				D3091FDF1C56E5A3007CF290 /* chat_filled-25.png in Resources */,
 				D35D98601C766D3400B48C3E /* payne.jpg in Resources */,
@@ -541,6 +595,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.7.1",
 				);
 				INFOPLIST_FILE = "St Catherine School Seattle/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -558,6 +613,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.7.1",
 				);
 				INFOPLIST_FILE = "St Catherine School Seattle/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
