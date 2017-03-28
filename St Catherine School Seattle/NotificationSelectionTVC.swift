@@ -26,19 +26,19 @@ class NotificationSelectionTVC: UITableViewController {
         tableView.dataSource = self
 
 
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
-        let fetchRequest = NSFetchRequest(entityName: "Person")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
         fetchRequest.predicate = NSPredicate(format: "uniqueId = %i", childNotificationSelection.uniqueId!)
 
 
         do {
-            let fetchResults = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            let fetchResults = try appDelegate.managedObjectContext.fetch(fetchRequest) as? [NSManagedObject]
             
             if fetchResults!.count != 0 {
                 
                 let managedObject = fetchResults![0]
-                updatedNotificationList = managedObject.valueForKey("notificationList") as! Set<String>
+                updatedNotificationList = managedObject.value(forKey: "notificationList") as! Set<String>
                 
             }
         } catch let error as NSError {
@@ -55,47 +55,47 @@ class NotificationSelectionTVC: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return notificationSelectionListData.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("notificationCell", forIndexPath: indexPath) as UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath) as UITableViewCell
 
         // Configure the cell...
-        cell.textLabel!.text = notificationSelectionListData[indexPath.row]
+        cell.textLabel!.text = notificationSelectionListData[(indexPath as NSIndexPath).row]
         
-        if updatedNotificationList.contains(notificationSelectionListData[indexPath.row]) {
+        if updatedNotificationList.contains(notificationSelectionListData[(indexPath as NSIndexPath).row]) {
             
-            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            cell.accessoryType = UITableViewCellAccessoryType.checkmark
         } else {
             
-            cell.accessoryType = UITableViewCellAccessoryType.None
+            cell.accessoryType = UITableViewCellAccessoryType.none
         }
     
         return cell
     }
     
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
+        let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
         
-        if currentCell.accessoryType == UITableViewCellAccessoryType.None {
+        if currentCell.accessoryType == UITableViewCellAccessoryType.none {
             
-            currentCell.accessoryType = UITableViewCellAccessoryType.Checkmark
-            updatedNotificationList.insert(notificationSelectionListData[indexPath.row])
+            currentCell.accessoryType = UITableViewCellAccessoryType.checkmark
+            updatedNotificationList.insert(notificationSelectionListData[(indexPath as NSIndexPath).row])
         } else {
             
-            currentCell.accessoryType = UITableViewCellAccessoryType.None
-            updatedNotificationList.remove(notificationSelectionListData[indexPath.row])
+            currentCell.accessoryType = UITableViewCellAccessoryType.none
+            updatedNotificationList.remove(notificationSelectionListData[(indexPath as NSIndexPath).row])
         }
         
     }
@@ -141,7 +141,7 @@ class NotificationSelectionTVC: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
@@ -149,11 +149,11 @@ class NotificationSelectionTVC: UITableViewController {
         
         let utilities = Utilities()
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         utilities.updateKidNotifications(childNotificationSelection, notificationList: updatedNotificationList, appDelegate: appDelegate)
         
-        if let destination = segue.destinationViewController as? SaveKidDetails {
+        if let destination = segue.destination as? SaveKidDetails {
             destination.countOfSubscriptions = updatedNotificationList.count
         }
     
@@ -181,7 +181,8 @@ class NotificationSelectionTVC: UITableViewController {
             "Math Club",
             "Friends of the Orphans",
             "Track",
-            "Cross Country"
+            "Cross Country",
+            "Volunteer Opportunities"
         ]
         
         return notificationList

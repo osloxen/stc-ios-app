@@ -14,7 +14,7 @@ class Child {
     var firstName : String?
     var grade : String?
     var activityList : [String]?;
-    var imageData : NSData?;
+    var imageData : Data?;
     var uniqueId : Int?;
     
     

@@ -35,9 +35,9 @@ class SchoolDetails: UIViewController, MKMapViewDelegate {
         
         mapOfSchool.addAnnotation(schoolPin)
         
-        let application = UIApplication.sharedApplication();
+        let application = UIApplication.shared;
         
-        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Badge, categories: nil))        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: UIUserNotificationType.badge, categories: nil))        
     }
     
     
@@ -49,30 +49,30 @@ class SchoolDetails: UIViewController, MKMapViewDelegate {
     
     
     
-    @IBAction func callSchool(sender: AnyObject) {
+    @IBAction func callSchool(_ sender: AnyObject) {
         
-        UIApplication.sharedApplication().openURL(NSURL(string: "tel://2065250581")!)
+        UIApplication.shared.openURL(URL(string: "tel://2065250581")!)
     }
     
-    @IBAction func gotoSchoolWebsite(sender: AnyObject) {
+    @IBAction func gotoSchoolWebsite(_ sender: AnyObject) {
         
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.stcatherineschool.net/")!)
+        UIApplication.shared.openURL(URL(string: "http://www.stcatherineschool.net/")!)
     }
     
-    @IBAction func emailSchool(sender: AnyObject) {
+    @IBAction func emailSchool(_ sender: AnyObject) {
         
         
-        UIApplication.sharedApplication().openURL(NSURL(string: "mailto:klitke@stcatherineschool.net")!)
+        UIApplication.shared.openURL(URL(string: "mailto:klitke@stcatherineschool.net")!)
     }
     
-    @IBAction func emailAttendance(sender: AnyObject) {
+    @IBAction func emailAttendance(_ sender: AnyObject) {
         
-        UIApplication.sharedApplication().openURL(NSURL(string: "mailto:attendance@stcatherineschool.net")!)
+        UIApplication.shared.openURL(URL(string: "mailto:attendance@stcatherineschool.net")!)
     }
     
     
     
-    func centerMapOnLocation(location: CLLocation) {
+    func centerMapOnLocation(_ location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
             regionRadius * 2.0, regionRadius * 2.0)
         mapOfSchool.setRegion(coordinateRegion, animated: true)
@@ -81,11 +81,11 @@ class SchoolDetails: UIViewController, MKMapViewDelegate {
     
     
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? PinsOnMap {
             let identifier = "pin"
             var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
                 as? MKPinAnnotationView {
                     dequeuedView.annotation = annotation
                     view = dequeuedView

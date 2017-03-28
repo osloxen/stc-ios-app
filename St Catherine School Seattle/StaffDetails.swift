@@ -38,20 +38,20 @@ class StaffDetails: UIViewController {
     
     // NOTE TO FUTURE SELF: This function removes the status bar.  I was having trouble with the view writing on top of the status bar
     // and then decided rather than fix it that it looked better without a status bar.  I could be wrong.
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
 
-    @IBAction func gotoStaffWebsite(sender: AnyObject) {
+    @IBAction func gotoStaffWebsite(_ sender: AnyObject) {
         
-        UIApplication.sharedApplication().openURL(NSURL(string: currentStaffMember.website!)!)
+        UIApplication.shared.openURL(URL(string: currentStaffMember.website!)!)
     }
     
     
-    @IBAction func sendEmailToStaff(sender: AnyObject) {
+    @IBAction func sendEmailToStaff(_ sender: AnyObject) {
         
-        UIApplication.sharedApplication().openURL(NSURL(string: "mailto:" + currentStaffMember.email!)!)
+        UIApplication.shared.openURL(URL(string: "mailto:" + currentStaffMember.email!)!)
     }
     
     /*

@@ -40,15 +40,16 @@ class AnnouncementsFilter {
     
     func populateChildren() {
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
         
-        let fetchRequest = NSFetchRequest(entityName: "Person")
+//        let fetchRequest = NSFetchRequest(entityName: "Person")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
         
         do {
             let results =
-            try managedContext.executeFetchRequest(fetchRequest)
+            try managedContext.fetch(fetchRequest)
             children = results as! [NSManagedObject]
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
@@ -66,13 +67,13 @@ class AnnouncementsFilter {
     }
     
     
-    func addChildGradeNotificationsToSearchString(kid: NSManagedObject) {
+    func addChildGradeNotificationsToSearchString(_ kid: NSManagedObject) {
         
         // Why was this crashing for Lisa???  I am putting the grade notification in this check for nil
         // so it doesn't crash.  BUGBUG - need to investigate how Lisa/Christy get into this crash
         // state.
-        if kid.valueForKey("grade") != nil {
-            listOfSubscriptions.insert(self.simplifyGradeToNumber(kid.valueForKey("grade") as! String)!)
+        if kid.value(forKey: "grade") != nil {
+            listOfSubscriptions.insert(self.simplifyGradeToNumber(kid.value(forKey: "grade") as! String)!)
         }
         
     }
@@ -80,19 +81,19 @@ class AnnouncementsFilter {
     
     
     
-    func addChildActivityAndGradeToList(kid: NSManagedObject) {
+    func addChildActivityAndGradeToList(_ kid: NSManagedObject) {
         
-        let kidActivityArray = kid.valueForKey("notificationList") as! Set<String>
+        let kidActivityArray = kid.value(forKey: "notificationList") as! Set<String>
         
         for kidActivity in kidActivityArray {
             var activityWithGrade = kidActivity
             
-            activityWithGrade = activityWithGrade.stringByReplacingOccurrencesOfString(" ", withString: "")
+            activityWithGrade = activityWithGrade.replacingOccurrences(of: " ", with: "")
             
             // Putting the simplifiedGrade in this 'if let' statement because of the Lisa/Christy crash
-            if let simplifiedGrade: String? = self.simplifyGradeToNumber(kid.valueForKey("grade") as! String)! {
+            if let simplifiedGrade: String = self.simplifyGradeToNumber(kid.value(forKey: "grade") as! String) {
 //                print(simplifiedGrade)
-                activityWithGrade += simplifiedGrade!
+                activityWithGrade += simplifiedGrade
             }
             
             
@@ -105,7 +106,7 @@ class AnnouncementsFilter {
     
     
     
-    func simplifyGradeToNumber(gradeString: String) -> String? {
+    func simplifyGradeToNumber(_ gradeString: String) -> String? {
         
         switch gradeString {
             
@@ -153,8 +154,8 @@ class AnnouncementsFilter {
         for addToFilter in listOfSubscriptions {
             
             var processedActivity = addToFilter
-            processedActivity = processedActivity.lowercaseString
-            processedActivity = processedActivity.stringByReplacingOccurrencesOfString(" ", withString: "")
+            processedActivity = processedActivity.lowercased()
+            processedActivity = processedActivity.replacingOccurrences(of: " ", with: "")
 
             searchQueryOfChildActivities += " "
             searchQueryOfChildActivities += orgHashtag
@@ -171,18 +172,14 @@ class AnnouncementsFilter {
     
     
     
-    func removeFinalOrIfNecessary( searchString: String) -> String {
+    func removeFinalOrIfNecessary( _ searchString: String) -> String {
         
-        var searchStringWithOrRemoved = searchString;
         
-        if searchString != "" {
-            
-            if searchString[searchString.endIndex.predecessor()] == "R" && searchString[searchString.endIndex.predecessor().predecessor()] == "O" {
-                
-                let range = searchString.endIndex.advancedBy(-3)..<searchString.endIndex;
-                searchStringWithOrRemoved.removeRange(range)
-            }
-        }
+        //TODO:  Re write this fuction.
+        
+        let searchStringWithOrRemoved = searchString;
+
+        // Do cool stuff to remove final OR if it is there
         
         return searchStringWithOrRemoved;
     }
@@ -193,14 +190,14 @@ class AnnouncementsFilter {
     func getFinalSearchString() -> String {
         
         // Capture all general school information
-        if finalSearchString.rangeOfString("OR") != nil {
+        if finalSearchString.range(of: "OR") != nil {
             finalSearchString += " OR stcgeneral"
         } else {
             finalSearchString += "stcgeneral"
         }
 
         // Capture all general school information
-        if finalSearchString.rangeOfString(" AND from:St_Cath_Seattle") == nil {
+        if finalSearchString.range(of: " AND from:St_Cath_Seattle") == nil {
             finalSearchString += " AND from:St_Cath_Seattle"
         }
 /*

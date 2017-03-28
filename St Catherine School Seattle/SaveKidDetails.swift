@@ -26,37 +26,37 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
     var countOfSubscriptions : Int = 0// This is for the segue from Notifications to here
     
 
-    @IBAction func chooseFromPhotoLib(sender: AnyObject) {
+    @IBAction func chooseFromPhotoLib(_ sender: AnyObject) {
         
         picker.allowsEditing = false
-        picker.sourceType = .PhotoLibrary
-        picker.modalPresentationStyle = .Popover
-        presentViewController(picker,
+        picker.sourceType = .photoLibrary
+        picker.modalPresentationStyle = .popover
+        present(picker,
             animated: true, completion: nil)
         picker.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
 
     }
     
-    @IBAction func selectGrade(sender: AnyObject) {
+    @IBAction func selectGrade(_ sender: AnyObject) {
         
-        pickerGrade.hidden = false;
+        pickerGrade.isHidden = false;
     }
     
     
-    @IBAction func chooseTakePhotoFromCamera(sender: AnyObject) {
+    @IBAction func chooseTakePhotoFromCamera(_ sender: AnyObject) {
         
         picker.allowsEditing = false
-        picker.sourceType = UIImagePickerControllerSourceType.Camera
-        picker.cameraCaptureMode = .Photo
-        picker.modalPresentationStyle = .FullScreen
-        presentViewController(picker,
+        picker.sourceType = UIImagePickerControllerSourceType.camera
+        picker.cameraCaptureMode = .photo
+        picker.modalPresentationStyle = .fullScreen
+        present(picker,
             animated: true,
             completion: nil)
         
     }
     
     
-    @IBAction func saveKidDetailsBtn(sender: AnyObject) {
+    @IBAction func saveKidDetailsBtn(_ sender: AnyObject) {
         
         // For now do nothing here.  Added when trying to get segues right.
         
@@ -72,7 +72,7 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
         picker.delegate = self
         self.pickerGrade.dataSource = self;
         self.pickerGrade.delegate = self;
-        pickerGrade.hidden = true;
+        pickerGrade.isHidden = true;
         
         pickerGradeData = self.setListOfGradeData()
         
@@ -80,7 +80,7 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
             childName.text = currentChild.firstName;
             
             if currentChild.imageData != nil {
-                kidPhotoImageView.image = UIImage(data:currentChild.imageData!,scale:1.0)
+                kidPhotoImageView.image = UIImage(data:currentChild.imageData! as Data,scale:1.0)
             }
             
             gradeLabel.text = currentChild.grade;
@@ -99,16 +99,16 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
         
         
         let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.Default
-        toolBar.translucent = true
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
         toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(SaveKidDetails.donePicker))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SaveKidDetails.donePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         toolBar.setItems([spaceButton, doneButton], animated: false)
-        toolBar.userInteractionEnabled = true
+        toolBar.isUserInteractionEnabled = true
         
         self.gradeLabel.inputAccessoryView = toolBar
 
@@ -129,7 +129,7 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
     func donePicker()
     {
         self.gradeLabel.resignFirstResponder() // To resign the inputView on clicking done.
-        pickerGrade.hidden = true;
+        pickerGrade.isHidden = true;
     }
 
 
@@ -144,14 +144,14 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
     
     
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
         return true;
     }
@@ -170,47 +170,47 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     //MARK: Delegates
     func imagePickerController(
-        picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo info: [String : AnyObject]){
+        _ picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [String : Any]){
         
             let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-            kidPhotoImageView.contentMode = .ScaleAspectFit
+            kidPhotoImageView.contentMode = .scaleAspectFit
             kidPhotoImageView.image = chosenImage
-            dismissViewControllerAnimated(true, completion: nil)
+            dismiss(animated: true, completion: nil)
     }
     
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerGradeData.count;
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerGradeData[row]
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         gradeLabel.text = pickerGradeData[row]
         
-        pickerGrade.hidden = true;
+        pickerGrade.isHidden = true;
     }
     
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any!) -> Bool {
 
         if (self.childName.text == "") && (identifier == "saveKidInfo") {
-            let alert = UIAlertController(title: "Know Name", message: "We need a name for your child.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Whatever...", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Know Name", message: "We need a name for your child.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Whatever...", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return false
         } else {
             
@@ -220,13 +220,13 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
 
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        print("prepare for segue inside SaveKidDetails");
         
         if segue.identifier != "segueShowNotifications" {
             
             // Set ListOfKids current kid controller to whomever you selected/created
-            let destinationVC = segue.destinationViewController as! ListOfKids;
+            let destinationVC = segue.destination as! ListOfKids;
             destinationVC.currentKid = Child()
             destinationVC.currentKid!.firstName = self.childName.text;
             destinationVC.currentKid!.uniqueId = self.currentChild.uniqueId;
@@ -239,8 +239,8 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
         } else {
             
             let utilities = Utilities()
-            utilities.saveChildBeforeContinuing(self.currentChild)
-            let destinationVC = segue.destinationViewController as! NotificationSelectionTVC;
+            let result = utilities.saveChildBeforeContinuing(self.currentChild)
+            let destinationVC = segue.destination as! NotificationSelectionTVC;
             destinationVC.childNotificationSelection = self.currentChild
 
         }
@@ -248,7 +248,7 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
     
     
-    @IBAction func doneSelectingNotifications(segue: UIStoryboardSegue) {
+    @IBAction func doneSelectingNotifications(_ segue: UIStoryboardSegue) {
         
         // save all the notifications
         numSubscriptions.text = String(countOfSubscriptions)

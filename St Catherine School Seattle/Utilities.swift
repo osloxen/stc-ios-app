@@ -13,17 +13,17 @@ import UIKit
 class Utilities {
     
     
-    func saveKid(name: String, appDelegate: AppDelegate) -> NSManagedObject {
+    func saveKid(_ name: String, appDelegate: AppDelegate) -> NSManagedObject {
 //        let appDelegate =
 //        UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
         
-        let entity =  NSEntityDescription.entityForName("Person",
-            inManagedObjectContext:managedContext)
+        let entity =  NSEntityDescription.entity(forEntityName: "Person",
+            in:managedContext)
         
         let person = NSManagedObject(entity: entity!,
-            insertIntoManagedObjectContext: managedContext)
+            insertInto: managedContext)
         
         person.setValue(name, forKey: "firstName")
         
@@ -37,15 +37,15 @@ class Utilities {
     }
     
     
-    func saveKid(kidData: Child, appDelegate: AppDelegate) -> NSManagedObject {
+    func saveKid(_ kidData: Child, appDelegate: AppDelegate) -> NSManagedObject {
         
         let managedContext = appDelegate.managedObjectContext
         
-        let entity =  NSEntityDescription.entityForName("Person",
-            inManagedObjectContext:managedContext)
+        let entity =  NSEntityDescription.entity(forEntityName: "Person",
+            in:managedContext)
         
         let person = NSManagedObject(entity: entity!,
-            insertIntoManagedObjectContext: managedContext)
+            insertInto: managedContext)
         
         let emptySetOfNotifications : Set<String> = []
         
@@ -65,15 +65,15 @@ class Utilities {
     }
     
     
-    func updateKidData(kidData: Child, appDelegate: AppDelegate) {
+    func updateKidData(_ kidData: Child, appDelegate: AppDelegate) {
         
         let managedContext = appDelegate.managedObjectContext
         
-        let fetchRequest = NSFetchRequest(entityName: "Person")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
         fetchRequest.predicate = NSPredicate(format: "uniqueId = %i", kidData.uniqueId!)
         
         do {
-            let fetchResults = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            let fetchResults = try appDelegate.managedObjectContext.fetch(fetchRequest) as? [NSManagedObject]
             
             if fetchResults!.count != 0 {
                 
@@ -97,15 +97,15 @@ class Utilities {
     
     
     
-    func updateKidNotifications(kidData: Child, notificationList: Set<String>, appDelegate: AppDelegate) {
+    func updateKidNotifications(_ kidData: Child, notificationList: Set<String>, appDelegate: AppDelegate) {
         
         let managedContext = appDelegate.managedObjectContext
         
-        let fetchRequest = NSFetchRequest(entityName: "Person")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
         fetchRequest.predicate = NSPredicate(format: "uniqueId = %i", kidData.uniqueId!)
         
         do {
-            let fetchResults = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            let fetchResults = try appDelegate.managedObjectContext.fetch(fetchRequest) as? [NSManagedObject]
             
             if fetchResults!.count != 0 {
                 
@@ -126,7 +126,7 @@ class Utilities {
     }
     
     
-    func childIsAlreadySaved(kidToEvaluate: Child) -> Bool {
+    func childIsAlreadySaved(_ kidToEvaluate: Child) -> Bool {
         
         if kidToEvaluate.uniqueId == nil {
             return false
@@ -134,14 +134,14 @@ class Utilities {
         
         var kidIsAlreadySaved = false
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        let fetchRequest = NSFetchRequest(entityName: "Person")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
         fetchRequest.predicate = NSPredicate(format: "uniqueId = %i", kidToEvaluate.uniqueId!)
         
         
         do {
-            let fetchResults = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            let fetchResults = try appDelegate.managedObjectContext.fetch(fetchRequest) as? [NSManagedObject]
             
             if fetchResults!.count != 0 {
                 
@@ -162,17 +162,17 @@ class Utilities {
     
     
     
-    func saveChildBeforeContinuing(kidToSave: Child) -> NSManagedObject? {
+    func saveChildBeforeContinuing(_ kidToSave: Child) -> NSManagedObject? {
     
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         if childIsAlreadySaved(kidToSave) {
             self.updateKidData(kidToSave, appDelegate: appDelegate)
             return nil
         } else {
-            kidToSave.uniqueId = Int(floor(NSDate().timeIntervalSince1970))
+            kidToSave.uniqueId = Int(floor(Date().timeIntervalSince1970))
             
-            let newKid = self.saveKid(kidToSave,appDelegate: UIApplication.sharedApplication().delegate as! AppDelegate)
+            let newKid = self.saveKid(kidToSave,appDelegate: UIApplication.shared.delegate as! AppDelegate)
             return newKid
         }
         

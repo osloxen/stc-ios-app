@@ -15,7 +15,7 @@ class ListOfKids: UITableViewController {
     var currentKid: Child?;
     
     var childName: String = "Child Needs A Name";
-    var childImageData: NSData?
+    var childImageData: Data?
     
     var children = [NSManagedObject]()
     
@@ -52,15 +52,15 @@ class ListOfKids: UITableViewController {
     
     func updateListOfChildren() {
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
         
-        let fetchRequest = NSFetchRequest(entityName: "Person")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
         
         do {
             let results =
-            try managedContext.executeFetchRequest(fetchRequest)
+            try managedContext.fetch(fetchRequest)
             children = results as! [NSManagedObject]
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
@@ -70,18 +70,18 @@ class ListOfKids: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return children.count;
     }
     
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
             //TODO:  What am I doing with this?
 //        print("User selected: ")
@@ -90,15 +90,15 @@ class ListOfKids: UITableViewController {
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("kidCell") as! KidsTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kidCell") as! KidsTableViewCell
 
         // Configure the cell...
-        let child = children[indexPath.row]
+        let child = children[(indexPath as NSIndexPath).row]
         
-        cell.kidName!.text = child.valueForKey("firstName") as? String
+        cell.kidName!.text = child.value(forKey: "firstName") as? String
         
-        let childPicture = child.valueForKey("imageData") as? NSData
+        let childPicture = child.value(forKey: "imageData") as? Data
         if (childPicture != nil) {
             cell.kidPicture.image = UIImage(data:childPicture!,scale:1.0)
         }
@@ -109,7 +109,7 @@ class ListOfKids: UITableViewController {
 
     
     // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
@@ -117,15 +117,15 @@ class ListOfKids: UITableViewController {
 
 
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             // Delete the row from the data source
             
             
             do {
-                let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                let appDel:AppDelegate = UIApplication.shared.delegate as! AppDelegate
                 let context:NSManagedObjectContext = appDel.managedObjectContext
-                context.deleteObject(children[indexPath.row] as NSManagedObject)
+                context.delete(children[(indexPath as NSIndexPath).row] as NSManagedObject)
                 
                 try context.save()
             } catch {
@@ -134,10 +134,10 @@ class ListOfKids: UITableViewController {
             
             
             
-            children.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            children.remove(at: (indexPath as NSIndexPath).row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
             self.tableView.reloadData()
-        } else if editingStyle == .Insert {
+        } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
@@ -160,22 +160,22 @@ class ListOfKids: UITableViewController {
 
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
 
 
         if segue.identifier == "ShowExistingChild" {
-            if let destination = segue.destinationViewController as? SaveKidDetails {
+            if let destination = segue.destination as? SaveKidDetails {
                 let indexPath = self.tableView.indexPathForSelectedRow;
                 
-                let child = children[indexPath!.row]
+                let child = children[(indexPath! as NSIndexPath).row]
                 
-                destination.currentChild.firstName = child.valueForKey("firstName") as? String
-                destination.currentChild.imageData = child.valueForKey("imageData") as? NSData
-                destination.currentChild.uniqueId = child.valueForKey("uniqueId") as? Int
-                destination.currentChild.grade = child.valueForKey("grade") as? String
-                destination.currentChild.activityList = Array(child.valueForKey("notificationList") as! Set<String>)
+                destination.currentChild.firstName = child.value(forKey: "firstName") as? String
+                destination.currentChild.imageData = child.value(forKey: "imageData") as? Data
+                destination.currentChild.uniqueId = child.value(forKey: "uniqueId") as? Int
+                destination.currentChild.grade = child.value(forKey: "grade") as? String
+                destination.currentChild.activityList = Array(child.value(forKey: "notificationList") as! Set<String>)
             }
         }
 
@@ -187,11 +187,11 @@ class ListOfKids: UITableViewController {
     
 //TODO: are these supposed to be hooked up?
     
-    @IBAction func cancelSaveChildDetails(segue: UIStoryboardSegue) {
+    @IBAction func cancelSaveChildDetails(_ segue: UIStoryboardSegue) {
         
     }
     
-    @IBAction func saveChildDetails(segue: UIStoryboardSegue) {
+    @IBAction func saveChildDetails(_ segue: UIStoryboardSegue) {
         
 //        print("save child details in ListOfKids");
         

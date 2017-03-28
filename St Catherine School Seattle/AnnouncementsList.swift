@@ -25,12 +25,12 @@ class AnnouncementsList: TWTRTimelineViewController {
         
         self.getAllNotificationsFiltered();
         
-        TWTRTweetView.appearance().backgroundColor = UIColor.cyanColor()
-        TWTRTweetTableViewCell.appearance().backgroundColor = UIColor.blackColor()
+        TWTRTweetView.appearance().backgroundColor = UIColor.cyan
+        TWTRTweetTableViewCell.appearance().backgroundColor = UIColor.black
         
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh notifications")
-        self.refreshControl!.addTarget(self, action: #selector(AnnouncementsList.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl!.addTarget(self, action: #selector(AnnouncementsList.refresh(_:)), for: UIControlEvents.valueChanged)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,7 +39,7 @@ class AnnouncementsList: TWTRTimelineViewController {
         bannerView.adUnitID = "ca-app-pub-7930951536016138/8110223004"
         
         bannerView.rootViewController = self
-        bannerView.loadRequest(GADRequest())
+        bannerView.load(GADRequest())
 
 
     }
@@ -49,7 +49,7 @@ class AnnouncementsList: TWTRTimelineViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func refresh(sender:AnyObject)
+    func refresh(_ sender:AnyObject)
     {
         self.getAllNotificationsFiltered();
         self.refreshControl!.endRefreshing();
@@ -58,8 +58,13 @@ class AnnouncementsList: TWTRTimelineViewController {
     
     func getAllNotificationsFiltered() {
         
-        let client = TWTRAPIClient()
+        let client = TWTRAPIClient();
         
+        /* ONLY CAPTURES TIMELINE DATA (OUT IN VERSION 1.2)
+        self.dataSource = TWTRUserTimelineDataSource(screenName: "St_Cath_Seattle", APIClient: client);
+        */
+        
+ 
         /*
         let filter = AnnouncementsFilter()
         
@@ -73,19 +78,13 @@ class AnnouncementsList: TWTRTimelineViewController {
             self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "stcgeneral", APIClient: client)
         }
         */
+
+// As of 1/10/17 the search feature does not work for the St Catherine account.  This is no change from 6 months ago.  Need to change to streaming the tweets maybe?
+//        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "4th grade on location at the Capitol", apiClient: client)
         
-        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "stcgeneral", APIClient: client)
+        // Work Around --> Just show the St Catherine timeline
+        self.dataSource = TWTRUserTimelineDataSource(screenName: "St_Cath_Seattle", apiClient: client)
 
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
