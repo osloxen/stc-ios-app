@@ -12,6 +12,54 @@ import UIKit
 
 class Utilities {
     
+    var foo:String = "not set";
+    
+    func getFoo() -> String {
+        self.returnJsonFromRestCall()
+        return self.foo;
+    }
+    
+    // TODO make this generic
+    func returnJsonFromRestCall() {
+        
+        let restStCathBasicInfo = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-name";
+        
+        let config = URLSessionConfiguration.default // Session Configuration
+        let session = URLSession(configuration: config) // Load configuration into Session
+        let url = URL(string: restStCathBasicInfo)!
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                print(error!.localizedDescription)
+                
+            } else {
+                
+                do {
+                    
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: AnyObject]
+                    {
+                        
+                        //Implement your logic
+                        print(json);
+                        
+                        let phoneNumber = json["phone"] as! String
+                        print(phoneNumber)
+                        self.foo = phoneNumber
+                    }
+                    
+                } catch {
+                    print("error in JSONSerialization")
+                    
+                }
+            }
+        })
+        
+        task.resume();
+    }
+    
+    
     
     func saveKid(_ name: String, appDelegate: AppDelegate) -> NSManagedObject {
 //        let appDelegate =

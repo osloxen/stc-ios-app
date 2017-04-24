@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
@@ -40,6 +41,17 @@ class Staff {
         email = nil;
         website = nil;
         twitter = nil;
+    }
+    
+    
+    func getStaffFromCloud() -> [Staff] {
+        
+        var allStaffMembers: [Staff] = []
+        
+        
+        
+        
+        return allStaffMembers
     }
     
     

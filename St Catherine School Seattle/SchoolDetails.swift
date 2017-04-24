@@ -16,10 +16,17 @@ class SchoolDetails: UIViewController, MKMapViewDelegate {
     
     let regionRadius: CLLocationDistance = 1000
     
-    
-    
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+
 
         mapOfSchool.delegate = self
 
@@ -37,7 +44,14 @@ class SchoolDetails: UIViewController, MKMapViewDelegate {
         
         let application = UIApplication.shared;
         
-        application.registerUserNotificationSettings(UIUserNotificationSettings(types: UIUserNotificationType.badge, categories: nil))        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: UIUserNotificationType.badge, categories: nil))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            let util = Utilities();
+            let foobar = util.getFoo()
+            print(foobar);
+            self.activityIndicator.stopAnimating()
+        }
     }
     
     
