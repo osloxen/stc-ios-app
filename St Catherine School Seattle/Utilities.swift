@@ -13,6 +13,18 @@ import UIKit
 class Utilities {
     
     var foo:String = "not set";
+    var jsonData:[String:AnyObject]?
+    
+    func getJsonData(restUrl:String) -> [String:AnyObject] {
+        self.returnJsonFromRestCall(restUrl: restUrl)
+        
+        if !(jsonData?.isEmpty)! {
+            return self.jsonData!
+        } else {
+            return ["error":"no json from rest call" as AnyObject]
+        }
+        
+    }
     
     func getFoo() -> String {
         self.returnJsonFromRestCall()
@@ -58,6 +70,46 @@ class Utilities {
         
         task.resume();
     }
+    
+    
+    func returnJsonFromRestCall(restUrl:String) {
+        
+        let config = URLSessionConfiguration.default // Session Configuration
+        let session = URLSession(configuration: config) // Load configuration into Session
+        var trimmedURL = String(restUrl.characters.filter { !" \n\t\r".characters.contains($0) })
+        trimmedURL = trimmedURL.lowercased()
+        print(trimmedURL)
+        let url = URL(string: trimmedURL)!
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                print(error!.localizedDescription)
+                
+            } else {
+                
+                do {
+                    
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: AnyObject]
+                    {
+                        
+                        //Implement your logic
+                        print(json);
+                        self.jsonData = json;
+                        
+                    }
+                    
+                } catch {
+                    print("error in JSONSerialization")
+                    
+                }
+            }
+        })
+        
+        task.resume();
+    }
+
     
     
     

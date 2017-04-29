@@ -27,7 +27,7 @@
 		D309200D1C56E6C3007CF290 /* AnnouncementFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FF11C56E6C3007CF290 /* AnnouncementFilter.swift */; };
 		D309200E1C56E6C3007CF290 /* AnnouncementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FF21C56E6C3007CF290 /* AnnouncementsCell.swift */; };
 		D309200F1C56E6C3007CF290 /* AnnouncementsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FF31C56E6C3007CF290 /* AnnouncementsList.swift */; };
-		D30920101C56E6C3007CF290 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FF41C56E6C3007CF290 /* AppDelegate.swift */; };
+		D30920101C56E6C3007CF290 /* StcAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FF41C56E6C3007CF290 /* StcAppDelegate.swift */; };
 		D30920121C56E6C3007CF290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FF71C56E6C3007CF290 /* LaunchScreen.storyboard */; };
 		D30920131C56E6C3007CF290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FF91C56E6C3007CF290 /* Main.storyboard */; };
 		D30920141C56E6C3007CF290 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3091FFB1C56E6C3007CF290 /* Child.swift */; };
@@ -55,7 +55,6 @@
 		D326031B1CBDDE6000C2FB08 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031A1CBDDE6000C2FB08 /* EventKitUI.framework */; };
 		D326031D1CBDDE6B00C2FB08 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */; };
 		D326031F1CBDDE7500C2FB08 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031E1CBDDE7500C2FB08 /* MessageUI.framework */; };
-		D32603211CBDDE7D00C2FB08 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603201CBDDE7D00C2FB08 /* StoreKit.framework */; };
 		D32603231CBDDE8800C2FB08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */; };
 		D35D98481C766D3400B48C3E /* pam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D35D982D1C766D3400B48C3E /* pam.jpg */; };
 		D35D98491C766D3400B48C3E /* burr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D35D982E1C766D3400B48C3E /* burr.jpg */; };
@@ -82,8 +81,72 @@
 		D35D98601C766D3400B48C3E /* payne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D35D98451C766D3400B48C3E /* payne.jpg */; };
 		D35D98611C766D3400B48C3E /* cox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D35D98461C766D3400B48C3E /* cox.jpg */; };
 		D35E7F161D6AC31B00FE4BD2 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35E7F151D6AC31B00FE4BD2 /* GoogleMobileAds.framework */; };
+		D381B75F1EB45E43002D7CD2 /* Test_St_Catherine_School_Seattle_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381B75E1EB45E43002D7CD2 /* Test_St_Catherine_School_Seattle_Tests.swift */; };
+		D381B7B31EB51727002D7CD2 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D381B7A61EB51685002D7CD2 /* SwiftyJSON.framework */; };
+		D381B7B61EB518D0002D7CD2 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381B7B51EB518D0002D7CD2 /* RestApiManager.swift */; };
 		D3A7E24F1CBDBFB000251749 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A7E24E1CBDBFB000251749 /* GoogleMobileAds.framework */; };
+		D3B5385F1EAEEA2A00C1854D /* ClassroomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5385E1EAEEA2A00C1854D /* ClassroomsTableViewController.swift */; };
+		D3B538611EAF1D4700C1854D /* ClassroomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B538601EAF1D4700C1854D /* ClassroomDetailsViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D381B7611EB45E43002D7CD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3091FA21C56E4C6007CF290 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3091FA91C56E4C6007CF290;
+			remoteInfo = "St Catherine School Seattle";
+		};
+		D381B7A51EB51685002D7CD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D381B79A1EB51685002D7CD2 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		D381B7A71EB51685002D7CD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D381B79A1EB51685002D7CD2 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = "SwiftyJSON iOS Tests";
+		};
+		D381B7A91EB51685002D7CD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D381B79A1EB51685002D7CD2 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC5B1A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX";
+		};
+		D381B7AB1EB51685002D7CD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D381B79A1EB51685002D7CD2 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC651A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX Tests";
+		};
+		D381B7AD1EB51685002D7CD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D381B79A1EB51685002D7CD2 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4D7CCE81B9465A700EE7221;
+			remoteInfo = "SwiftyJSON watchOS";
+		};
+		D381B7AF1EB51685002D7CD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D381B79A1EB51685002D7CD2 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7236B4F61BAC14150020529B;
+			remoteInfo = "SwiftyJSON tvOS";
+		};
+		D381B7B11EB51685002D7CD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D381B79A1EB51685002D7CD2 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A8580F741BCF5C5B00DA927B;
+			remoteInfo = "SwiftyJSON tvOS Tests";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D3091FAA1C56E4C6007CF290 /* St Catherine School Seattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "St Catherine School Seattle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +171,7 @@
 		D3091FF11C56E6C3007CF290 /* AnnouncementFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementFilter.swift; sourceTree = "<group>"; };
 		D3091FF21C56E6C3007CF290 /* AnnouncementsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsCell.swift; sourceTree = "<group>"; };
 		D3091FF31C56E6C3007CF290 /* AnnouncementsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsList.swift; sourceTree = "<group>"; };
-		D3091FF41C56E6C3007CF290 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3091FF41C56E6C3007CF290 /* StcAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StcAppDelegate.swift; sourceTree = "<group>"; };
 		D3091FF81C56E6C3007CF290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3091FFA1C56E6C3007CF290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		D3091FFB1C56E6C3007CF290 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
@@ -137,7 +200,6 @@
 		D326031A1CBDDE6000C2FB08 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D326031E1CBDDE7500C2FB08 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		D32603201CBDDE7D00C2FB08 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D35D982D1C766D3400B48C3E /* pam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pam.jpg; sourceTree = "<group>"; };
 		D35D982E1C766D3400B48C3E /* burr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burr.jpg; sourceTree = "<group>"; };
@@ -164,7 +226,15 @@
 		D35D98451C766D3400B48C3E /* payne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = payne.jpg; sourceTree = "<group>"; };
 		D35D98461C766D3400B48C3E /* cox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cox.jpg; sourceTree = "<group>"; };
 		D35E7F151D6AC31B00FE4BD2 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		D381B7561EB45D2E002D7CD2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D381B75C1EB45E43002D7CD2 /* Test St Catherine School Seattle Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test St Catherine School Seattle Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D381B75E1EB45E43002D7CD2 /* Test_St_Catherine_School_Seattle_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_St_Catherine_School_Seattle_Tests.swift; sourceTree = "<group>"; };
+		D381B7601EB45E43002D7CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D381B79A1EB51685002D7CD2 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "../../../Downloads/SwiftyJSON-master 2/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
+		D381B7B51EB518D0002D7CD2 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestApiManager.swift; path = Dependencies/RestApiManager.swift; sourceTree = "<group>"; };
 		D3A7E24E1CBDBFB000251749 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "GoogleMobileAdsSdkiOS-7.7.1/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		D3B5385E1EAEEA2A00C1854D /* ClassroomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassroomsTableViewController.swift; sourceTree = "<group>"; };
+		D3B538601EAF1D4700C1854D /* ClassroomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassroomDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,9 +242,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D381B7B31EB51727002D7CD2 /* SwiftyJSON.framework in Frameworks */,
 				D35E7F161D6AC31B00FE4BD2 /* GoogleMobileAds.framework in Frameworks */,
 				D32603231CBDDE8800C2FB08 /* SystemConfiguration.framework in Frameworks */,
-				D32603211CBDDE7D00C2FB08 /* StoreKit.framework in Frameworks */,
 				D326031F1CBDDE7500C2FB08 /* MessageUI.framework in Frameworks */,
 				D326031D1CBDDE6B00C2FB08 /* MediaPlayer.framework in Frameworks */,
 				D326031B1CBDDE6000C2FB08 /* EventKitUI.framework in Frameworks */,
@@ -193,15 +263,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D381B7591EB45E43002D7CD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		D3091FA11C56E4C6007CF290 = {
 			isa = PBXGroup;
 			children = (
+				D381B79A1EB51685002D7CD2 /* SwiftyJSON.xcodeproj */,
 				D35E7F151D6AC31B00FE4BD2 /* GoogleMobileAds.framework */,
 				D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */,
-				D32603201CBDDE7D00C2FB08 /* StoreKit.framework */,
 				D326031E1CBDDE7500C2FB08 /* MessageUI.framework */,
 				D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */,
 				D326031A1CBDDE6000C2FB08 /* EventKitUI.framework */,
@@ -214,12 +291,14 @@
 				D326030C1CBDDE1B00C2FB08 /* AdSupport.framework */,
 				D3A7E24E1CBDBFB000251749 /* GoogleMobileAds.framework */,
 				D3091FAC1C56E4C6007CF290 /* St Catherine School Seattle */,
+				D381B75D1EB45E43002D7CD2 /* Test St Catherine School Seattle Tests */,
 				D3091FAB1C56E4C6007CF290 /* Products */,
 				D3091FC61C56E54A007CF290 /* TwitterKit.framework */,
 				D3091FC71C56E54A007CF290 /* TwitterKitResources.bundle */,
 				D3091FC81C56E54A007CF290 /* TwitterCore.framework */,
 				D3091FC21C56E50A007CF290 /* Fabric.framework */,
 				D3091FC31C56E50A007CF290 /* Crashlytics.framework */,
+				D381B7551EB45D2E002D7CD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				D3091FAA1C56E4C6007CF290 /* St Catherine School Seattle.app */,
+				D381B75C1EB45E43002D7CD2 /* Test St Catherine School Seattle Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,10 +314,12 @@
 		D3091FAC1C56E4C6007CF290 /* St Catherine School Seattle */ = {
 			isa = PBXGroup;
 			children = (
+				D381B7B41EB51895002D7CD2 /* dependencies */,
+				D3B5385D1EAEE4CE00C1854D /* classrooms */,
 				D3091FF11C56E6C3007CF290 /* AnnouncementFilter.swift */,
 				D3091FF21C56E6C3007CF290 /* AnnouncementsCell.swift */,
 				D3091FF31C56E6C3007CF290 /* AnnouncementsList.swift */,
-				D3091FF41C56E6C3007CF290 /* AppDelegate.swift */,
+				D3091FF41C56E6C3007CF290 /* StcAppDelegate.swift */,
 				D3091FF61C56E6C3007CF290 /* Base.lproj */,
 				D3091FFB1C56E6C3007CF290 /* Child.swift */,
 				D3091FFD1C56E6C3007CF290 /* Info.plist */,
@@ -253,7 +335,6 @@
 				D30920091C56E6C3007CF290 /* Staff.swift */,
 				D309200A1C56E6C3007CF290 /* StaffDetails.swift */,
 				D309200B1C56E6C3007CF290 /* StaffTableViewCell.swift */,
-				D309200C1C56E6C3007CF290 /* Utilities.swift */,
 				D3091FCC1C56E5A3007CF290 /* Assets */,
 				D3091FB31C56E4C6007CF290 /* Main.storyboard */,
 				D3091FB81C56E4C6007CF290 /* LaunchScreen.storyboard */,
@@ -321,6 +402,55 @@
 			name = staffPics;
 			sourceTree = "<group>";
 		};
+		D381B7551EB45D2E002D7CD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D381B7561EB45D2E002D7CD2 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D381B75D1EB45E43002D7CD2 /* Test St Catherine School Seattle Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D381B75E1EB45E43002D7CD2 /* Test_St_Catherine_School_Seattle_Tests.swift */,
+				D381B7601EB45E43002D7CD2 /* Info.plist */,
+			);
+			path = "Test St Catherine School Seattle Tests";
+			sourceTree = "<group>";
+		};
+		D381B79B1EB51685002D7CD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D381B7A61EB51685002D7CD2 /* SwiftyJSON.framework */,
+				D381B7A81EB51685002D7CD2 /* SwiftyJSON iOS Tests.xctest */,
+				D381B7AA1EB51685002D7CD2 /* SwiftyJSON.framework */,
+				D381B7AC1EB51685002D7CD2 /* SwiftyJSON OSX Tests.xctest */,
+				D381B7AE1EB51685002D7CD2 /* SwiftyJSON.framework */,
+				D381B7B01EB51685002D7CD2 /* SwiftyJSON.framework */,
+				D381B7B21EB51685002D7CD2 /* SwiftyJSON tvOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D381B7B41EB51895002D7CD2 /* dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				D309200C1C56E6C3007CF290 /* Utilities.swift */,
+				D381B7B51EB518D0002D7CD2 /* RestApiManager.swift */,
+			);
+			name = dependencies;
+			sourceTree = "<group>";
+		};
+		D3B5385D1EAEE4CE00C1854D /* classrooms */ = {
+			isa = PBXGroup;
+			children = (
+				D3B5385E1EAEEA2A00C1854D /* ClassroomsTableViewController.swift */,
+				D3B538601EAF1D4700C1854D /* ClassroomDetailsViewController.swift */,
+			);
+			name = classrooms;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -342,13 +472,31 @@
 			productReference = D3091FAA1C56E4C6007CF290 /* St Catherine School Seattle.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D381B75B1EB45E43002D7CD2 /* Test St Catherine School Seattle Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D381B7631EB45E43002D7CD2 /* Build configuration list for PBXNativeTarget "Test St Catherine School Seattle Tests" */;
+			buildPhases = (
+				D381B7581EB45E43002D7CD2 /* Sources */,
+				D381B7591EB45E43002D7CD2 /* Frameworks */,
+				D381B75A1EB45E43002D7CD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D381B7621EB45E43002D7CD2 /* PBXTargetDependency */,
+			);
+			name = "Test St Catherine School Seattle Tests";
+			productName = "Test St Catherine School Seattle Tests";
+			productReference = D381B75C1EB45E43002D7CD2 /* Test St Catherine School Seattle Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D3091FA21C56E4C6007CF290 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Joe Dog Productions";
 				TargetAttributes = {
@@ -356,6 +504,16 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = P2U22T7Y9U;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
+					D381B75B1EB45E43002D7CD2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D3091FA91C56E4C6007CF290;
 					};
 				};
 			};
@@ -370,12 +528,71 @@
 			mainGroup = D3091FA11C56E4C6007CF290;
 			productRefGroup = D3091FAB1C56E4C6007CF290 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D381B79B1EB51685002D7CD2 /* Products */;
+					ProjectRef = D381B79A1EB51685002D7CD2 /* SwiftyJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D3091FA91C56E4C6007CF290 /* St Catherine School Seattle */,
+				D381B75B1EB45E43002D7CD2 /* Test St Catherine School Seattle Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D381B7A61EB51685002D7CD2 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = D381B7A51EB51685002D7CD2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D381B7A81EB51685002D7CD2 /* SwiftyJSON iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON iOS Tests.xctest";
+			remoteRef = D381B7A71EB51685002D7CD2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D381B7AA1EB51685002D7CD2 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = D381B7A91EB51685002D7CD2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D381B7AC1EB51685002D7CD2 /* SwiftyJSON OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON OSX Tests.xctest";
+			remoteRef = D381B7AB1EB51685002D7CD2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D381B7AE1EB51685002D7CD2 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = D381B7AD1EB51685002D7CD2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D381B7B01EB51685002D7CD2 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = D381B7AF1EB51685002D7CD2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D381B7B21EB51685002D7CD2 /* SwiftyJSON tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON tvOS Tests.xctest";
+			remoteRef = D381B7B11EB51685002D7CD2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D3091FA81C56E4C6007CF290 /* Resources */ = {
@@ -425,6 +642,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D381B75A1EB45E43002D7CD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -448,10 +672,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30920101C56E6C3007CF290 /* AppDelegate.swift in Sources */,
+				D30920101C56E6C3007CF290 /* StcAppDelegate.swift in Sources */,
 				D309200E1C56E6C3007CF290 /* AnnouncementsCell.swift in Sources */,
+				D3B5385F1EAEEA2A00C1854D /* ClassroomsTableViewController.swift in Sources */,
 				D30920241C56E6C3007CF290 /* Utilities.swift in Sources */,
 				D30920191C56E6C3007CF290 /* ListOfStaff.swift in Sources */,
+				D381B7B61EB518D0002D7CD2 /* RestApiManager.swift in Sources */,
 				D309201B1C56E6C3007CF290 /* NotificationSelectionTVC.swift in Sources */,
 				D309201A1C56E6C3007CF290 /* NotificationList.swift in Sources */,
 				D309201F1C56E6C3007CF290 /* SchoolDetails.swift in Sources */,
@@ -466,10 +692,27 @@
 				D30920181C56E6C3007CF290 /* ListOfKids.swift in Sources */,
 				D30920141C56E6C3007CF290 /* Child.swift in Sources */,
 				D30920231C56E6C3007CF290 /* StaffTableViewCell.swift in Sources */,
+				D3B538611EAF1D4700C1854D /* ClassroomDetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D381B7581EB45E43002D7CD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D381B75F1EB45E43002D7CD2 /* Test_St_Catherine_School_Seattle_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D381B7621EB45E43002D7CD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3091FA91C56E4C6007CF290 /* St Catherine School Seattle */;
+			targetProxy = D381B7611EB45E43002D7CD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D3091FB31C56E4C6007CF290 /* Main.storyboard */ = {
@@ -637,6 +880,40 @@
 			};
 			name = Release;
 		};
+		D381B7641EB45E43002D7CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = "Test St Catherine School Seattle Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dberge.Test-St-Catherine-School-Seattle-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/St Catherine School Seattle.app/St Catherine School Seattle";
+			};
+			name = Debug;
+		};
+		D381B7651EB45E43002D7CD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Test St Catherine School Seattle Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dberge.Test-St-Catherine-School-Seattle-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/St Catherine School Seattle.app/St Catherine School Seattle";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -657,6 +934,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D381B7631EB45E43002D7CD2 /* Build configuration list for PBXNativeTarget "Test St Catherine School Seattle Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D381B7641EB45E43002D7CD2 /* Debug */,
+				D381B7651EB45E43002D7CD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
