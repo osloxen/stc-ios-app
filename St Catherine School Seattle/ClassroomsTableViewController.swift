@@ -10,9 +10,9 @@ import UIKit
 
 class ClassroomsTableViewController: UITableViewController {
 
-    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    var activityvaricator:UIActivityIndicatorView = UIActivityIndicatorView()
     
-    let gradesAtSchool = ["Kindergarden",
+    let gradesAtSchool = ["Kindergarten",
                           "1st Grade",
                           "2nd Grade",
                           "3rd Grade",
@@ -26,6 +26,10 @@ class ClassroomsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+
+        
+        /*
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
@@ -40,7 +44,8 @@ class ClassroomsTableViewController: UITableViewController {
             self.activityIndicator.stopAnimating()
             UIApplication.shared.endIgnoringInteractionEvents()
         }
-
+        */
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -109,7 +114,7 @@ class ClassroomsTableViewController: UITableViewController {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+ */
 
     
     // MARK: - Navigation
@@ -122,7 +127,7 @@ class ClassroomsTableViewController: UITableViewController {
         
         if segue.identifier == "showClassroomDetails" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let controller = segue.destination as! ClassroomDetailsViewController
+                let controller = segue.destination as! HomeworkDetailsTVC
                 let value = gradesAtSchool[indexPath.row]
                 controller.gradeRequested = value
             }

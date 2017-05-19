@@ -8,20 +8,43 @@
 
 import UIKit
 import TwitterKit
-import GoogleMobileAds
+import Alamofire
+import SwiftyJSON
 
 class AnnouncementsList: TWTRTimelineViewController {
     
     
-    @IBOutlet weak var bannerView: GADBannerView!
-
-
+    @IBOutlet weak var localAdText: UITextView!
+    
+    
+    func fetchAd() {
+        
+        Alamofire.request("https://tp6pumul78.execute-api.us-east-1.amazonaws.com/prod/version1/ad").responseJSON { response in
+            
+            if let MYJSON = response.result.value {
+                print("JSON: \(MYJSON)")
+                let json = JSON(MYJSON)
+                
+                self.localAdText.text = json["business"].stringValue + "\n" + json["adText"].stringValue
+                
+                self.tableView.reloadData()
+                
+                //self.activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+        
+        localAdText.text = "Loading your local ad..."
+        
+        fetchAd()
         
         self.getAllNotificationsFiltered();
         
@@ -34,19 +57,16 @@ class AnnouncementsList: TWTRTimelineViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        // Maple Leaf ads
-        bannerView.adUnitID = "ca-app-pub-7930951536016138/8110223004"
-        
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 2
     }
 
     func refresh(_ sender:AnyObject)
@@ -59,28 +79,6 @@ class AnnouncementsList: TWTRTimelineViewController {
     func getAllNotificationsFiltered() {
         
         let client = TWTRAPIClient();
-        
-        /* ONLY CAPTURES TIMELINE DATA (OUT IN VERSION 1.2)
-        self.dataSource = TWTRUserTimelineDataSource(screenName: "St_Cath_Seattle", APIClient: client);
-        */
-        
- 
-        /*
-        let filter = AnnouncementsFilter()
-        
-        let filteredSearchQuery = filter.getFinalSearchString()
-
-        
-        if filteredSearchQuery != "" {
-            
-            self.dataSource = TWTRSearchTimelineDataSource(searchQuery: filteredSearchQuery, APIClient: client)
-        } else {
-            self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "stcgeneral", APIClient: client)
-        }
-        */
-
-// As of 1/10/17 the search feature does not work for the St Catherine account.  This is no change from 6 months ago.  Need to change to streaming the tweets maybe?
-//        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "4th grade on location at the Capitol", apiClient: client)
         
         // Work Around --> Just show the St Catherine timeline
         self.dataSource = TWTRUserTimelineDataSource(screenName: "St_Cath_Seattle", apiClient: client)

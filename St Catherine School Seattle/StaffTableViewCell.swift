@@ -10,8 +10,6 @@ import UIKit
 
 class StaffTableViewCell: UITableViewCell {
     
-    
-    @IBOutlet weak var staffImage: UIImageView!
 
     @IBOutlet weak var staffName: UILabel!
 

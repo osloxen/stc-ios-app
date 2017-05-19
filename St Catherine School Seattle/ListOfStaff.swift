@@ -7,15 +7,82 @@
 //
 
 import UIKit
-import GoogleMobileAds
+import SwiftyJSON
+import Alamofire
 
 class ListOfStaff: UITableViewController {
+    
+    var staffListFromRest:JSON = JSON.null
+    
+    var arrayOfSchoolStaff: [staffMember] = []
+    
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    struct staffMember {
+        var lastName:String
+        var firstName:String
+        var title:String
+        var website:String
+        var email:String
+    }
+    
+    
+    func fetchStaff() {
+        
+        let restApiManager = RestApiManager();
+        
+        let urlForClassHomework = restApiManager.getAllStaffUrl()
+        
+        print("*******************")
+        print("*******************")
+        print("*******************")
+        print("*******************")
+        print("*******************")
+        print(urlForClassHomework)
+        print("*******************")
+        print("*******************")
+        print("*******************")
+        print("*******************")
+        
+        Alamofire.request(urlForClassHomework).responseJSON { response in
+            //print(response.request as Any)  // original URL request
+            //print(response.response as Any) // HTTP URL response
+            //print(response.data as Any)     // server data
+            //print(response.result)   // result of response serialization
+            
+            if let MYJSON = response.result.value {
+                print("JSON: \(MYJSON)")
+                self.staffListFromRest = JSON(MYJSON)
+                
+                for (_, object) in self.staffListFromRest["staffList"] {
+                    let currentStaff: staffMember = staffMember(lastName: object["lastName"].stringValue, firstName: object["firstName"].stringValue, title: object["title"].stringValue, website: object["website"].stringValue, email: object["email"].stringValue)
+                    self.arrayOfSchoolStaff.append(currentStaff)
+                }
+                
+                self.activityIndicator.stopAnimating()
+                self.tableView.reloadData()
+                
+            } else {
+                //self.classHomeworkReminders["errorMessage"] = "Could not get JSON from Rest API" +
+                    //"using url " + urlForClassHomework
+            }
+        }
+        
+    }
 
-    var staffList: [Staff] = []
+    func startActivityIndicatorProcess(activityIndicator:UIActivityIndicatorView) {
+        
+        
+
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+ 
+        //UIApplication.shared.beginIgnoringInteractionEvents()
+    }
     
-    let staff = Staff()
-    
-    @IBOutlet weak var bannerView: GADBannerView!
     
         
     override func viewDidLoad() {
@@ -23,17 +90,13 @@ class ListOfStaff: UITableViewController {
         
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
         
+        startActivityIndicatorProcess(activityIndicator: activityIndicator)
+        
         tableView.delegate = self
         tableView.dataSource = self
-
-        staffList = staff.getAllStaff()
-                
-        // Maple Leaf ads
-        bannerView.adUnitID = "ca-app-pub-7930951536016138/8110223004"
         
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-
+        fetchStaff()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +113,12 @@ class ListOfStaff: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return staffList.count
+        //return staffList.count
+        
+        if self.staffListFromRest == JSON.null {
+            return 0
+        }
+        return self.staffListFromRest["staffList"].count
     }
 
     
@@ -60,14 +128,13 @@ class ListOfStaff: UITableViewController {
         let row = (indexPath as NSIndexPath).row
         
         // Configure the cell...
-        cell.staffName.text = staffList[row].name
-        cell.lastName.text = staffList[row].lastName
-        cell.staffTitle.text  = staffList[row].title
-        
-        if staffList[row].imageData != nil {
-            cell.staffImage.image = staffList[row].imageData
-        }
 
+        
+        cell.lastName.text = self.arrayOfSchoolStaff[row].lastName
+        cell.staffName.text = self.arrayOfSchoolStaff[row].firstName
+        cell.staffTitle.text  = self.arrayOfSchoolStaff[row].title
+        
+        
         return cell
     }
 
@@ -119,13 +186,13 @@ class ListOfStaff: UITableViewController {
             if let destination = segue.destination as? StaffDetails {
                 let indexPath = self.tableView.indexPathForSelectedRow;
                 
-                let staffMember = staffList[(indexPath! as NSIndexPath).row]
-                destination.currentStaffMember.name      = staffMember.name
-                destination.currentStaffMember.lastName  = staffMember.lastName
-                destination.currentStaffMember.title     = staffMember.title
-                destination.currentStaffMember.imageData = staffMember.imageData
-                destination.currentStaffMember.website   = staffMember.website
-                destination.currentStaffMember.email     = staffMember.email
+//                let staffMember = staffList[(indexPath! as NSIndexPath).row]
+                let viewThisStaffMemberDetails = self.arrayOfSchoolStaff[(indexPath! as NSIndexPath).row]
+                destination.currentStaffMember.name      = viewThisStaffMemberDetails.firstName
+                destination.currentStaffMember.lastName  = viewThisStaffMemberDetails.lastName
+                destination.currentStaffMember.title     = viewThisStaffMemberDetails.title
+                destination.currentStaffMember.website   = viewThisStaffMemberDetails.website
+                destination.currentStaffMemberEmail      = viewThisStaffMemberDetails.email
             }
         }
 

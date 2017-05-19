@@ -14,9 +14,12 @@ class StaffDetails: UIViewController {
     @IBOutlet weak var staffName: UILabel!
     @IBOutlet weak var staffLastName: UILabel!
     @IBOutlet weak var staffTitle: UILabel!
-    @IBOutlet weak var staffImage: UIImageView!
+    
+
     
     var currentStaffMember = Staff()
+    
+    var currentStaffMemberEmail = "not set"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +30,6 @@ class StaffDetails: UIViewController {
         staffName.text = currentStaffMember.name
         staffLastName.text = currentStaffMember.lastName
         staffTitle.text = currentStaffMember.title
-        staffImage.image = currentStaffMember.imageData
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,10 +52,20 @@ class StaffDetails: UIViewController {
     
     
     @IBAction func sendEmailToStaff(_ sender: AnyObject) {
+        //print(currentStaffMemberEmail)
         
-        UIApplication.shared.openURL(URL(string: "mailto:" + currentStaffMember.email!)!)
+        //UIApplication.shared.openURL(URL(string: "mailto:" + currentStaffMemberEmail)!)
+        
+        let coded = "mailto:"+currentStaffMemberEmail
+        
+        if let emailURL:NSURL = NSURL(string: coded)
+        {
+            if UIApplication.shared.canOpenURL(emailURL as URL)
+            {
+                UIApplication.shared.openURL(emailURL as URL)
+            }
+        }
     }
-    
     /*
     // MARK: - Navigation
 
