@@ -383,16 +383,16 @@ Seattle, WA 98115</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading your local ad..." textAlignment="center" selectable="NO" id="FkJ-nO-GbK">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <textView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Loading your local ad..." textAlignment="center" selectable="NO" id="FkJ-nO-GbK">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
                         </textView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="twitterCell" id="YvS-4F-gFw">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="101" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YvS-4F-gFw" id="I1s-yb-6Ey">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -413,7 +413,7 @@ Seattle, WA 98115</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2i-Ud-Snu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="1012"/>
+            <point key="canvasLocation" x="-58.5" y="1011.5"/>
         </scene>
         <!--Classrooms-->
         <scene sceneID="3QC-eN-82n">
@@ -434,7 +434,7 @@ Seattle, WA 98115</string>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="INa-1v-fIA">
                                             <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -486,15 +486,15 @@ Seattle, WA 98115</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading Local Ad" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxc-ue-S6W" userLabel="Ad Title">
-                                            <rect key="frame" x="14" y="41" width="347" height="21"/>
+                                            <rect key="frame" x="14" y="8" width="347" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading local ad text..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ni0-Ry-oh8" userLabel="Ad Text">
-                                            <rect key="frame" x="14" y="42" width="347" height="18"/>
-                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                            <rect key="frame" x="87" y="38" width="200" height="24"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -507,11 +507,12 @@ Seattle, WA 98115</string>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="v3Q-b3-Cgb" firstAttribute="leading" secondItem="5Ku-gc-p0J" secondAttribute="leadingMargin" constant="6" id="3nk-Vp-HoO"/>
+                                        <constraint firstItem="ni0-Ry-oh8" firstAttribute="leading" secondItem="5Ku-gc-p0J" secondAttribute="leadingMargin" constant="79" id="982-fv-aYe"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="v3Q-b3-Cgb" secondAttribute="trailing" constant="6" id="9kl-aO-QYH"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="ni0-Ry-oh8" secondAttribute="trailing" constant="6" id="U3x-ZW-uJS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ni0-Ry-oh8" secondAttribute="bottom" constant="31" id="Qwi-jZ-cH0"/>
+                                        <constraint firstItem="ni0-Ry-oh8" firstAttribute="top" secondItem="5Ku-gc-p0J" secondAttribute="topMargin" constant="30" id="X5R-O3-ZBH"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ni0-Ry-oh8" secondAttribute="trailing" constant="80" id="gFt-P5-FZR"/>
                                         <constraint firstItem="v3Q-b3-Cgb" firstAttribute="centerY" secondItem="5Ku-gc-p0J" secondAttribute="centerY" id="yWC-hg-BWR"/>
-                                        <constraint firstItem="ni0-Ry-oh8" firstAttribute="leading" secondItem="5Ku-gc-p0J" secondAttribute="leadingMargin" constant="6" id="yYG-fu-yDk"/>
-                                        <constraint firstItem="ni0-Ry-oh8" firstAttribute="centerY" secondItem="5Ku-gc-p0J" secondAttribute="centerY" id="zYX-r1-m9z"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

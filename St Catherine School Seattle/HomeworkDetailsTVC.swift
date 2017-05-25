@@ -92,7 +92,7 @@ class HomeworkDetailsTVC: UITableViewController {
                 self.classHomeworkReminders["classroomProject"] = json["classroomProject"].stringValue
                 self.classHomeworkReminders["nextFieldTrip"] = json["nextFieldTrip"].stringValue
                 
-                self.tableView.estimatedRowHeight = 150.0
+                self.tableView.estimatedRowHeight = 300.0
                 self.tableView.rowHeight = UITableViewAutomaticDimension
                 
                 self.reloadTableViewData()
@@ -120,7 +120,7 @@ class HomeworkDetailsTVC: UITableViewController {
         
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
         
-        tableView.estimatedRowHeight = 150.0
+        tableView.estimatedRowHeight = 300.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
         fetchAd()

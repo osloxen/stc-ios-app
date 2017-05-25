@@ -15,8 +15,6 @@ class NotificationSelectionTVC: UITableViewController {
     
     var updatedNotificationList : Set<String> = []
     
-    var childNotificationSelection = Child()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -141,52 +139,9 @@ class NotificationSelectionTVC: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-//        print(updatedNotificationList)
-        
-        let utilities = Utilities()
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        utilities.updateKidNotifications(childNotificationSelection, notificationList: updatedNotificationList, appDelegate: appDelegate)
-        
-        if let destination = segue.destination as? SaveKidDetails {
-            destination.countOfSubscriptions = updatedNotificationList.count
-        }
-    
-    
-    }
-
-
-    func setNotificationsList() -> [String] {
-        
-        let notificationList : [String] = [
-            "Soccer",
-            "Basketball",
-            "Band",
-            "Drama",
-            "Speech",
-            "Volleyball",
-            "French Club",
-            "Science",
-            "Spanish",
-            "Extended Care",
-            "Study Hall",
-            "Choir",
-            "Coding",
-            "Chess Club",
-            "Math Club",
-            "Friends of the Orphans",
-            "Track",
-            "Cross Country",
-            "Volunteer Opportunities"
-        ]
-        
-        return notificationList
-    }
 
 
     

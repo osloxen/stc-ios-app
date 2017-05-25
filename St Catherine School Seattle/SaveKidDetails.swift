@@ -239,7 +239,7 @@ class SaveKidDetails: UIViewController,UIImagePickerControllerDelegate,UINavigat
         } else {
             
             let utilities = Utilities()
-            let result = utilities.saveChildBeforeContinuing(self.currentChild)
+            _ = utilities.saveChildBeforeContinuing(self.currentChild)
             let destinationVC = segue.destination as! NotificationSelectionTVC;
             destinationVC.childNotificationSelection = self.currentChild
 

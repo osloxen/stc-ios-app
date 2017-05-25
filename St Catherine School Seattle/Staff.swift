@@ -46,7 +46,7 @@ class Staff {
     
     func getStaffFromCloud() -> [Staff] {
         
-        var allStaffMembers: [Staff] = []
+        let allStaffMembers: [Staff] = []
         
         
         

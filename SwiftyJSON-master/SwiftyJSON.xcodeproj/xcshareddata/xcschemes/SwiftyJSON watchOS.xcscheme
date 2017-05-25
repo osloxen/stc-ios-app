@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3091FA91C56E4C6007CF290"
-               BuildableName = "St Catherine School Seattle.app"
-               BlueprintName = "St Catherine School Seattle"
-               ReferencedContainer = "container:St Catherine School Seattle.xcodeproj">
+               BlueprintIdentifier = "E4D7CCDE1B9465A700EE7221"
+               BuildableName = "SwiftyJSON.framework"
+               BlueprintName = "SwiftyJSON watchOS"
+               ReferencedContainer = "container:SwiftyJSON.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D381B75B1EB45E43002D7CD2"
-               BuildableName = "Test St Catherine School Seattle Tests.xctest"
-               BlueprintName = "Test St Catherine School Seattle Tests"
-               ReferencedContainer = "container:St Catherine School Seattle.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3091FA91C56E4C6007CF290"
-            BuildableName = "St Catherine School Seattle.app"
-            BlueprintName = "St Catherine School Seattle"
-            ReferencedContainer = "container:St Catherine School Seattle.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3091FA91C56E4C6007CF290"
-            BuildableName = "St Catherine School Seattle.app"
-            BlueprintName = "St Catherine School Seattle"
-            ReferencedContainer = "container:St Catherine School Seattle.xcodeproj">
+            BlueprintIdentifier = "E4D7CCDE1B9465A700EE7221"
+            BuildableName = "SwiftyJSON.framework"
+            BlueprintName = "SwiftyJSON watchOS"
+            ReferencedContainer = "container:SwiftyJSON.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3091FA91C56E4C6007CF290"
-            BuildableName = "St Catherine School Seattle.app"
-            BlueprintName = "St Catherine School Seattle"
-            ReferencedContainer = "container:St Catherine School Seattle.xcodeproj">
+            BlueprintIdentifier = "E4D7CCDE1B9465A700EE7221"
+            BuildableName = "SwiftyJSON.framework"
+            BlueprintName = "SwiftyJSON watchOS"
+            ReferencedContainer = "container:SwiftyJSON.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
