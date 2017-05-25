@@ -61,6 +61,10 @@
 		D382B3C01EBD493F00E4EE8A /* HomeworkDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382B3BF1EBD493F00E4EE8A /* HomeworkDetailsCell.swift */; };
 		D3B5385F1EAEEA2A00C1854D /* ClassroomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5385E1EAEEA2A00C1854D /* ClassroomsTableViewController.swift */; };
 		D3B538611EAF1D4700C1854D /* ClassroomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B538601EAF1D4700C1854D /* ClassroomDetailsViewController.swift */; };
+		D3C385981ED6B86700123625 /* apple-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C385971ED6B86700123625 /* apple-25.png */; };
+		D3C385A81ED6B88100123625 /* megaphone-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C385A71ED6B88100123625 /* megaphone-25.png */; };
+		D3C385AA1ED6B8CD00123625 /* megaphone-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C385A91ED6B8CD00123625 /* megaphone-25.png */; };
+		D3C385AC1ED6B8D900123625 /* apple-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C385AB1ED6B8D900123625 /* apple-25.png */; };
 		D3F721571ED29C1D0075629F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D7D26C1ED29B4C00430AAB /* SwiftyJSON.framework */; };
 		D3F721581ED29C1D0075629F /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3D7D26C1ED29B4C00430AAB /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -260,6 +264,10 @@
 		D382B3BF1EBD493F00E4EE8A /* HomeworkDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkDetailsCell.swift; sourceTree = "<group>"; };
 		D3B5385E1EAEEA2A00C1854D /* ClassroomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassroomsTableViewController.swift; sourceTree = "<group>"; };
 		D3B538601EAF1D4700C1854D /* ClassroomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassroomDetailsViewController.swift; sourceTree = "<group>"; };
+		D3C385971ED6B86700123625 /* apple-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "apple-25.png"; path = "St Catherine School Seattle/Assets/apple-25.png"; sourceTree = SOURCE_ROOT; };
+		D3C385A71ED6B88100123625 /* megaphone-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "megaphone-25.png"; path = "St Catherine School Seattle/Assets/megaphone-25.png"; sourceTree = SOURCE_ROOT; };
+		D3C385A91ED6B8CD00123625 /* megaphone-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "megaphone-25.png"; sourceTree = "<group>"; };
+		D3C385AB1ED6B8D900123625 /* apple-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-25.png"; sourceTree = "<group>"; };
 		D3D7D2601ED29B4C00430AAB /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -360,7 +368,8 @@
 		D3091FCC1C56E5A3007CF290 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				D35D982C1C766CFE00B48C3E /* staffPics */,
+				D3C385AB1ED6B8D900123625 /* apple-25.png */,
+				D3C385A91ED6B8CD00123625 /* megaphone-25.png */,
 				D3091FCD1C56E5A3007CF290 /* chat_filled-25.png */,
 				D3091FD11C56E5A3007CF290 /* questionMark.png */,
 				D3091FD21C56E5A3007CF290 /* staff-25.png */,
@@ -381,6 +390,8 @@
 			children = (
 				D3091FF71C56E6C3007CF290 /* LaunchScreen.storyboard */,
 				D3091FF91C56E6C3007CF290 /* Main.storyboard */,
+				D3C385A71ED6B88100123625 /* megaphone-25.png */,
+				D3C385971ED6B86700123625 /* apple-25.png */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -394,13 +405,6 @@
 				D30920001C56E6C3007CF290 /* ListOfStaff.swift */,
 			);
 			name = staff;
-			sourceTree = "<group>";
-		};
-		D35D982C1C766CFE00B48C3E /* staffPics */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = staffPics;
 			sourceTree = "<group>";
 		};
 		D381B7551EB45D2E002D7CD2 /* Frameworks */ = {
@@ -685,11 +689,14 @@
 			files = (
 				D3091FEF1C56E5A3007CF290 /* student-25.png in Resources */,
 				D30920131C56E6C3007CF290 /* Main.storyboard in Resources */,
+				D3C385AA1ED6B8CD00123625 /* megaphone-25.png in Resources */,
 				D31FE6901CA310E600233E64 /* Assets.xcassets in Resources */,
+				D3C385A81ED6B88100123625 /* megaphone-25.png in Resources */,
 				D3091FEA1C56E5A3007CF290 /* StCicon152x152-01.png in Resources */,
 				D3091FCA1C56E54A007CF290 /* TwitterKitResources.bundle in Resources */,
 				D3091FE91C56E5A3007CF290 /* stCicon120x120.png in Resources */,
 				D30920121C56E6C3007CF290 /* LaunchScreen.storyboard in Resources */,
+				D3C385AC1ED6B8D900123625 /* apple-25.png in Resources */,
 				D3091FE41C56E5A3007CF290 /* staff-25.png in Resources */,
 				D3091FDF1C56E5A3007CF290 /* chat_filled-25.png in Resources */,
 				D3091FBA1C56E4C6007CF290 /* LaunchScreen.storyboard in Resources */,
@@ -699,6 +706,7 @@
 				D3091FE31C56E5A3007CF290 /* questionMark.png in Resources */,
 				D3091FF01C56E5A3007CF290 /* warehouse_filled-25.png in Resources */,
 				D3091FEE1C56E5A3007CF290 /* StCicons87x87-01.png in Resources */,
+				D3C385981ED6B86700123625 /* apple-25.png in Resources */,
 				D3091FB51C56E4C6007CF290 /* Main.storyboard in Resources */,
 				D3091FE71C56E5A3007CF290 /* stcBuilding_skinny.jpg in Resources */,
 			);
@@ -918,7 +926,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.7.1",
 				);
 				INFOPLIST_FILE = "St Catherine School Seattle/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -941,7 +948,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.7.1",
 				);
 				INFOPLIST_FILE = "St Catherine School Seattle/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
