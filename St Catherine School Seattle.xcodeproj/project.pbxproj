@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30440621F665BDE00D082D3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30440611F665BDE00D082D3 /* TableViewCell.swift */; };
+		D304641F1F4F2C4D0056C204 /* ShowEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304641E1F4F2C4D0056C204 /* ShowEventsCell.swift */; };
 		D3091FB51C56E4C6007CF290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FB31C56E4C6007CF290 /* Main.storyboard */; };
 		D3091FBA1C56E4C6007CF290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FB81C56E4C6007CF290 /* LaunchScreen.storyboard */; };
 		D3091FC41C56E50A007CF290 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3091FC21C56E50A007CF290 /* Fabric.framework */; };
@@ -41,6 +43,11 @@
 		D30920241C56E6C3007CF290 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309200C1C56E6C3007CF290 /* Utilities.swift */; };
 		D317DD131ED3FB6F00182575 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D317DD121ED3FB6F00182575 /* Info.plist */; };
 		D317DD151ED3FD8800182575 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D317DD141ED3FD8800182575 /* Default-568h@2x.png */; };
+		D31D8DD71F38E304007E5669 /* HomeworkDayDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D8DD61F38E304007E5669 /* HomeworkDayDetailsTableViewCell.swift */; };
+		D31D8DE71F3910CE007E5669 /* running_filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D31D8DE61F3910CE007E5669 /* running_filled-25.png */; };
+		D31D8DEA1F391333007E5669 /* ListSportsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D8DE91F391333007E5669 /* ListSportsTVC.swift */; };
+		D31D8DEC1F3915A0007E5669 /* GradesBySportTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D8DEB1F3915A0007E5669 /* GradesBySportTVC.swift */; };
+		D31D8DEE1F391DA0007E5669 /* SportsScheduleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D8DED1F391DA0007E5669 /* SportsScheduleTVC.swift */; };
 		D31FE6901CA310E600233E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31FE68F1CA310E600233E64 /* Assets.xcassets */; };
 		D326030D1CBDDE1B00C2FB08 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326030C1CBDDE1B00C2FB08 /* AdSupport.framework */; };
 		D326030F1CBDDE2600C2FB08 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326030E1CBDDE2600C2FB08 /* AudioToolbox.framework */; };
@@ -53,12 +60,19 @@
 		D326031D1CBDDE6B00C2FB08 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */; };
 		D326031F1CBDDE7500C2FB08 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031E1CBDDE7500C2FB08 /* MessageUI.framework */; };
 		D32603231CBDDE8800C2FB08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */; };
+		D3513C351F4A9BD000ACBF31 /* LunchDatesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3513C341F4A9BD000ACBF31 /* LunchDatesTVC.swift */; };
+		D3513C381F4D643D00ACBF31 /* ShowEventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3513C371F4D643D00ACBF31 /* ShowEventsTVC.swift */; };
+		D359A36F1F3BBA4000F4AD82 /* SportsEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359A36E1F3BBA4000F4AD82 /* SportsEventCell.swift */; };
+		D36FC3241F343AF200132DED /* marker_pen_filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D36FC3231F343AF200132DED /* marker_pen_filled-25.png */; };
+		D36FC3341F34482900132DED /* HomeworkDatesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FC3331F34482900132DED /* HomeworkDatesTVC.swift */; };
 		D381B75F1EB45E43002D7CD2 /* Test_St_Catherine_School_Seattle_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381B75E1EB45E43002D7CD2 /* Test_St_Catherine_School_Seattle_Tests.swift */; };
 		D381B7B61EB518D0002D7CD2 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381B7B51EB518D0002D7CD2 /* RestApiManager.swift */; };
 		D381B7E91EB55209002D7CD2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D381B7DC1EB5517D002D7CD2 /* Alamofire.framework */; };
 		D381B7EA1EB55209002D7CD2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D381B7DC1EB5517D002D7CD2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D382B3AF1EBC435800E4EE8A /* HomeworkDetailsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382B3AE1EBC435800E4EE8A /* HomeworkDetailsTVC.swift */; };
 		D382B3C01EBD493F00E4EE8A /* HomeworkDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382B3BF1EBD493F00E4EE8A /* HomeworkDetailsCell.swift */; };
+		D3A93E581F66100100464A1A /* RegistrationAnnouncement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A93E571F66100100464A1A /* RegistrationAnnouncement.swift */; };
+		D3A93E5A1F6613C600464A1A /* SportsRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A93E591F6613C600464A1A /* SportsRegistrationVC.swift */; };
 		D3B5385F1EAEEA2A00C1854D /* ClassroomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5385E1EAEEA2A00C1854D /* ClassroomsTableViewController.swift */; };
 		D3B538611EAF1D4700C1854D /* ClassroomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B538601EAF1D4700C1854D /* ClassroomDetailsViewController.swift */; };
 		D3C385981ED6B86700123625 /* apple-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C385971ED6B86700123625 /* apple-25.png */; };
@@ -207,6 +221,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D30440611F665BDE00D082D3 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D304641E1F4F2C4D0056C204 /* ShowEventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventsCell.swift; sourceTree = "<group>"; };
 		D3091FAA1C56E4C6007CF290 /* St Catherine School Seattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "St Catherine School Seattle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3091FB41C56E4C6007CF290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3091FB91C56E4C6007CF290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -242,6 +258,11 @@
 		D309200C1C56E6C3007CF290 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		D317DD121ED3FB6F00182575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "St Catherine School Seattle/Info.plist"; sourceTree = "<group>"; };
 		D317DD141ED3FD8800182575 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D31D8DD61F38E304007E5669 /* HomeworkDayDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkDayDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		D31D8DE61F3910CE007E5669 /* running_filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running_filled-25.png"; sourceTree = "<group>"; };
+		D31D8DE91F391333007E5669 /* ListSportsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSportsTVC.swift; sourceTree = "<group>"; };
+		D31D8DEB1F3915A0007E5669 /* GradesBySportTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesBySportTVC.swift; sourceTree = "<group>"; };
+		D31D8DED1F391DA0007E5669 /* SportsScheduleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsScheduleTVC.swift; sourceTree = "<group>"; };
 		D31FE68F1CA310E600233E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D326030C1CBDDE1B00C2FB08 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		D326030E1CBDDE2600C2FB08 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -254,6 +275,11 @@
 		D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D326031E1CBDDE7500C2FB08 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D3513C341F4A9BD000ACBF31 /* LunchDatesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchDatesTVC.swift; sourceTree = "<group>"; };
+		D3513C371F4D643D00ACBF31 /* ShowEventsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventsTVC.swift; sourceTree = "<group>"; };
+		D359A36E1F3BBA4000F4AD82 /* SportsEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsEventCell.swift; sourceTree = "<group>"; };
+		D36FC3231F343AF200132DED /* marker_pen_filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker_pen_filled-25.png"; sourceTree = "<group>"; };
+		D36FC3331F34482900132DED /* HomeworkDatesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkDatesTVC.swift; sourceTree = "<group>"; };
 		D381B7561EB45D2E002D7CD2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D381B75C1EB45E43002D7CD2 /* Test St Catherine School Seattle Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test St Catherine School Seattle Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D381B75E1EB45E43002D7CD2 /* Test_St_Catherine_School_Seattle_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_St_Catherine_School_Seattle_Tests.swift; sourceTree = "<group>"; };
@@ -262,6 +288,8 @@
 		D381B7D01EB5517D002D7CD2 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		D382B3AE1EBC435800E4EE8A /* HomeworkDetailsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeworkDetailsTVC.swift; path = "St Catherine School Seattle/HomeworkDetailsTVC.swift"; sourceTree = SOURCE_ROOT; };
 		D382B3BF1EBD493F00E4EE8A /* HomeworkDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkDetailsCell.swift; sourceTree = "<group>"; };
+		D3A93E571F66100100464A1A /* RegistrationAnnouncement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationAnnouncement.swift; sourceTree = "<group>"; };
+		D3A93E591F6613C600464A1A /* SportsRegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsRegistrationVC.swift; sourceTree = "<group>"; };
 		D3B5385E1EAEEA2A00C1854D /* ClassroomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassroomsTableViewController.swift; sourceTree = "<group>"; };
 		D3B538601EAF1D4700C1854D /* ClassroomDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassroomDetailsViewController.swift; sourceTree = "<group>"; };
 		D3C385971ED6B86700123625 /* apple-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "apple-25.png"; path = "St Catherine School Seattle/Assets/apple-25.png"; sourceTree = SOURCE_ROOT; };
@@ -348,6 +376,9 @@
 		D3091FAC1C56E4C6007CF290 /* St Catherine School Seattle */ = {
 			isa = PBXGroup;
 			children = (
+				D3513C361F4D63F300ACBF31 /* Events */,
+				D3513C251F4A9BA300ACBF31 /* Lunch */,
+				D31D8DE81F3912D6007E5669 /* CYO Sports */,
 				D3D7D2581ECC247B00430AAB /* Twitter */,
 				D348995D1EC405050045D4FB /* staff */,
 				D3B5385D1EAEE4CE00C1854D /* classrooms */,
@@ -368,6 +399,10 @@
 		D3091FCC1C56E5A3007CF290 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D3C385971ED6B86700123625 /* apple-25.png */,
+				D3C385A71ED6B88100123625 /* megaphone-25.png */,
+				D31D8DE61F3910CE007E5669 /* running_filled-25.png */,
+				D36FC3231F343AF200132DED /* marker_pen_filled-25.png */,
 				D3C385AB1ED6B8D900123625 /* apple-25.png */,
 				D3C385A91ED6B8CD00123625 /* megaphone-25.png */,
 				D3091FCD1C56E5A3007CF290 /* chat_filled-25.png */,
@@ -390,10 +425,21 @@
 			children = (
 				D3091FF71C56E6C3007CF290 /* LaunchScreen.storyboard */,
 				D3091FF91C56E6C3007CF290 /* Main.storyboard */,
-				D3C385A71ED6B88100123625 /* megaphone-25.png */,
-				D3C385971ED6B86700123625 /* apple-25.png */,
 			);
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		D31D8DE81F3912D6007E5669 /* CYO Sports */ = {
+			isa = PBXGroup;
+			children = (
+				D31D8DE91F391333007E5669 /* ListSportsTVC.swift */,
+				D31D8DEB1F3915A0007E5669 /* GradesBySportTVC.swift */,
+				D31D8DED1F391DA0007E5669 /* SportsScheduleTVC.swift */,
+				D359A36E1F3BBA4000F4AD82 /* SportsEventCell.swift */,
+				D3A93E571F66100100464A1A /* RegistrationAnnouncement.swift */,
+				D3A93E591F6613C600464A1A /* SportsRegistrationVC.swift */,
+			);
+			name = "CYO Sports";
 			sourceTree = "<group>";
 		};
 		D348995D1EC405050045D4FB /* staff */ = {
@@ -405,6 +451,24 @@
 				D30920001C56E6C3007CF290 /* ListOfStaff.swift */,
 			);
 			name = staff;
+			sourceTree = "<group>";
+		};
+		D3513C251F4A9BA300ACBF31 /* Lunch */ = {
+			isa = PBXGroup;
+			children = (
+				D3513C341F4A9BD000ACBF31 /* LunchDatesTVC.swift */,
+				D30440611F665BDE00D082D3 /* TableViewCell.swift */,
+			);
+			name = Lunch;
+			sourceTree = "<group>";
+		};
+		D3513C361F4D63F300ACBF31 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				D3513C371F4D643D00ACBF31 /* ShowEventsTVC.swift */,
+				D304641E1F4F2C4D0056C204 /* ShowEventsCell.swift */,
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 		D381B7551EB45D2E002D7CD2 /* Frameworks */ = {
@@ -453,7 +517,9 @@
 				D3B5385E1EAEEA2A00C1854D /* ClassroomsTableViewController.swift */,
 				D3B538601EAF1D4700C1854D /* ClassroomDetailsViewController.swift */,
 				D382B3AE1EBC435800E4EE8A /* HomeworkDetailsTVC.swift */,
+				D36FC3331F34482900132DED /* HomeworkDatesTVC.swift */,
 				D382B3BF1EBD493F00E4EE8A /* HomeworkDetailsCell.swift */,
+				D31D8DD61F38E304007E5669 /* HomeworkDayDetailsTableViewCell.swift */,
 			);
 			name = classrooms;
 			sourceTree = "<group>";
@@ -697,7 +763,9 @@
 				D3091FE91C56E5A3007CF290 /* stCicon120x120.png in Resources */,
 				D30920121C56E6C3007CF290 /* LaunchScreen.storyboard in Resources */,
 				D3C385AC1ED6B8D900123625 /* apple-25.png in Resources */,
+				D36FC3241F343AF200132DED /* marker_pen_filled-25.png in Resources */,
 				D3091FE41C56E5A3007CF290 /* staff-25.png in Resources */,
+				D31D8DE71F3910CE007E5669 /* running_filled-25.png in Resources */,
 				D3091FDF1C56E5A3007CF290 /* chat_filled-25.png in Resources */,
 				D3091FBA1C56E4C6007CF290 /* LaunchScreen.storyboard in Resources */,
 				D317DD131ED3FB6F00182575 /* Info.plist in Resources */,
@@ -745,21 +813,33 @@
 				D30920101C56E6C3007CF290 /* StcAppDelegate.swift in Sources */,
 				D309200E1C56E6C3007CF290 /* AnnouncementsCell.swift in Sources */,
 				D3B5385F1EAEEA2A00C1854D /* ClassroomsTableViewController.swift in Sources */,
+				D36FC3341F34482900132DED /* HomeworkDatesTVC.swift in Sources */,
 				D30920241C56E6C3007CF290 /* Utilities.swift in Sources */,
 				D30920191C56E6C3007CF290 /* ListOfStaff.swift in Sources */,
 				D381B7B61EB518D0002D7CD2 /* RestApiManager.swift in Sources */,
 				D309201A1C56E6C3007CF290 /* NotificationList.swift in Sources */,
 				D309201F1C56E6C3007CF290 /* SchoolDetails.swift in Sources */,
 				D309201E1C56E6C3007CF290 /* SchoolDataModel.xcdatamodeld in Sources */,
+				D3A93E5A1F6613C600464A1A /* SportsRegistrationVC.swift in Sources */,
 				D309200D1C56E6C3007CF290 /* AnnouncementFilter.swift in Sources */,
+				D3A93E581F66100100464A1A /* RegistrationAnnouncement.swift in Sources */,
 				D30920221C56E6C3007CF290 /* StaffDetails.swift in Sources */,
 				D309201C1C56E6C3007CF290 /* PinsOnMap.swift in Sources */,
+				D30440621F665BDE00D082D3 /* TableViewCell.swift in Sources */,
+				D31D8DEC1F3915A0007E5669 /* GradesBySportTVC.swift in Sources */,
+				D31D8DEE1F391DA0007E5669 /* SportsScheduleTVC.swift in Sources */,
+				D3513C351F4A9BD000ACBF31 /* LunchDatesTVC.swift in Sources */,
 				D30920211C56E6C3007CF290 /* Staff.swift in Sources */,
 				D309200F1C56E6C3007CF290 /* AnnouncementsList.swift in Sources */,
+				D31D8DD71F38E304007E5669 /* HomeworkDayDetailsTableViewCell.swift in Sources */,
+				D3513C381F4D643D00ACBF31 /* ShowEventsTVC.swift in Sources */,
 				D382B3C01EBD493F00E4EE8A /* HomeworkDetailsCell.swift in Sources */,
+				D31D8DEA1F391333007E5669 /* ListSportsTVC.swift in Sources */,
 				D30920231C56E6C3007CF290 /* StaffTableViewCell.swift in Sources */,
+				D359A36F1F3BBA4000F4AD82 /* SportsEventCell.swift in Sources */,
 				D382B3AF1EBC435800E4EE8A /* HomeworkDetailsTVC.swift in Sources */,
 				D3B538611EAF1D4700C1854D /* ClassroomDetailsViewController.swift in Sources */,
+				D304641F1F4F2C4D0056C204 /* ShowEventsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

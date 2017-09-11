@@ -27,6 +27,8 @@ class ClassroomDetailsViewController: UIViewController {
     @IBOutlet weak var classroomProjectHomework: UILabel!
     @IBOutlet weak var fieldTripInfo: UILabel!
     
+
+    
     var classHomeworkReminders: [String:String] = [
         "class"             : "not set",
         "generalReminder"   : "not set",

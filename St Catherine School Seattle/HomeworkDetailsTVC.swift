@@ -13,24 +13,30 @@ import SwiftyJSON
 class HomeworkDetailsTVC: UITableViewController {
 
     var gradeRequested: String? = nil
+
+    var homeworkDate: String = "not set"
+    
+    var generalReminder: String = "not set"
+    var algebra: String = "not set"
+    var algebraFundamentals = "not set"
+    var middleSchoolMath = "not set"
+    var english = "not set"
+    var socialStudies = "not set"
+    var spanish = "not set"
+    var science = "not set"
+    var currentClassProject = "not set"
+    var nextSpecialEvent = "not set"
+    var vocabulary = "not set"
+    var religion = "not set"
+    var music = "not set"
+    var math = "not set"
+    
     
     var adDisplay: [String:String] = [
         "business"     :"not set",
         "adText"       :"not set"
     ]
     
-    var classHomeworkReminders: [String:String] = [
-        "class"             : "not set",
-        "generalReminder"   : "not set",
-        "math"              : "not set",
-        "science"           : "not set",
-        "english"           : "not set",
-        "spanish"           : "not set",
-        "vocabulary"        : "not set",
-        "classroomProject"  : "not set",
-        "nextFieldTrip"     : "not set",
-        "errorMessage"      : "not set"
-    ]
 
     func reloadTableViewData() {
         
@@ -56,55 +62,6 @@ class HomeworkDetailsTVC: UITableViewController {
     }
     
     
-    func fetchGradeInfo() {
-        
-        let restApiManager = RestApiManager();
-        
-        let urlForClassHomework = restApiManager.getClassHomeworkUrl(classroom: self.gradeRequested!)
-        
-        print("*******************")
-        print("*******************")
-        print("*******************")
-        print("*******************")
-        print("*******************")
-        print(urlForClassHomework)
-        print("*******************")
-        print("*******************")
-        print("*******************")
-        print("*******************")
-        
-        Alamofire.request(urlForClassHomework).responseJSON { response in
-            //print(response.request as Any)  // original URL request
-            //print(response.response as Any) // HTTP URL response
-            //print(response.data as Any)     // server data
-            //print(response.result)   // result of response serialization
-            
-            if let MYJSON = response.result.value {
-                print("JSON: \(MYJSON)")
-                var json = JSON(MYJSON)
-                self.classHomeworkReminders["class"] = json["class"].stringValue
-                self.classHomeworkReminders["generalReminder"] = json["generalReminder"].stringValue
-                self.classHomeworkReminders["math"] = json["math"].stringValue
-                self.classHomeworkReminders["science"] = json["science"].stringValue
-                self.classHomeworkReminders["english"] = json["english"].stringValue
-                self.classHomeworkReminders["spanish"] = json["spanish"].stringValue
-                self.classHomeworkReminders["vocabulary"] = json["vocabulary"].stringValue
-                self.classHomeworkReminders["classroomProject"] = json["classroomProject"].stringValue
-                self.classHomeworkReminders["nextFieldTrip"] = json["nextFieldTrip"].stringValue
-                
-                self.tableView.estimatedRowHeight = 300.0
-                self.tableView.rowHeight = UITableViewAutomaticDimension
-                
-                self.reloadTableViewData()
-
-            } else {
-                self.classHomeworkReminders["errorMessage"] = "Could not get JSON from Rest API" +
-                    "using url " + urlForClassHomework
-            }
-        }
-        
-    }
-
     
     @IBOutlet weak var classNavBar: UINavigationItem!
     
@@ -113,7 +70,7 @@ class HomeworkDetailsTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        classNavBar.title = gradeRequested!
+        self.navigationItem.title = self.homeworkDate
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -124,15 +81,7 @@ class HomeworkDetailsTVC: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         fetchAd()
-        fetchGradeInfo()
         
-//        print("grade requested: " + gradeRequested!)
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -144,42 +93,93 @@ class HomeworkDetailsTVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 9
+        return 12
     }
 
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> UIView? {
+        
+//        let headerView = UIView()
 
-        
-        switch section {
-        case 0:
-            if (adDisplay["business"] == "not set") {
-                return "Your local business ad is loading..."
-            } else {
-                return adDisplay["business"]
+        if  (gradeRequested == "Grade 8" ||
+             gradeRequested == "Grade 7" ||
+             gradeRequested == "Grade 6") {
+            
+            switch section {
+            case 0:
+                if (adDisplay["business"] == "not set") {
+                    return "Your local business ad is loading..."
+                    //return headerView
+                } else {
+                    return adDisplay["business"]
+                }
+            case 1:
+                return "General Reminder"
+            case 2:
+                return "Algebra"
+            case 3:
+                return "Algebra Fundamentals"
+            case 4:
+                 return "Middle School Math"
+            case 5:
+                 return "English Homework"
+            case 6:
+                 return "Social Studies"
+            case 7:
+                 return "Spanish Homework"
+            case 8:
+                 return "Science"
+            case 9:
+                return "Music"
+            case 10:
+                return "Current Class Project"
+            case 11:
+                return "Next Special Event"
+                
+            default:
+                return "Title Not Set :("
             }
-        case 1:
-            return "General Summary"
-        case 2:
-            return "Math Homework"
-        case 3:
-            return "Science Homework"
-        case 4:
-            return "English Homework"
-        case 5:
-            return "Vocabulary Words"
-        case 6:
-            return "Spanish Homework"
-        case 7:
-            return "Current Class Project"
-        case 8:
-            return "Next Field Trip"
-        default:
-            return "Title Not Set :("
+
+        } else {
+
+            switch section {
+            case 0:
+                if (adDisplay["business"] == "not set") {
+                    return "Your local business ad is loading..."
+                } else {
+                    return adDisplay["business"]
+                }
+            case 1:
+                return "General Reminder"
+            case 2:
+                return "Math"
+            case 3:
+                return "Vocabulary Words"
+            case 4:
+                 return "English Homework"
+            case 5:
+                 return "Social Studies"
+            case 6:
+                 return "Spanish"
+            case 7:
+                 return "Science"
+            case 8:
+                 return "Religion"
+            case 9:
+                return "Music"
+            case 10:
+                return "Current Class Project"
+            case 11:
+                return "Next Special Event"
+ 
+            default:
+                return "Title Not Set :("
+            }
         }
-        
     }
 
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
@@ -191,89 +191,145 @@ class HomeworkDetailsTVC: UITableViewController {
 
 
         // Configure the cell...
-        let cell:HomeworkDetailsCell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath) as! HomeworkDetailsCell
+        let cell:HomeworkDayDetailsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath) as! HomeworkDayDetailsTableViewCell
     
         cell.adTitle.isHidden = true
         
-        switch indexPath.section {
-        case 0:
-            cell.homeworkDetail.isHidden = true
-            cell.adText.isHidden = false
-            if (adDisplay["adText"] == "not set") {
-                cell.adText?.text = "Your local business ad is loading..."
-            } else {
-                cell.adText.translatesAutoresizingMaskIntoConstraints = false
-                cell.adText?.text = adDisplay["adText"]
+        if  (gradeRequested == "Grade 8" ||
+            gradeRequested == "Grade 7" ||
+            gradeRequested == "Grade 6") {
+
+            switch indexPath.section {
+            case 0:
+                cell.homeworkDetail.isHidden = true
+                cell.adText.isHidden = false
+                if (adDisplay["adText"] == "not set") {
+                    cell.adText?.text = "Your local business ad is loading..."
+                } else {
+                    cell.adText.translatesAutoresizingMaskIntoConstraints = false
+                    cell.adText?.text = adDisplay["adText"]
+                }
+                return cell
+            case 1:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail.numberOfLines = 0
+                cell.homeworkDetail?.text = self.generalReminder
+                
+            case 2:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.algebra
+            case 3:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.algebraFundamentals
+            case 4:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.middleSchoolMath
+            case 5:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.english
+            case 6:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.socialStudies
+            case 7:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.spanish
+            case 8:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.science
+            case 9:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.music
+            case 10:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.currentClassProject
+            case 11:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.nextSpecialEvent
+                
+            default:
+                cell.adText.isHidden = true
+                cell.homeworkDetail?.text = "Homework item not found"
+                
             }
-            return cell
-        case 1:
-            cell.adText.isHidden = true
-            cell.homeworkDetail.isHidden = false
-            if (classHomeworkReminders["generalReminder"] == "not set") {
-                cell.homeworkDetail?.text = "General Summary Loading..."
-            } else {
-                cell.homeworkDetail?.text = classHomeworkReminders["generalReminder"]
+        } else {
+            switch indexPath.section {
+            case 0:
+                cell.homeworkDetail.isHidden = true
+                cell.adText.isHidden = false
+                if (adDisplay["adText"] == "not set") {
+                    cell.adText?.text = "Your local business ad is loading..."
+                } else {
+                    cell.adText.translatesAutoresizingMaskIntoConstraints = false
+                    cell.adText?.text = adDisplay["adText"]
+                }
+                return cell
+            case 1:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail.numberOfLines = 0
+                cell.homeworkDetail?.text = self.generalReminder
+                
+                
+            case 2:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.math
+                
+            case 3:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.vocabulary
+            case 4:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.english
+            case 5:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.socialStudies
+            case 6:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.spanish
+            case 7:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.science
+            case 8:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.religion
+            case 9:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.music
+            case 10:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.currentClassProject
+            case 11:
+                cell.adText.isHidden = true
+                cell.homeworkDetail.isHidden = false
+                cell.homeworkDetail?.text = self.nextSpecialEvent
+                
+            default:
+                cell.adText.isHidden = true
+                cell.homeworkDetail?.text = "Homework item not found"
             }
-        case 2:
-            cell.adText.isHidden = true
-            cell.homeworkDetail.isHidden = false
-            if (classHomeworkReminders["math"] == "not set") {
-                cell.homeworkDetail?.text = "Math Homework Loading..."
-            } else {
-                cell.homeworkDetail?.text = classHomeworkReminders["math"]
-            }
-        case 3:
-            cell.adText.isHidden = true
-            cell.homeworkDetail.isHidden = false
-            if (classHomeworkReminders["science"] == "not set") {
-                cell.homeworkDetail?.text = "Science Homework Loading..."
-            } else {
-                cell.homeworkDetail?.text = classHomeworkReminders["science"]
-            }
-        case 4:
-            cell.adText.isHidden = true
-            cell.homeworkDetail.isHidden = false
-            if (classHomeworkReminders["english"] == "not set") {
-                cell.homeworkDetail?.text = "English Homework Loading..."
-            } else {
-                cell.homeworkDetail?.text = classHomeworkReminders["english"]
-            }
-        case 5:
-            cell.adText.isHidden = true
-            cell.homeworkDetail.isHidden = false
-            if (classHomeworkReminders["vocabulary"] == "not set") {
-                cell.homeworkDetail?.text = "Vocabulary Homework Loading..."
-            } else {
-                cell.homeworkDetail?.text = classHomeworkReminders["vocabulary"]
-            }
-        case 6:
-            cell.adText.isHidden = true
-            cell.homeworkDetail.isHidden = false
-            if (classHomeworkReminders["spanish"] == "not set") {
-                cell.homeworkDetail?.text = "Spanish Homework Loading..."
-            } else {
-                cell.homeworkDetail?.text = classHomeworkReminders["spanish"]
-            }
-        case 7:
-            cell.adText.isHidden = true
-            cell.homeworkDetail.isHidden = false
-            if (classHomeworkReminders["classroomProject"] == "not set") {
-                cell.homeworkDetail?.text = "Current Class Project Loading..."
-            } else {
-                cell.homeworkDetail?.text = classHomeworkReminders["classroomProject"]
-            }
-        case 8:
-            cell.adText.isHidden = true
-            cell.homeworkDetail.isHidden = false
-            if (classHomeworkReminders["nextFieldTrip"] == "not set") {
-                cell.homeworkDetail?.text = "Next Field Trip Loading..."
-            } else {
-                cell.homeworkDetail?.text = classHomeworkReminders["nextFieldTrip"]
-            }
-        default:
-            cell.adText.isHidden = true
-            cell.homeworkDetail?.text = "Homework item not found"
+            
         }
+        
         
         return cell
     }

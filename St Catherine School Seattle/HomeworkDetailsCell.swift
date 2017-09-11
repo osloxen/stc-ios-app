@@ -14,4 +14,5 @@ class HomeworkDetailsCell: UITableViewCell {
     @IBOutlet weak var adText: UILabel!
     @IBOutlet weak var homeworkDetail: UILabel!
     
+    
 }

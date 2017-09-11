@@ -12,12 +12,22 @@ import Alamofire
 
 class ListOfStaff: UITableViewController {
     
-    var staffListFromRest:JSON = JSON.null
+    var staffList = [Any]()
     
-    var arrayOfSchoolStaff: [staffMember] = []
+    //var arrayOfSchoolStaff: [staffMember] = []
+    
+    var scheduleForSelectedSport = [Any]()
+    
+    var staffLastNameArray = [String]()
+    var staffFirstNameArray = [String]()
+    var staffTitleArray = [String]()
+    var staffWebsiteArray = [String]()
+    var staffEmailArray = [String]()
+    var staffPhoneArray = [String]()
     
     var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
-    
+
+/*
     struct staffMember {
         var lastName:String
         var firstName:String
@@ -25,7 +35,7 @@ class ListOfStaff: UITableViewController {
         var website:String
         var email:String
     }
-    
+*/
     
     func fetchStaff() {
         
@@ -52,11 +62,18 @@ class ListOfStaff: UITableViewController {
             
             if let MYJSON = response.result.value {
                 print("JSON: \(MYJSON)")
-                self.staffListFromRest = JSON(MYJSON)
+                var json = JSON(MYJSON)
                 
-                for (_, object) in self.staffListFromRest["staffList"] {
-                    let currentStaff: staffMember = staffMember(lastName: object["lastName"].stringValue, firstName: object["firstName"].stringValue, title: object["title"].stringValue, website: object["website"].stringValue, email: object["email"].stringValue)
-                    self.arrayOfSchoolStaff.append(currentStaff)
+                let staffFromCloud = json["staffList"].array!
+                self.staffList = staffFromCloud
+                
+                for staffMember in staffFromCloud {
+                    self.staffLastNameArray.append(staffMember["lastName"].string!);
+                    self.staffFirstNameArray.append(staffMember["firstName"].string!);
+                    self.staffTitleArray.append(staffMember["title"].string!);
+                    self.staffWebsiteArray.append(staffMember["website"].string!);
+                    self.staffEmailArray.append(staffMember["email"].string!);
+                    self.staffPhoneArray.append(staffMember["phone"].string!);
                 }
                 
                 self.activityIndicator.stopAnimating()
@@ -72,23 +89,17 @@ class ListOfStaff: UITableViewController {
 
     func startActivityIndicatorProcess(activityIndicator:UIActivityIndicatorView) {
         
-        
-
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
- 
-        //UIApplication.shared.beginIgnoringInteractionEvents()
     }
     
     
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
         
         startActivityIndicatorProcess(activityIndicator: activityIndicator)
         
@@ -108,17 +119,15 @@ class ListOfStaff: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //return staffList.count
         
-        if self.staffListFromRest == JSON.null {
-            return 0
-        }
-        return self.staffListFromRest["staffList"].count
+
+        return self.staffLastNameArray.count
     }
 
     
@@ -128,12 +137,9 @@ class ListOfStaff: UITableViewController {
         let row = (indexPath as NSIndexPath).row
         
         // Configure the cell...
-
-        
-        cell.lastName.text = self.arrayOfSchoolStaff[row].lastName
-        cell.staffName.text = self.arrayOfSchoolStaff[row].firstName
-        cell.staffTitle.text  = self.arrayOfSchoolStaff[row].title
-        
+        cell.lastName.text = self.staffLastNameArray[row]
+        cell.staffName.text = self.staffFirstNameArray[row]
+        cell.staffTitle.text  = self.staffTitleArray[row]
         
         return cell
     }
@@ -187,12 +193,12 @@ class ListOfStaff: UITableViewController {
                 let indexPath = self.tableView.indexPathForSelectedRow;
                 
 //                let staffMember = staffList[(indexPath! as NSIndexPath).row]
-                let viewThisStaffMemberDetails = self.arrayOfSchoolStaff[(indexPath! as NSIndexPath).row]
-                destination.currentStaffMember.name      = viewThisStaffMemberDetails.firstName
-                destination.currentStaffMember.lastName  = viewThisStaffMemberDetails.lastName
-                destination.currentStaffMember.title     = viewThisStaffMemberDetails.title
-                destination.currentStaffMember.website   = viewThisStaffMemberDetails.website
-                destination.currentStaffMemberEmail      = viewThisStaffMemberDetails.email
+//                let viewThisStaffMemberDetails = self.arrayOfSchoolStaff[(indexPath! as NSIndexPath).row]
+                destination.currentStaffMember.name = staffFirstNameArray[indexPath!.row]
+                destination.currentStaffMember.lastName  = staffLastNameArray[indexPath!.row]
+                destination.currentStaffMember.title     = staffTitleArray[indexPath!.row]
+                destination.currentStaffMember.website   = staffWebsiteArray[indexPath!.row]
+                destination.currentStaffMemberEmail      = staffEmailArray[indexPath!.row]
             }
         }
 

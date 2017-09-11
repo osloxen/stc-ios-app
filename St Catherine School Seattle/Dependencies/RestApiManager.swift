@@ -10,9 +10,23 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
+extension Date {
+    var yesterday: Date {
+        return Calendar.current.date(byAdding: .day, value: -1, to: self)!
+    }
+    var tenDaysFromNow: Date {
+        return Calendar.current.date(byAdding: .day, value: 10, to: self)!
+    }
+    var thirtyDaysFromNow: Date {
+        return Calendar.current.date(byAdding: .day, value: 30, to: self)!
+    }
+}
+
 class RestApiManager {
     
     var jsonFromRestCall:JSON = JSON.null
+    
+
     
     var baseUrl:String = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/"
     var apiVersion:String = "beta/"
@@ -43,6 +57,106 @@ class RestApiManager {
         return filteredUrl
     }
     
+    
+    
+    //
+    // Create REST call to homework using yesterday as a start date
+    // and 10 days from now as an end date.
+    // TODO:  This needs to be fixed to account for the end of the year.
+    //
+    func getLunchDatesUrl() -> String {
+        
+        let homeworkBaseUrl = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/st-catherine-school/lunch"
+        
+        let date = Date()
+        
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        //        let today = formatter.string(from: date)
+        let yesterday = formatter.string(from: date.yesterday)
+        let tenDaysFromNow = formatter.string(from: date.tenDaysFromNow)
+        
+        let urlForRestApi = homeworkBaseUrl+"?startDate="+yesterday+"&endDate="+tenDaysFromNow
+        
+        return urlForRestApi
+    }
+
+    
+    
+    
+    //
+    // Create REST call to get events
+    //
+    func getEventsUrl() -> String {
+        
+        let EventsBaseUrl = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/events"
+        
+        let urlForRestApi = EventsBaseUrl
+
+        return urlForRestApi
+    }
+    
+    
+    
+    //
+    // Create REST call to homework using yesterday as a start date
+    // and 10 days from now as an end date.
+    // TODO:  This needs to be fixed to account for the end of the year.
+    //
+    func getClassHomeworkDatesUrl(classroom:String) -> String {
+        
+        let homeworkBaseUrl = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/homework-by-class-start-and-end-date/"
+        
+        let date = Date()
+        
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+//        let today = formatter.string(from: date)
+        let yesterday = formatter.string(from: date.yesterday)
+        let tenDaysFromNow = formatter.string(from: date.tenDaysFromNow)
+        
+        let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: classroom)
+
+        let urlForRestApi = homeworkBaseUrl+trimmedParameter+"?startDate="+yesterday+"&endDate="+tenDaysFromNow
+/*
+        let urlForRestApi = homeworkBaseUrl+trimmedParameter+"?startDate=2017-08-15&endDate=2017-08-25"
+*/
+        return urlForRestApi
+    }
+    
+    
+    //
+    // Create REST call to homework using yesterday as a start date
+    // and 10 days from now as an end date.
+    // TODO:  This needs to be fixed to account for the end of the year.
+    //
+    func getCYOSportsDatesUrl(classroom:String, sport:String, gender:String) -> String {
+        
+        let homeworkBaseUrl = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/cyo-sports-schedule/"
+        
+        let date = Date()
+        
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        //        let today = formatter.string(from: date)
+        let yesterday = formatter.string(from: date.yesterday)
+        let tenDaysFromNow = formatter.string(from: date.tenDaysFromNow)
+        let thirtyDaysFromNow = formatter.string(from: date.thirtyDaysFromNow)
+        
+        let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: classroom)
+        let lowerCaseSport = sport.lowercased()
+        
+        let urlForRestApi = homeworkBaseUrl+trimmedParameter+"?startDate="+yesterday+"&endDate="+thirtyDaysFromNow+"&sport=" + lowerCaseSport +
+        "&gender=" + gender + "&eventType=all"
+ 
+        return urlForRestApi
+    }
     
     
     func getClassHomeworkUrl(classroom:String) -> String {

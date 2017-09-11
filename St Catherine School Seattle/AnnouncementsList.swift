@@ -48,7 +48,7 @@ class AnnouncementsList: TWTRTimelineViewController {
         
         self.getAllNotificationsFiltered();
         
-        TWTRTweetView.appearance().backgroundColor = UIColor.cyan
+        TWTRTweetView.appearance().backgroundColor = UIColor.white
         TWTRTweetTableViewCell.appearance().backgroundColor = UIColor.black
         
         self.refreshControl = UIRefreshControl()

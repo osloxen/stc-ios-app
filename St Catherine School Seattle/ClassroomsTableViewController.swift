@@ -13,14 +13,14 @@ class ClassroomsTableViewController: UITableViewController {
     var activityvaricator:UIActivityIndicatorView = UIActivityIndicatorView()
     
     let gradesAtSchool = ["Kindergarten",
-                          "1st Grade",
-                          "2nd Grade",
-                          "3rd Grade",
-                          "4th Grade",
-                          "5th Grade",
-                          "6th Grade",
-                          "7th Grade",
-                          "8th Grade"]
+                          "Grade 1",
+                          "Grade 2",
+                          "Grade 3",
+                          "Grade 4",
+                          "Grade 5",
+                          "Grade 6",
+                          "Grade 7",
+                          "Grade 8"]
 
     
     override func viewDidLoad() {
@@ -28,6 +28,8 @@ class ClassroomsTableViewController: UITableViewController {
         
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
 
+        tableView.dataSource = self
+        tableView.delegate = self
         
         /*
         activityIndicator.center = self.view.center
@@ -78,6 +80,12 @@ class ClassroomsTableViewController: UITableViewController {
         cell.textLabel?.text = gradesAtSchool[indexPath.row]
 
         return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NSLog("You selected cell number: \(indexPath.row)!")
+        self.performSegue(withIdentifier: "showHomeworkDates", sender: self)
     }
  
 
@@ -130,8 +138,19 @@ class ClassroomsTableViewController: UITableViewController {
                 let controller = segue.destination as! HomeworkDetailsTVC
                 let value = gradesAtSchool[indexPath.row]
                 controller.gradeRequested = value
+                print("selected showClassroomDetails")
             }
         }
+        
+        if segue.identifier == "showHomeworkDates" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = segue.destination as! HomeworkDatesTVC
+                let value = gradesAtSchool[indexPath.row]
+                controller.gradeRequested = value
+                print("selected showHomeworkDates")
+            }
+        }
+
     }
     
     @IBAction func doneLookingAtGrade(segue:UIStoryboardSegue) {
