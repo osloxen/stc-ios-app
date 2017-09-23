@@ -49,6 +49,9 @@
 		D31D8DEC1F3915A0007E5669 /* GradesBySportTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D8DEB1F3915A0007E5669 /* GradesBySportTVC.swift */; };
 		D31D8DEE1F391DA0007E5669 /* SportsScheduleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D8DED1F391DA0007E5669 /* SportsScheduleTVC.swift */; };
 		D31FE6901CA310E600233E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31FE68F1CA310E600233E64 /* Assets.xcassets */; };
+		D323E3C01F74DB3F00D81AC0 /* calendar-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D323E3BF1F74DB3F00D81AC0 /* calendar-25.png */; };
+		D323E3D11F74E1D400D81AC0 /* SchoolScheduleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323E3D01F74E1D400D81AC0 /* SchoolScheduleTVC.swift */; };
+		D323E3D31F74E1FD00D81AC0 /* SchoolScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323E3D21F74E1FD00D81AC0 /* SchoolScheduleCell.swift */; };
 		D326030D1CBDDE1B00C2FB08 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326030C1CBDDE1B00C2FB08 /* AdSupport.framework */; };
 		D326030F1CBDDE2600C2FB08 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326030E1CBDDE2600C2FB08 /* AudioToolbox.framework */; };
 		D32603111CBDDE2E00C2FB08 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603101CBDDE2E00C2FB08 /* AVFoundation.framework */; };
@@ -264,6 +267,9 @@
 		D31D8DEB1F3915A0007E5669 /* GradesBySportTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesBySportTVC.swift; sourceTree = "<group>"; };
 		D31D8DED1F391DA0007E5669 /* SportsScheduleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsScheduleTVC.swift; sourceTree = "<group>"; };
 		D31FE68F1CA310E600233E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D323E3BF1F74DB3F00D81AC0 /* calendar-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-25.png"; sourceTree = "<group>"; };
+		D323E3D01F74E1D400D81AC0 /* SchoolScheduleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolScheduleTVC.swift; sourceTree = "<group>"; };
+		D323E3D21F74E1FD00D81AC0 /* SchoolScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolScheduleCell.swift; sourceTree = "<group>"; };
 		D326030C1CBDDE1B00C2FB08 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		D326030E1CBDDE2600C2FB08 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D32603101CBDDE2E00C2FB08 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -376,6 +382,7 @@
 		D3091FAC1C56E4C6007CF290 /* St Catherine School Seattle */ = {
 			isa = PBXGroup;
 			children = (
+				D323E3CF1F74E16900D81AC0 /* School Schedule */,
 				D3513C361F4D63F300ACBF31 /* Events */,
 				D3513C251F4A9BA300ACBF31 /* Lunch */,
 				D31D8DE81F3912D6007E5669 /* CYO Sports */,
@@ -399,6 +406,7 @@
 		D3091FCC1C56E5A3007CF290 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D323E3BF1F74DB3F00D81AC0 /* calendar-25.png */,
 				D3C385971ED6B86700123625 /* apple-25.png */,
 				D3C385A71ED6B88100123625 /* megaphone-25.png */,
 				D31D8DE61F3910CE007E5669 /* running_filled-25.png */,
@@ -440,6 +448,15 @@
 				D3A93E591F6613C600464A1A /* SportsRegistrationVC.swift */,
 			);
 			name = "CYO Sports";
+			sourceTree = "<group>";
+		};
+		D323E3CF1F74E16900D81AC0 /* School Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				D323E3D01F74E1D400D81AC0 /* SchoolScheduleTVC.swift */,
+				D323E3D21F74E1FD00D81AC0 /* SchoolScheduleCell.swift */,
+			);
+			name = "School Schedule";
 			sourceTree = "<group>";
 		};
 		D348995D1EC405050045D4FB /* staff */ = {
@@ -770,6 +787,7 @@
 				D3091FBA1C56E4C6007CF290 /* LaunchScreen.storyboard in Resources */,
 				D317DD131ED3FB6F00182575 /* Info.plist in Resources */,
 				D317DD151ED3FD8800182575 /* Default-568h@2x.png in Resources */,
+				D323E3C01F74DB3F00D81AC0 /* calendar-25.png in Resources */,
 				D3091FED1C56E5A3007CF290 /* StCicon80x80-01.png in Resources */,
 				D3091FE31C56E5A3007CF290 /* questionMark.png in Resources */,
 				D3091FF01C56E5A3007CF290 /* warehouse_filled-25.png in Resources */,
@@ -818,6 +836,8 @@
 				D30920191C56E6C3007CF290 /* ListOfStaff.swift in Sources */,
 				D381B7B61EB518D0002D7CD2 /* RestApiManager.swift in Sources */,
 				D309201A1C56E6C3007CF290 /* NotificationList.swift in Sources */,
+				D323E3D31F74E1FD00D81AC0 /* SchoolScheduleCell.swift in Sources */,
+				D323E3D11F74E1D400D81AC0 /* SchoolScheduleTVC.swift in Sources */,
 				D309201F1C56E6C3007CF290 /* SchoolDetails.swift in Sources */,
 				D309201E1C56E6C3007CF290 /* SchoolDataModel.xcdatamodeld in Sources */,
 				D3A93E5A1F6613C600464A1A /* SportsRegistrationVC.swift in Sources */,

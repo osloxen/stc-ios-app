@@ -83,7 +83,29 @@ class RestApiManager {
         return urlForRestApi
     }
 
+    // https://guufy6lon5.execute-api.us-east-1.amazonaws.com/sept2017
     
+    //
+    // Create REST call to get events
+    //
+    func getScheduleUrl() -> String {
+        
+        let ScheduleBaseUrl = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/sept2017/school-schedule"
+        
+        let date = Date()
+        
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        //        let today = formatter.string(from: date)
+        let yesterday = formatter.string(from: date.yesterday)
+        let tenDaysFromNow = formatter.string(from: date.tenDaysFromNow)
+        
+        let urlForRestApi = ScheduleBaseUrl+"?startDate="+yesterday+"&endDate="+tenDaysFromNow
+
+        return urlForRestApi
+    }
     
     
     //
