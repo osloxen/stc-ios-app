@@ -13,6 +13,8 @@ import Alamofire
 
 class ClassroomDetailsViewController: UIViewController {
     
+/*
+    
     @IBOutlet weak var classroomHomeworkSummaryNavBar: UINavigationItem!
     @IBOutlet weak var businessName: UILabel!
     @IBOutlet weak var vocabHomework: UITextView!
@@ -182,5 +184,5 @@ class ClassroomDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+*/
 }

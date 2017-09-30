@@ -11,11 +11,16 @@ import Alamofire
 import SwiftyJSON
 
 class HomeworkDetailsTVC: UITableViewController {
+    
+    var hwDetails = [String: [String]]()
+    var subjectColumnNames = [String]()
+    var hwIndex:Int?
 
     var gradeRequested: String? = nil
 
     var homeworkDate: String = "not set"
-    
+   
+/*
     var generalReminder: String = "not set"
     var algebra: String = "not set"
     var algebraFundamentals = "not set"
@@ -30,7 +35,7 @@ class HomeworkDetailsTVC: UITableViewController {
     var religion = "not set"
     var music = "not set"
     var math = "not set"
-    
+*/    
     
     var adDisplay: [String:String] = [
         "business"     :"not set",
@@ -93,7 +98,10 @@ class HomeworkDetailsTVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 12
+        
+        //return 12
+        
+        return hwDetails["date"]!.count
     }
 
     
@@ -102,6 +110,21 @@ class HomeworkDetailsTVC: UITableViewController {
         
 //        let headerView = UIView()
 
+        print(section)
+        print(subjectColumnNames[section])
+
+        if (section == 0) {
+            if (adDisplay["business"] == "not set") {
+                return "Your local business ad is loading..."
+                //return headerView
+            } else {
+                return adDisplay["business"]
+            }
+        } else {
+            return subjectColumnNames[section]
+        }
+        
+/*
         if  (gradeRequested == "Grade 8" ||
              gradeRequested == "Grade 7" ||
              gradeRequested == "Grade 6") {
@@ -177,6 +200,7 @@ class HomeworkDetailsTVC: UITableViewController {
                 return "Title Not Set :("
             }
         }
+ */
     }
 
     
@@ -194,6 +218,25 @@ class HomeworkDetailsTVC: UITableViewController {
         let cell:HomeworkDayDetailsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath) as! HomeworkDayDetailsTableViewCell
     
         cell.adTitle.isHidden = true
+        
+        if (indexPath.section == 0) {
+            cell.homeworkDetail.isHidden = true
+            cell.adText.isHidden = false
+            if (adDisplay["adText"] == "not set") {
+                cell.adText?.text = "Your local business ad is loading..."
+            } else {
+                cell.adText.translatesAutoresizingMaskIntoConstraints = false
+                cell.adText?.text = adDisplay["adText"]
+            }
+            return cell
+        } else {
+            
+            cell.adText.isHidden = true
+            cell.homeworkDetail?.text = self.hwDetails[subjectColumnNames[indexPath.section]]![hwIndex!]
+            
+        }
+        
+ /*
         
         if  (gradeRequested == "Grade 8" ||
             gradeRequested == "Grade 7" ||
@@ -213,9 +256,8 @@ class HomeworkDetailsTVC: UITableViewController {
             case 1:
                 cell.adText.isHidden = true
                 cell.homeworkDetail.isHidden = false
-                cell.homeworkDetail.numberOfLines = 0
+                //cell.homeworkDetail.numberOfLines = 0
                 cell.homeworkDetail?.text = self.generalReminder
-                
             case 2:
                 cell.adText.isHidden = true
                 cell.homeworkDetail.isHidden = false
@@ -329,7 +371,7 @@ class HomeworkDetailsTVC: UITableViewController {
             }
             
         }
-        
+*/        
         
         return cell
     }

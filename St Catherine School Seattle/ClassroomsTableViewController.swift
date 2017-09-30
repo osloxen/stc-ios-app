@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ClassroomsTableViewController: UITableViewController {
 
@@ -22,6 +24,11 @@ class ClassroomsTableViewController: UITableViewController {
                           "Grade 7",
                           "Grade 8"]
 
+    var hwDictionary = [String: [String]]()
+    var subjectNamesFromCloud = [String]()
+    var homeworkFromCloud = [Any]()
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,28 +38,6 @@ class ClassroomsTableViewController: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        /*
-        activityIndicator.center = self.view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(activityIndicator)
-        activityIndicator.startAnimating()
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
-            let util = Utilities();
-            let foobar = util.getFoo()
-            print(foobar);
-            self.activityIndicator.stopAnimating()
-            UIApplication.shared.endIgnoringInteractionEvents()
-        }
-        */
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -144,6 +129,7 @@ class ClassroomsTableViewController: UITableViewController {
         
         if segue.identifier == "showHomeworkDates" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
+
                 let controller = segue.destination as! HomeworkDatesTVC
                 let value = gradesAtSchool[indexPath.row]
                 controller.gradeRequested = value

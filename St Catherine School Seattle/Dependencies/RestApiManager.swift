@@ -24,9 +24,30 @@ extension Date {
 
 class RestApiManager {
     
-    var jsonFromRestCall:JSON = JSON.null
+    struct RestAPI {
+        struct url {
+            static let getLunches = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/st-catherine-school/lunch"
+            
+            static let getColumnHeadings = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/sept2017/column-headers"
+            
+            static let getSchoolSchedule = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/sept2017/school-schedule"
+            
+            static let getEvents = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/events"
+            
+            static let homework = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/homework-by-class-start-and-end-date/"
+            
+            static let sports = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/cyo-sports-schedule/"
+            
+            static let staff = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-school/staff"
+            
+            static let staffDetails = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-school/classinfo/"
+        }
+    }
     
-
+//         let urlForRestApi = self.baseUrl+self.apiVersion+self.school+self.listOfAllStaff
+//    let urlForRestApi = self.baseUrl+self.apiVersion+self.school+self.classHomeworkResource+trimmedParameter
+    
+    var jsonFromRestCall:JSON = JSON.null
     
     var baseUrl:String = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/"
     var apiVersion:String = "beta/"
@@ -35,7 +56,7 @@ class RestApiManager {
     let listOfAllStaff:String = "staff"
     
     
-    
+/*
     var classHomeworkReminders: [String:String] = [
         "class"             : "not set",
         "generalReminder"   : "not set",
@@ -48,7 +69,7 @@ class RestApiManager {
         "nextFieldTrip"     : "not set",
         "errorMessage"      : "not set"
     ]
-    
+*/
     
     func normalizeTheStringForRestApi(unfilteredUrl:String) -> String {
         var filteredUrl = String(unfilteredUrl.characters.filter { !" \n\t\r".characters.contains($0) })
@@ -60,13 +81,11 @@ class RestApiManager {
     
     
     //
-    // Create REST call to homework using yesterday as a start date
-    // and 10 days from now as an end date.
-    // TODO:  This needs to be fixed to account for the end of the year.
+    // LUNCHES!!!
     //
     func getLunchDatesUrl() -> String {
         
-        let homeworkBaseUrl = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/st-catherine-school/lunch"
+        let homeworkBaseUrl = RestAPI.url.getLunches
         
         let date = Date()
         
@@ -82,15 +101,28 @@ class RestApiManager {
         
         return urlForRestApi
     }
+    
 
-    // https://guufy6lon5.execute-api.us-east-1.amazonaws.com/sept2017
+    //
+    // Create REST call to get column names/subjects
+    //
+    func getHomeworkColumnsUrl(grade:String) -> String {
+        
+        let ScheduleBaseUrl = RestAPI.url.getColumnHeadings
+        
+        let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: grade)
+        
+        let urlForRestApi = ScheduleBaseUrl+"/"+trimmedParameter
+        
+        return urlForRestApi
+    }
     
     //
     // Create REST call to get events
     //
     func getScheduleUrl() -> String {
         
-        let ScheduleBaseUrl = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/sept2017/school-schedule"
+        let ScheduleBaseUrl = RestAPI.url.getSchoolSchedule
         
         let date = Date()
         
@@ -113,7 +145,7 @@ class RestApiManager {
     //
     func getEventsUrl() -> String {
         
-        let EventsBaseUrl = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/events"
+        let EventsBaseUrl = RestAPI.url.getEvents
         
         let urlForRestApi = EventsBaseUrl
 
@@ -129,7 +161,7 @@ class RestApiManager {
     //
     func getClassHomeworkDatesUrl(classroom:String) -> String {
         
-        let homeworkBaseUrl = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/homework-by-class-start-and-end-date/"
+        let homeworkBaseUrl = RestAPI.url.homework
         
         let date = Date()
         
@@ -144,9 +176,7 @@ class RestApiManager {
         let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: classroom)
 
         let urlForRestApi = homeworkBaseUrl+trimmedParameter+"?startDate="+yesterday+"&endDate="+tenDaysFromNow
-/*
-        let urlForRestApi = homeworkBaseUrl+trimmedParameter+"?startDate=2017-08-15&endDate=2017-08-25"
-*/
+
         return urlForRestApi
     }
     
@@ -158,7 +188,7 @@ class RestApiManager {
     //
     func getCYOSportsDatesUrl(classroom:String, sport:String, gender:String) -> String {
         
-        let homeworkBaseUrl = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/cyo-sports-schedule/"
+        let sportsBaseUrl = RestAPI.url.sports
         
         let date = Date()
         
@@ -174,25 +204,30 @@ class RestApiManager {
         let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: classroom)
         let lowerCaseSport = sport.lowercased()
         
-        let urlForRestApi = homeworkBaseUrl+trimmedParameter+"?startDate="+yesterday+"&endDate="+thirtyDaysFromNow+"&sport=" + lowerCaseSport +
+        let urlForRestApi = sportsBaseUrl+trimmedParameter+"?startDate="+yesterday+"&endDate="+thirtyDaysFromNow+"&sport=" + lowerCaseSport +
         "&gender=" + gender + "&eventType=all"
  
         return urlForRestApi
     }
     
     
+/*
     func getClassHomeworkUrl(classroom:String) -> String {
         
         let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: classroom)
         let urlForRestApi = self.baseUrl+self.apiVersion+self.school+self.classHomeworkResource+trimmedParameter
         
+        let urlForRestApi = RestAPI.url.h
+        
         return urlForRestApi
     }
-    
+*/
 
+    
     func getAllStaffUrl() -> String {
         
-        let urlForRestApi = self.baseUrl+self.apiVersion+self.school+self.listOfAllStaff
+        //let urlForRestApi = self.baseUrl+self.apiVersion+self.school+self.listOfAllStaff
+        let urlForRestApi = RestAPI.url.staff
         
         return urlForRestApi
     }
@@ -207,7 +242,7 @@ class RestApiManager {
     }
 
 
-    
+/*
     func fetchJson(resource:String, parameter:String) {
         
         let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: parameter)
@@ -249,6 +284,7 @@ class RestApiManager {
                                 "using url " + urlForRestApi
             }
         }
+ 
     }
-    
+ */   
 }

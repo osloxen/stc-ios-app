@@ -16,23 +16,43 @@ class HomeworkDatesTVC: UITableViewController {
     
     var gradeRequested: String? = nil
     
-    var homeworkDateArray = [String]()
-    var homeworkReminderArray = [String]()
-    var homeworkAlgebraArray = [String]()
-    var homeworkAlgebraFundArray = [String]()
-    var homeworkMiddleSchoolMath = [String]()
-    var homeworkEnglish = [String]()
-    var homeworkSocialStudies = [String]()
-    var homeworkSpanish = [String]()
-    var homeworkScience = [String]()
-    var homeworkClassProject = [String]()
-    var homeworkNextSpecialEvent = [String]()
-    var homeworkReligion = [String]()
-    var homeworkMusic = [String]()
-    var homeworkVocabulary = [String]()
-    var homeworkMath = [String]()
-    
     var homeworkFromCloud = [Any]()
+    
+    var hwDictionary = [String: [String]]()
+    var subjectNamesFromCloud = [String]()
+    
+
+    func fetchColumnHeaders() {
+        
+        let restApiManager = RestApiManager();
+        
+        let urlForHomeworkColumns = restApiManager.getHomeworkColumnsUrl(grade: self.gradeRequested!)
+        
+        print("*******************")
+        print(urlForHomeworkColumns)
+        print("*******************")
+        
+        Alamofire.request(urlForHomeworkColumns).responseJSON { response in
+            
+            if let MYJSON = response.result.value {
+                print("JSON: \(MYJSON)")
+                var json = JSON(MYJSON)
+                
+                let columnsFromCloud = json["columnArray"].array!
+                
+                for columnName in columnsFromCloud {
+                    self.hwDictionary[columnName.string!] = []
+                    self.subjectNamesFromCloud.append(columnName.string!)
+                }
+                
+            } else {
+                print("error with rest call")
+            }
+        }
+    }
+
+    
+    
     
     func fetchGradeHomeworkDates() {
         
@@ -53,46 +73,23 @@ class HomeworkDatesTVC: UITableViewController {
                 let homeworkFromCloud = json["homeworkArray"].array!
                 self.homeworkFromCloud = homeworkFromCloud
 
-                if (self.gradeRequested! == "Grade 8" ||
-                    self.gradeRequested! == "Grade 7" ||
-                    self.gradeRequested! == "Grade 6") {
-                    for myHomeworkDate in homeworkFromCloud {
-                        self.homeworkDateArray.append(myHomeworkDate["date"].string!);
-                        self.homeworkReminderArray.append(myHomeworkDate["general reminder"].string!);
-                        self.homeworkAlgebraArray.append(myHomeworkDate["algebra"].string!);
-                        self.homeworkAlgebraFundArray.append(myHomeworkDate["algebra fundamentals"].string!);
-                        self.homeworkMiddleSchoolMath.append(myHomeworkDate["middle school math"].string!);
-                        self.homeworkEnglish.append(myHomeworkDate["english"].string!);
-                        self.homeworkSocialStudies.append(myHomeworkDate["social studies"].string!);
-                        self.homeworkSpanish.append(myHomeworkDate["spanish"].string!);
-                        self.homeworkScience.append(myHomeworkDate["science"].string!);
-                        self.homeworkMusic.append(myHomeworkDate["music"].string!);
-                        self.homeworkClassProject.append(myHomeworkDate["current class project"].string!);
-                        self.homeworkNextSpecialEvent.append(myHomeworkDate["next special event"].string!);
-                    }
-                } else {
-                    for myHomeworkDate in homeworkFromCloud {
-                        self.homeworkDateArray.append(myHomeworkDate["date"].string!);
-                        self.homeworkReminderArray.append(myHomeworkDate["general reminder"].string!);
-                        self.homeworkMath.append(myHomeworkDate["math"].string!);
-                        self.homeworkVocabulary.append(myHomeworkDate["vocabulary"].string!);
- 
-                        self.homeworkEnglish.append(myHomeworkDate["english"].string!);
-                        self.homeworkSocialStudies.append(myHomeworkDate["social studies"].string!);
-                        self.homeworkSpanish.append(myHomeworkDate["spanish"].string!);
-                        self.homeworkScience.append(myHomeworkDate["science"].string!);
-                        self.homeworkReligion.append(myHomeworkDate["religion"].string!);
-                        self.homeworkMusic.append(myHomeworkDate["music"].string!);
-                        self.homeworkClassProject.append(myHomeworkDate["current class project"].string!);
-                        self.homeworkNextSpecialEvent.append(myHomeworkDate["next special event"].string!);
-                    }
+                for myHomeworkDate in homeworkFromCloud {
+                        // Get rid of if statement for grades after you get this working
+                        for schoolSubject in self.hwDictionary.keys {
+                            
+                            self.hwDictionary[schoolSubject]!.append(myHomeworkDate[schoolSubject].string!)
+                        }
                 }
+
                 
                 self.tableView.estimatedRowHeight = 300.0
                 self.tableView.rowHeight = UITableViewAutomaticDimension
                 
                 self.reloadTableViewData()
                 self.activityIndicator.stopAnimating()
+                
+                // This keeps table view from loading until API call is done.
+                self.tableView.dataSource = self
             
             } else {
                 print("error with rest call")
@@ -126,9 +123,10 @@ class HomeworkDatesTVC: UITableViewController {
         
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
         
-        tableView.dataSource = self
+        tableView.dataSource = nil
         tableView.delegate = self
         
+        fetchColumnHeaders()
         fetchGradeHomeworkDates()
     }
 
@@ -145,8 +143,9 @@ class HomeworkDatesTVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.homeworkDateArray.count
+
+        return self.hwDictionary["date"]!.count
+
     }
 
     
@@ -156,7 +155,7 @@ class HomeworkDatesTVC: UITableViewController {
         // Configure the cell...
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.date(from: homeworkDateArray[indexPath.row])
+        let date = dateFormatter.date(from: self.hwDictionary["date"]![indexPath.row])
         
         dateFormatter.dateFormat = "MMMM d"
         let parentFriendlyDate = dateFormatter.string(from: date!)
@@ -221,44 +220,15 @@ class HomeworkDatesTVC: UITableViewController {
         if segue.identifier == "showHomeworkDetails" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let controller = segue.destination as! HomeworkDetailsTVC
-                let value = homeworkDateArray[indexPath.row]
+                let value = hwDictionary["date"]![indexPath.row]
+                
+                controller.hwDetails = self.hwDictionary
+                controller.subjectColumnNames = self.subjectNamesFromCloud
+                controller.hwIndex = indexPath.row
+                print(self.hwDictionary["date"]![indexPath.row])
+                
                 controller.homeworkDate = value
-                print("homeworkDate = ")
-                print(homeworkDateArray[indexPath.row])
                 
-                controller.generalReminder = self.homeworkReminderArray[indexPath.row]
-                
-                if (self.homeworkMath.count > 0) {
-                    controller.math = self.homeworkMath[indexPath.row]
-                }
-                
-                if (self.homeworkAlgebraArray.count > 0) {
-                    controller.algebra = self.homeworkAlgebraArray[indexPath.row]
-                }
-                
-                if (self.homeworkAlgebraFundArray.count > 0) {
-                    controller.algebraFundamentals = self.homeworkAlgebraFundArray[indexPath.row]
-                }
-                
-                if (self.homeworkMiddleSchoolMath.count > 0) {
-                    controller.middleSchoolMath = self.homeworkMiddleSchoolMath[indexPath.row]
-                }
-                
-                controller.english = self.homeworkEnglish[indexPath.row]
-                controller.socialStudies = self.homeworkSocialStudies[indexPath.row]
-                controller.spanish = self.homeworkSpanish[indexPath.row]
-                controller.science = self.homeworkScience[indexPath.row]
-                
-                if (self.homeworkVocabulary.count > 0) {
-                    controller.vocabulary = self.homeworkVocabulary[indexPath.row]
-                }
-                controller.music = self.homeworkMusic[indexPath.row]
-                
-                if (self.homeworkReligion.count > 0) {
-                    controller.religion = self.homeworkReligion[indexPath.row]
-                }
-                controller.currentClassProject = self.homeworkClassProject[indexPath.row]
-                controller.nextSpecialEvent = self.homeworkNextSpecialEvent[indexPath.row]
                 controller.gradeRequested = gradeRequested
             }
         }
