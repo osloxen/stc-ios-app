@@ -26,19 +26,23 @@ class RestApiManager {
     
     struct RestAPI {
         struct url {
-            static let getLunches = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/st-catherine-school/lunch"
+            static let getLunches = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/lunch"
             
-            static let getColumnHeadings = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/sept2017/column-headers"
+            static let getColumnHeadings = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/columns"
             
-            static let getSchoolSchedule = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/sept2017/school-schedule"
+
+            static let getSchoolSchedule = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/school-schedule"
             
-            static let getEvents = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/events"
+            static let getEvents = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/events"
             
-            static let homework = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/homework-by-class-start-and-end-date/"
+
+            static let homework = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/homework/"
             
-            static let sports = "https://guufy6lon5.execute-api.us-east-1.amazonaws.com/july2017/cyo-sports-schedule/"
+            static let sports = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/sports/"
             
-            static let staff = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-school/staff"
+            static let staff = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/staff"
+            
+            // *** BELOW is old and not used and should be deleted ***
             
             static let staffDetails = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-school/classinfo/"
         }
@@ -85,7 +89,7 @@ class RestApiManager {
     //
     func getLunchDatesUrl() -> String {
         
-        let homeworkBaseUrl = RestAPI.url.getLunches
+        let lunchBaseUrl = RestAPI.url.getLunches
         
         let date = Date()
         
@@ -97,7 +101,7 @@ class RestApiManager {
         let yesterday = formatter.string(from: date.yesterday)
         let tenDaysFromNow = formatter.string(from: date.tenDaysFromNow)
         
-        let urlForRestApi = homeworkBaseUrl+"?startDate="+yesterday+"&endDate="+tenDaysFromNow
+        let urlForRestApi = lunchBaseUrl+"?startDate="+yesterday+"&endDate="+tenDaysFromNow
         
         return urlForRestApi
     }
@@ -233,6 +237,7 @@ class RestApiManager {
     }
     
     
+    // This is old and not used and should be delted
     func getStaffDetailsUrl(staffMember:String) -> String {
         
         let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: staffMember)

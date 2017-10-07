@@ -127,7 +127,16 @@ class SportsScheduleTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sportSchedDetailsCell", for: indexPath) as! SportsEventCell
 
         // Configure the cell...
-        cell.eventDate?.text = sportSchedDateArray[indexPath.row]
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: sportSchedDateArray[indexPath.row])
+        
+        dateFormatter.dateFormat = "EEEE, MMM d"
+        let parentFriendlyDate = dateFormatter.string(from: date!)
+
+        
+        cell.eventDate?.text = parentFriendlyDate
         cell.eventType?.text = sportSchedEventTypeArray[indexPath.row]
         cell.eventNotes?.text = sportSchedNotesArray[indexPath.row]
         cell.eventLocationName?.text = sportSchedLocationNameArray[indexPath.row]

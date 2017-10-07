@@ -121,7 +121,7 @@ class LunchDatesTVC: UITableViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let date = dateFormatter.date(from: lunchDateArray[indexPath.row])
         
-        dateFormatter.dateFormat = "MMMM d"
+        dateFormatter.dateFormat = "EEEE, MMMM d"
         let parentFriendlyDate = dateFormatter.string(from: date!)
         
         cell.textLabel?.text = parentFriendlyDate

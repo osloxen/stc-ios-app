@@ -127,8 +127,15 @@ class SchoolScheduleTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "schoolSchedCell", for: indexPath) as! SchoolScheduleCell
 
         // Configure the cell...
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: schedDateArray[indexPath.row])
         
-        cell.schoolDateLabel?.text = schedDateArray[indexPath.row]
+        dateFormatter.dateFormat = "EEEE, MMM d"
+        let parentFriendlyDate = dateFormatter.string(from: date!)
+        
+        
+        cell.schoolDateLabel?.text = parentFriendlyDate
         cell.schoolState?.text = schedOpenStateArray[indexPath.row]
         cell.startTimeLabel?.text = schedStartTimeArray[indexPath.row]
         cell.endTimeLabel?.text = schedEndTimeArray[indexPath.row]
