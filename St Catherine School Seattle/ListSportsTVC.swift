@@ -66,14 +66,15 @@ class ListSportsTVC: UITableViewController {
         
         switch sportsAtSchool[indexPath.row] {
         case "Soccer":
-            self.performSegue(withIdentifier: "showGradesBySport", sender: self)
+            registrationInfo = "Soccer online registration begins May 1st"
+            self.performSegue(withIdentifier: "registrationMessage", sender: self)
             
         case "Cross Country":
-            self.performSegue(withIdentifier: "showGradesBySport", sender: self)
-            
-        case "Basketball":
             registrationInfo = "Basketball online registration begins October 1st"
             self.performSegue(withIdentifier: "registrationMessage", sender: self)
+            
+        case "Basketball":
+            self.performSegue(withIdentifier: "showGradesBySport", sender: self)
             
         case "Volleyball":
             registrationInfo = "Volleyball online registration begins January 1st"

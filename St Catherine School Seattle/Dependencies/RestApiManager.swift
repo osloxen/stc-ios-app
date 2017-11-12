@@ -26,11 +26,12 @@ class RestApiManager {
     
     struct RestAPI {
         struct url {
+            //
             static let getLunches = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/lunch"
             
             static let getColumnHeadings = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/columns"
             
-
+            //
             static let getSchoolSchedule = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/school-schedule"
             
             static let getEvents = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/events"
@@ -60,20 +61,6 @@ class RestApiManager {
     let listOfAllStaff:String = "staff"
     
     
-/*
-    var classHomeworkReminders: [String:String] = [
-        "class"             : "not set",
-        "generalReminder"   : "not set",
-        "math"              : "not set",
-        "science"           : "not set",
-        "english"           : "not set",
-        "spanish"           : "not set",
-        "vocabulary"        : "not set",
-        "classroomProject"  : "not set",
-        "nextFieldTrip"     : "not set",
-        "errorMessage"      : "not set"
-    ]
-*/
     
     func normalizeTheStringForRestApi(unfilteredUrl:String) -> String {
         var filteredUrl = String(unfilteredUrl.characters.filter { !" \n\t\r".characters.contains($0) })
@@ -202,7 +189,7 @@ class RestApiManager {
         
         //        let today = formatter.string(from: date)
         let yesterday = formatter.string(from: date.yesterday)
-        let tenDaysFromNow = formatter.string(from: date.tenDaysFromNow)
+        //let tenDaysFromNow = formatter.string(from: date.tenDaysFromNow)
         let thirtyDaysFromNow = formatter.string(from: date.thirtyDaysFromNow)
         
         let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: classroom)
