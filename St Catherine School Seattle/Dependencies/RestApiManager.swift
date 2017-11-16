@@ -39,13 +39,20 @@ class RestApiManager {
 
             static let homework = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/homework/"
             
-            static let sports = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/sports/"
+            
+            //TODO: Set this to Prod again
+//            static let sports = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/sports/"
+            
+            
+            static let sports = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/dev/stc/sports/latest/"
             
             static let staff = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/staff"
             
             // *** BELOW is old and not used and should be deleted ***
             
             static let staffDetails = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-school/classinfo/"
+            
+            static let speechUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/dev/stc/activities/speech"
         }
     }
     
@@ -70,6 +77,13 @@ class RestApiManager {
     }
     
     
+    // 
+    // Speech!  More Speech!
+    //
+    func getSpeechUrl() -> String {
+        
+        return RestAPI.url.speechUrl
+    }
     
     //
     // LUNCHES!!!

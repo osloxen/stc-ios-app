@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D30440621F665BDE00D082D3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30440611F665BDE00D082D3 /* TableViewCell.swift */; };
+		D30440771FB91AAE007562C0 /* fairytale-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D30440761FB91AAE007562C0 /* fairytale-25.png */; };
+		D30440871FB91B35007562C0 /* ActivitiesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30440861FB91B35007562C0 /* ActivitiesTVC.swift */; };
 		D304641F1F4F2C4D0056C204 /* ShowEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304641E1F4F2C4D0056C204 /* ShowEventsCell.swift */; };
 		D3091FB51C56E4C6007CF290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FB31C56E4C6007CF290 /* Main.storyboard */; };
 		D3091FBA1C56E4C6007CF290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3091FB81C56E4C6007CF290 /* LaunchScreen.storyboard */; };
@@ -63,6 +65,8 @@
 		D326031D1CBDDE6B00C2FB08 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */; };
 		D326031F1CBDDE7500C2FB08 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031E1CBDDE7500C2FB08 /* MessageUI.framework */; };
 		D32603231CBDDE8800C2FB08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */; };
+		D35052421FBD532C007BA831 /* ClubInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052411FBD532C007BA831 /* ClubInfoVC.swift */; };
+		D35052521FBD5A73007BA831 /* SpeechInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052511FBD5A73007BA831 /* SpeechInfoVC.swift */; };
 		D3513C351F4A9BD000ACBF31 /* LunchDatesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3513C341F4A9BD000ACBF31 /* LunchDatesTVC.swift */; };
 		D3513C381F4D643D00ACBF31 /* ShowEventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3513C371F4D643D00ACBF31 /* ShowEventsTVC.swift */; };
 		D359A36F1F3BBA4000F4AD82 /* SportsEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359A36E1F3BBA4000F4AD82 /* SportsEventCell.swift */; };
@@ -225,6 +229,8 @@
 
 /* Begin PBXFileReference section */
 		D30440611F665BDE00D082D3 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D30440761FB91AAE007562C0 /* fairytale-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fairytale-25.png"; sourceTree = "<group>"; };
+		D30440861FB91B35007562C0 /* ActivitiesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTVC.swift; sourceTree = "<group>"; };
 		D304641E1F4F2C4D0056C204 /* ShowEventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventsCell.swift; sourceTree = "<group>"; };
 		D3091FAA1C56E4C6007CF290 /* St Catherine School Seattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "St Catherine School Seattle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3091FB41C56E4C6007CF290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -281,6 +287,8 @@
 		D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D326031E1CBDDE7500C2FB08 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D35052411FBD532C007BA831 /* ClubInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubInfoVC.swift; sourceTree = "<group>"; };
+		D35052511FBD5A73007BA831 /* SpeechInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechInfoVC.swift; sourceTree = "<group>"; };
 		D3513C341F4A9BD000ACBF31 /* LunchDatesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchDatesTVC.swift; sourceTree = "<group>"; };
 		D3513C371F4D643D00ACBF31 /* ShowEventsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventsTVC.swift; sourceTree = "<group>"; };
 		D359A36E1F3BBA4000F4AD82 /* SportsEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsEventCell.swift; sourceTree = "<group>"; };
@@ -340,6 +348,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D30440881FB91B40007562C0 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				D30440861FB91B35007562C0 /* ActivitiesTVC.swift */,
+				D35052411FBD532C007BA831 /* ClubInfoVC.swift */,
+				D35052511FBD5A73007BA831 /* SpeechInfoVC.swift */,
+			);
+			name = Activities;
+			sourceTree = "<group>";
+		};
 		D3091FA11C56E4C6007CF290 = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +400,7 @@
 		D3091FAC1C56E4C6007CF290 /* St Catherine School Seattle */ = {
 			isa = PBXGroup;
 			children = (
+				D30440881FB91B40007562C0 /* Activities */,
 				D323E3CF1F74E16900D81AC0 /* School Schedule */,
 				D3513C361F4D63F300ACBF31 /* Events */,
 				D3513C251F4A9BA300ACBF31 /* Lunch */,
@@ -406,6 +425,7 @@
 		D3091FCC1C56E5A3007CF290 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D30440761FB91AAE007562C0 /* fairytale-25.png */,
 				D323E3BF1F74DB3F00D81AC0 /* calendar-25.png */,
 				D3C385971ED6B86700123625 /* apple-25.png */,
 				D3C385A71ED6B88100123625 /* megaphone-25.png */,
@@ -780,6 +800,7 @@
 				D3091FE91C56E5A3007CF290 /* stCicon120x120.png in Resources */,
 				D30920121C56E6C3007CF290 /* LaunchScreen.storyboard in Resources */,
 				D3C385AC1ED6B8D900123625 /* apple-25.png in Resources */,
+				D30440771FB91AAE007562C0 /* fairytale-25.png in Resources */,
 				D36FC3241F343AF200132DED /* marker_pen_filled-25.png in Resources */,
 				D3091FE41C56E5A3007CF290 /* staff-25.png in Resources */,
 				D31D8DE71F3910CE007E5669 /* running_filled-25.png in Resources */,
@@ -828,6 +849,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35052421FBD532C007BA831 /* ClubInfoVC.swift in Sources */,
 				D30920101C56E6C3007CF290 /* StcAppDelegate.swift in Sources */,
 				D309200E1C56E6C3007CF290 /* AnnouncementsCell.swift in Sources */,
 				D3B5385F1EAEEA2A00C1854D /* ClassroomsTableViewController.swift in Sources */,
@@ -840,7 +862,9 @@
 				D323E3D11F74E1D400D81AC0 /* SchoolScheduleTVC.swift in Sources */,
 				D309201F1C56E6C3007CF290 /* SchoolDetails.swift in Sources */,
 				D309201E1C56E6C3007CF290 /* SchoolDataModel.xcdatamodeld in Sources */,
+				D35052521FBD5A73007BA831 /* SpeechInfoVC.swift in Sources */,
 				D3A93E5A1F6613C600464A1A /* SportsRegistrationVC.swift in Sources */,
+				D30440871FB91B35007562C0 /* ActivitiesTVC.swift in Sources */,
 				D309200D1C56E6C3007CF290 /* AnnouncementFilter.swift in Sources */,
 				D3A93E581F66100100464A1A /* RegistrationAnnouncement.swift in Sources */,
 				D30920221C56E6C3007CF290 /* StaffDetails.swift in Sources */,

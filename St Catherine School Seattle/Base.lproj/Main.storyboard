@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="393"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jxP-qq-bu8" id="8Fn-Sy-GjI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="392"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="393"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bi4-9p-jIR">
@@ -443,7 +443,7 @@ Seattle, WA 98115</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1A4-ht-nWf" id="dNf-3c-Q2j">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Staff Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loz-ep-PNs">
@@ -601,9 +601,10 @@ Seattle, WA 98115</string>
                     </tabBar>
                     <connections>
                         <segue destination="PGx-BT-9OH" kind="relationship" relationship="viewControllers" id="KOa-1W-5BC"/>
-                        <segue destination="4oa-Xg-HeP" kind="relationship" relationship="viewControllers" id="C7G-AH-yxj"/>
                         <segue destination="KAr-eG-L7J" kind="relationship" relationship="viewControllers" id="Y05-Mh-p0a"/>
+                        <segue destination="nPq-l6-oat" kind="relationship" relationship="viewControllers" id="369-yS-Tve"/>
                         <segue destination="eXl-3P-W7D" kind="relationship" relationship="viewControllers" id="3mk-dM-ZPg"/>
+                        <segue destination="4oa-Xg-HeP" kind="relationship" relationship="viewControllers" id="C7G-AH-yxj"/>
                         <segue destination="bnJ-Hh-kcl" kind="relationship" relationship="viewControllers" id="6hz-OU-WGN"/>
                         <segue destination="Vgg-hf-EYW" kind="relationship" relationship="viewControllers" id="t1m-sY-78E"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -627,7 +628,7 @@ Seattle, WA 98115</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vd4-Fz-fcw" id="8Au-pl-q1N">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -659,7 +660,7 @@ Seattle, WA 98115</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M2A-bo-nAZ" id="oTp-IM-436">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -690,7 +691,7 @@ Seattle, WA 98115</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bk9-au-KFG" id="OhI-9m-Jgz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ad Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5G-EF-6pY">
@@ -799,7 +800,7 @@ Seattle, WA 98115</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="153"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffE-nK-1yL" id="esd-oX-Z4t">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="153"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwI-lQ-PFW">
@@ -888,7 +889,7 @@ Seattle, WA 98115</string>
                                 <rect key="frame" x="0.0" y="101" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YvS-4F-gFw" id="I1s-yb-6Ey">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -921,7 +922,7 @@ Seattle, WA 98115</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P41-AO-snf" id="2rD-dO-1lj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -940,7 +941,7 @@ Seattle, WA 98115</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VY-De-6PE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-928.79999999999995" y="965.6671664167917"/>
+            <point key="canvasLocation" x="-895" y="1186"/>
         </scene>
         <!--Sports RegistrationVC-->
         <scene sceneID="gDa-2P-5CL">
@@ -986,7 +987,7 @@ Seattle, WA 98115</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="org-f6-q5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-929" y="1772"/>
+            <point key="canvasLocation" x="8.8000000000000007" y="1771.6641679160421"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="u63-iv-bYF">
@@ -1041,7 +1042,7 @@ Seattle, WA 98115</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khR-6N-U7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="A2N-ri-2Db" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-153" y="1772"/>
+            <point key="canvasLocation" x="784.79999999999995" y="1771.6641679160421"/>
         </scene>
         <!--Grades By SportTVC-->
         <scene sceneID="fvf-R7-WUU">
@@ -1056,7 +1057,7 @@ Seattle, WA 98115</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cA8-8d-t6D" id="f4e-aP-RvP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1088,16 +1089,16 @@ Seattle, WA 98115</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="204"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eIO-Lh-ZPT" id="JZU-Cc-eXb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Event Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjD-Rj-ec4">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjD-Rj-ec4">
                                             <rect key="frame" x="22" y="69" width="331" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-8G-fi1">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-8G-fi1">
                                             <rect key="frame" x="22" y="104" width="331" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -1174,6 +1175,115 @@ Seattle, WA 98115</string>
             </objects>
             <point key="canvasLocation" x="583.20000000000005" y="965.6671664167917"/>
         </scene>
+        <!--ActivitiesTVC-->
+        <scene sceneID="hkj-5g-dRs">
+            <objects>
+                <tableViewController id="5j7-JS-FIv" customClass="ActivitiesTVC" customModule="St_Catherine_School_Seattle" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UQ0-qm-L3E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="activityIdentifier" selectionStyle="default" indentationWidth="10" reuseIdentifier="activityIdentifier" textLabel="uUL-9x-rfn" style="IBUITableViewCellStyleDefault" id="Pul-Tc-S5S">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pul-Tc-S5S" id="wkn-OM-OQh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uUL-9x-rfn">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5j7-JS-FIv" id="Mu2-uZ-Th5"/>
+                            <outlet property="delegate" destination="5j7-JS-FIv" id="jBe-cM-s5m"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yxd-3b-p9q"/>
+                    <connections>
+                        <segue destination="Dqt-Jc-CMU" kind="show" identifier="showSportsOfferings" id="Rtj-T7-Tce"/>
+                        <segue destination="oer-JB-cE2" kind="show" identifier="showSpeech" id="V6j-l5-Axg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUn-4k-PZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1626" y="1684"/>
+        </scene>
+        <!--Speech InfoVC-->
+        <scene sceneID="rzs-95-dF3">
+            <objects>
+                <viewController id="oer-JB-cE2" customClass="SpeechInfoVC" customModule="St_Catherine_School_Seattle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="27g-el-48u"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q7b-FW-nJ8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RYF-H7-T8L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speech Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBU-lh-sVG">
+                                <rect key="frame" x="39" y="107" width="219" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7es-HI-6IF">
+                                <rect key="frame" x="39" y="153" width="219" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Competition Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rK9-ZG-5nt">
+                                <rect key="frame" x="39" y="243" width="219" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdM-Pu-Xvl">
+                                <rect key="frame" x="39" y="289" width="219" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practice Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWK-Ku-QXV">
+                                <rect key="frame" x="39" y="386" width="219" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVS-EI-pcn">
+                                <rect key="frame" x="39" y="431" width="219" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="generalInfo" destination="7es-HI-6IF" id="Nie-0c-MK7"/>
+                        <outlet property="labelCompetitionSched" destination="PdM-Pu-Xvl" id="8Hc-ub-aqN"/>
+                        <outlet property="labelPracticeSched" destination="bVS-EI-pcn" id="JLN-mb-A84"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39g-ac-q6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1626.4000000000001" y="2480.5097451274364"/>
+        </scene>
         <!--CYO Sports-->
         <scene sceneID="xaY-Da-lUO">
             <objects>
@@ -1212,11 +1322,31 @@ Seattle, WA 98115</string>
             </objects>
             <point key="canvasLocation" x="-1868" y="203.74812593703149"/>
         </scene>
+        <!--Clubs/Sports-->
+        <scene sceneID="sQu-eR-Bgp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nPq-l6-oat" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Clubs/Sports" image="fairytale-25.png" id="69m-kH-Ev2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EaP-PM-gqt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5j7-JS-FIv" kind="relationship" relationship="rootViewController" id="XD0-Mr-AyL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KRc-tv-2wt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2615.1999999999998" y="1665.5172413793105"/>
+        </scene>
     </scenes>
     <resources>
         <image name="apple-25.png" width="25" height="25"/>
         <image name="calendar-25.png" width="25" height="25"/>
         <image name="chat_filled-25.png" width="25" height="25"/>
+        <image name="fairytale-25.png" width="25" height="25"/>
         <image name="marker_pen_filled-25.png" width="25" height="25"/>
         <image name="megaphone-25.png" width="25" height="25"/>
         <image name="running_filled-25.png" width="25" height="25"/>
@@ -1225,6 +1355,7 @@ Seattle, WA 98115</string>
         <image name="warehouse_filled-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Rtj-T7-Tce"/>
         <segue reference="XOg-4l-C1c"/>
     </inferredMetricsTieBreakers>
 </document>

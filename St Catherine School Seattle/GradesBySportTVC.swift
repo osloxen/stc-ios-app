@@ -254,7 +254,6 @@ class GradesBySportTVC: UITableViewController {
                 controller.gradeSelected = gradeSelected
                 controller.genderSelected = genderSelected
                 controller.sportSelected = sportSelected
-            
         }
     }
  
