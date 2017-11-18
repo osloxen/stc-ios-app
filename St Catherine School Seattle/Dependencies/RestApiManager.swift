@@ -53,6 +53,8 @@ class RestApiManager {
             static let staffDetails = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-school/classinfo/"
             
             static let speechUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/dev/stc/activities/speech"
+            
+            static let activitiesUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/dev/stc/activities/"
         }
     }
     
@@ -74,6 +76,16 @@ class RestApiManager {
         filteredUrl = filteredUrl.lowercased()
         
         return filteredUrl
+    }
+    
+    
+    func getActivitiesUrl(activity: String) -> String {
+        
+        var urlToUse = RestAPI.url.activitiesUrl
+        
+        urlToUse += activity
+        
+        return urlToUse
     }
     
     

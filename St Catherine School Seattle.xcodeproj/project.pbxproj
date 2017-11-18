@@ -67,6 +67,9 @@
 		D32603231CBDDE8800C2FB08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */; };
 		D35052421FBD532C007BA831 /* ClubInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052411FBD532C007BA831 /* ClubInfoVC.swift */; };
 		D35052521FBD5A73007BA831 /* SpeechInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052511FBD5A73007BA831 /* SpeechInfoVC.swift */; };
+		D35052541FBD66C4007BA831 /* DramaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052531FBD66C4007BA831 /* DramaVC.swift */; };
+		D35052561FBDE9F8007BA831 /* RoboticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052551FBDE9F8007BA831 /* RoboticsVC.swift */; };
+		D35052581FBDED9B007BA831 /* CrossingGuardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052571FBDED9B007BA831 /* CrossingGuardVC.swift */; };
 		D3513C351F4A9BD000ACBF31 /* LunchDatesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3513C341F4A9BD000ACBF31 /* LunchDatesTVC.swift */; };
 		D3513C381F4D643D00ACBF31 /* ShowEventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3513C371F4D643D00ACBF31 /* ShowEventsTVC.swift */; };
 		D359A36F1F3BBA4000F4AD82 /* SportsEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359A36E1F3BBA4000F4AD82 /* SportsEventCell.swift */; };
@@ -289,6 +292,9 @@
 		D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D35052411FBD532C007BA831 /* ClubInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubInfoVC.swift; sourceTree = "<group>"; };
 		D35052511FBD5A73007BA831 /* SpeechInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechInfoVC.swift; sourceTree = "<group>"; };
+		D35052531FBD66C4007BA831 /* DramaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaVC.swift; sourceTree = "<group>"; };
+		D35052551FBDE9F8007BA831 /* RoboticsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoboticsVC.swift; sourceTree = "<group>"; };
+		D35052571FBDED9B007BA831 /* CrossingGuardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossingGuardVC.swift; sourceTree = "<group>"; };
 		D3513C341F4A9BD000ACBF31 /* LunchDatesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchDatesTVC.swift; sourceTree = "<group>"; };
 		D3513C371F4D643D00ACBF31 /* ShowEventsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventsTVC.swift; sourceTree = "<group>"; };
 		D359A36E1F3BBA4000F4AD82 /* SportsEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsEventCell.swift; sourceTree = "<group>"; };
@@ -351,9 +357,12 @@
 		D30440881FB91B40007562C0 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
+				D35052571FBDED9B007BA831 /* CrossingGuardVC.swift */,
 				D30440861FB91B35007562C0 /* ActivitiesTVC.swift */,
 				D35052411FBD532C007BA831 /* ClubInfoVC.swift */,
 				D35052511FBD5A73007BA831 /* SpeechInfoVC.swift */,
+				D35052531FBD66C4007BA831 /* DramaVC.swift */,
+				D35052551FBDE9F8007BA831 /* RoboticsVC.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -871,11 +880,13 @@
 				D309201C1C56E6C3007CF290 /* PinsOnMap.swift in Sources */,
 				D30440621F665BDE00D082D3 /* TableViewCell.swift in Sources */,
 				D31D8DEC1F3915A0007E5669 /* GradesBySportTVC.swift in Sources */,
+				D35052541FBD66C4007BA831 /* DramaVC.swift in Sources */,
 				D31D8DEE1F391DA0007E5669 /* SportsScheduleTVC.swift in Sources */,
 				D3513C351F4A9BD000ACBF31 /* LunchDatesTVC.swift in Sources */,
 				D30920211C56E6C3007CF290 /* Staff.swift in Sources */,
 				D309200F1C56E6C3007CF290 /* AnnouncementsList.swift in Sources */,
 				D31D8DD71F38E304007E5669 /* HomeworkDayDetailsTableViewCell.swift in Sources */,
+				D35052561FBDE9F8007BA831 /* RoboticsVC.swift in Sources */,
 				D3513C381F4D643D00ACBF31 /* ShowEventsTVC.swift in Sources */,
 				D382B3C01EBD493F00E4EE8A /* HomeworkDetailsCell.swift in Sources */,
 				D31D8DEA1F391333007E5669 /* ListSportsTVC.swift in Sources */,
@@ -883,6 +894,7 @@
 				D359A36F1F3BBA4000F4AD82 /* SportsEventCell.swift in Sources */,
 				D382B3AF1EBC435800E4EE8A /* HomeworkDetailsTVC.swift in Sources */,
 				D3B538611EAF1D4700C1854D /* ClassroomDetailsViewController.swift in Sources */,
+				D35052581FBDED9B007BA831 /* CrossingGuardVC.swift in Sources */,
 				D304641F1F4F2C4D0056C204 /* ShowEventsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
