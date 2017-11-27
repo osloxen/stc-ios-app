@@ -26,12 +26,16 @@ class RestApiManager {
     
     struct RestAPI {
         struct url {
-            //
+            
+                        //TODO: Set all of these to prodblue
+            
+            
+            
             static let getLunches = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/lunch"
             
             static let getColumnHeadings = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/columns"
             
-            //
+            
             static let getSchoolSchedule = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/school-schedule"
             
             static let getEvents = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/events"
@@ -40,7 +44,6 @@ class RestApiManager {
             static let homework = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/homework/"
             
             
-            //TODO: Set this to Prod again
 //            static let sports = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/sports/"
             
             
@@ -48,13 +51,15 @@ class RestApiManager {
             
             static let staff = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/staff"
             
-            // *** BELOW is old and not used and should be deleted ***
-            
+            // I don't think I use this call for anything.  Find out.
             static let staffDetails = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-school/classinfo/"
             
             static let speechUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/dev/stc/activities/speech"
             
             static let activitiesUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/dev/stc/activities/"
+            
+            static let classroomNotes = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/classroom/notes/"
+            
         }
     }
     
@@ -77,6 +82,21 @@ class RestApiManager {
         
         return filteredUrl
     }
+    
+
+    
+    func getClassroomNotesUrl(grade: String) -> String {
+        
+        let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: grade)
+        
+        var urlToUse = RestAPI.url.classroomNotes
+        
+        urlToUse += trimmedParameter
+        
+        return urlToUse
+    }
+    
+
     
     
     func getActivitiesUrl(activity: String) -> String {

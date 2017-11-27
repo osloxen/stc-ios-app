@@ -70,7 +70,22 @@ class ClassroomsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NSLog("You selected cell number: \(indexPath.row)!")
-        self.performSegue(withIdentifier: "showHomeworkDates", sender: self)
+        
+        switch gradesAtSchool[indexPath.row] {
+
+        case "Kindergarten":
+            self.performSegue(withIdentifier: "showPrimaryGradeInfo", sender: self)
+        case "Grade 1":
+            self.performSegue(withIdentifier: "showPrimaryGradeInfo", sender: self)
+        case "Grade 2":
+            self.performSegue(withIdentifier: "showPrimaryGradeInfo", sender: self)
+
+        default:
+            self.performSegue(withIdentifier: "showHomeworkDates", sender: self)
+
+            NSLog("Did NOT see a primary grade so using Homework Dates as the default. ")
+        }
+        
     }
  
 
@@ -136,6 +151,19 @@ class ClassroomsTableViewController: UITableViewController {
                 print("selected showHomeworkDates")
             }
         }
+        
+        // showPrimaryGradeInfo
+        
+        if segue.identifier == "showPrimaryGradeInfo" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                
+                let controller = segue.destination as! NotesTVC
+                let value = gradesAtSchool[indexPath.row]
+                controller.gradeRequested = value
+                print("prepare for segue showPrimaryGradeInfo")
+            }
+        }
+        
 
     }
     

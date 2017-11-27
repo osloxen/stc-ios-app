@@ -58,18 +58,18 @@ class ActivitiesTVC: UITableViewController {
         NSLog("You selected cell number: \(indexPath.row)!")
         
         switch activitiesAtSchool[indexPath.row] {
-        case "Sports":
-            self.performSegue(withIdentifier: "showSportsOfferings", sender: self)
-        case "Speech and Debate":
-            self.performSegue(withIdentifier: "showSpeech", sender: self)
-        case "Drama":
-            self.performSegue(withIdentifier: "showDrama", sender: self)
-        case "Robotics":
-            self.performSegue(withIdentifier: "showRobotics", sender: self)
-        case "Crossing Guard":
-            self.performSegue(withIdentifier: "showCrossingGuard", sender: self)
-        default:
-            NSLog("You forgot to set the segue!  Accidentally went to default in case statement.")
+            case "Sports":
+                self.performSegue(withIdentifier: "showSportsOfferings", sender: self)
+            case "Speech and Debate":
+                self.performSegue(withIdentifier: "showSpeech", sender: self)
+            case "Drama":
+                self.performSegue(withIdentifier: "showDrama", sender: self)
+            case "Robotics":
+                self.performSegue(withIdentifier: "showRobotics", sender: self)
+            case "Crossing Guard":
+                self.performSegue(withIdentifier: "showCrossingGuard", sender: self)
+            default:
+                NSLog("You forgot to set the segue!  Accidentally went to default in case statement.")
         }
     }
     

@@ -70,6 +70,7 @@
 		D35052541FBD66C4007BA831 /* DramaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052531FBD66C4007BA831 /* DramaVC.swift */; };
 		D35052561FBDE9F8007BA831 /* RoboticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052551FBDE9F8007BA831 /* RoboticsVC.swift */; };
 		D35052581FBDED9B007BA831 /* CrossingGuardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052571FBDED9B007BA831 /* CrossingGuardVC.swift */; };
+		D350525A1FC3F070007BA831 /* NotesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052591FC3F070007BA831 /* NotesTVC.swift */; };
 		D3513C351F4A9BD000ACBF31 /* LunchDatesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3513C341F4A9BD000ACBF31 /* LunchDatesTVC.swift */; };
 		D3513C381F4D643D00ACBF31 /* ShowEventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3513C371F4D643D00ACBF31 /* ShowEventsTVC.swift */; };
 		D359A36F1F3BBA4000F4AD82 /* SportsEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359A36E1F3BBA4000F4AD82 /* SportsEventCell.swift */; };
@@ -295,6 +296,7 @@
 		D35052531FBD66C4007BA831 /* DramaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaVC.swift; sourceTree = "<group>"; };
 		D35052551FBDE9F8007BA831 /* RoboticsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoboticsVC.swift; sourceTree = "<group>"; };
 		D35052571FBDED9B007BA831 /* CrossingGuardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossingGuardVC.swift; sourceTree = "<group>"; };
+		D35052591FC3F070007BA831 /* NotesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTVC.swift; sourceTree = "<group>"; };
 		D3513C341F4A9BD000ACBF31 /* LunchDatesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchDatesTVC.swift; sourceTree = "<group>"; };
 		D3513C371F4D643D00ACBF31 /* ShowEventsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventsTVC.swift; sourceTree = "<group>"; };
 		D359A36E1F3BBA4000F4AD82 /* SportsEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsEventCell.swift; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 				D36FC3331F34482900132DED /* HomeworkDatesTVC.swift */,
 				D382B3BF1EBD493F00E4EE8A /* HomeworkDetailsCell.swift */,
 				D31D8DD61F38E304007E5669 /* HomeworkDayDetailsTableViewCell.swift */,
+				D35052591FC3F070007BA831 /* NotesTVC.swift */,
 			);
 			name = classrooms;
 			sourceTree = "<group>";
@@ -894,6 +897,7 @@
 				D359A36F1F3BBA4000F4AD82 /* SportsEventCell.swift in Sources */,
 				D382B3AF1EBC435800E4EE8A /* HomeworkDetailsTVC.swift in Sources */,
 				D3B538611EAF1D4700C1854D /* ClassroomDetailsViewController.swift in Sources */,
+				D350525A1FC3F070007BA831 /* NotesTVC.swift in Sources */,
 				D35052581FBDED9B007BA831 /* CrossingGuardVC.swift in Sources */,
 				D304641F1F4F2C4D0056C204 /* ShowEventsCell.swift in Sources */,
 			);

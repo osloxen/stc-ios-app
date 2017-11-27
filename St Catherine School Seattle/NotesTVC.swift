@@ -1,8 +1,8 @@
 //
-//  HomeworkDatesTVC.swift
+//  NotesTVC.swift
 //  St Catherine School Seattle
 //
-//  Created by David Berge on 8/3/17.
+//  Created by David Berge on 11/20/17.
 //  Copyright © 2017 Joe Dog Productions. All rights reserved.
 //
 
@@ -10,77 +10,59 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class HomeworkDatesTVC: UITableViewController {
+class NotesTVC: UITableViewController {
     
+    
+    var gradeRequested = ""
+
     var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
-    
-    var gradeRequested: String? = nil
-    
-    var homeworkFromCloud = [Any]()
-    
-    var hwDictionary = [String: [String]]()
-    var subjectNamesFromCloud = [String]()
-    
 
-    func fetchColumnHeaders() {
+    var teacherNote:String = ""
+    var notesBySubject = [String]()
+    var notesByDayOfWeek = [String]()
+    var spellingWords:String = ""
+    
+    
+    func reloadTableViewData() {
         
-        let restApiManager = RestApiManager();
-        
-        let urlForHomeworkColumns = restApiManager.getHomeworkColumnsUrl(grade: self.gradeRequested!)
-        
-        print("*******************")
-        print(urlForHomeworkColumns)
-        print("*******************")
-        
-        Alamofire.request(urlForHomeworkColumns).responseJSON { response in
-            
-            if let MYJSON = response.result.value {
-                print("JSON: \(MYJSON)")
-                var json = JSON(MYJSON)
-                
-                let columnsFromCloud = json["columnArray"].array!
-                
-                for columnName in columnsFromCloud {
-                    self.hwDictionary[columnName.string!] = []
-                    self.subjectNamesFromCloud.append(columnName.string!)
-                }
-                
-            } else {
-                print("error with rest call")
-            }
-        }
+        self.tableView.reloadData()
     }
-
     
     
     
-    func fetchGradeHomeworkDates() {
+    
+    func fetchClassroomNotes() {
         
         let restApiManager = RestApiManager();
         
-        let urlForClassHomework = restApiManager.getClassHomeworkDatesUrl(classroom: self.gradeRequested!)
+        let urlForClassroomNotes = restApiManager.getClassroomNotesUrl(grade: self.gradeRequested)
         
         print("*******************")
-        print(urlForClassHomework)
+        print(urlForClassroomNotes)
         print("*******************")
-
-        Alamofire.request(urlForClassHomework).responseJSON { response in
+        
+        Alamofire.request(urlForClassroomNotes).responseJSON { response in
             
             if let MYJSON = response.result.value {
                 print("JSON: \(MYJSON)")
                 var json = JSON(MYJSON)
-
-                let homeworkFromCloud = json["homeworkArray"].array!
-                self.homeworkFromCloud = homeworkFromCloud
-
-                for myHomeworkDate in homeworkFromCloud {
-                        // Get rid of if statement for grades after you get this working
-                        for schoolSubject in self.hwDictionary.keys {
-                            
-                            self.hwDictionary[schoolSubject]!.append(myHomeworkDate[schoolSubject].string!)
-                        }
+                
+                let classroomNotesFromCloud = json["infoArray"].array!
+                //self.homeworkFromCloud = homeworkFromCloud
+                
+                self.teacherNote = classroomNotesFromCloud[1].string!
+                
+                for arrayPosition in stride(from: 4, to: 14, by: 2) {
+                    // Just grab the academeic subjects
+                    self.notesBySubject.append(classroomNotesFromCloud[arrayPosition].string!)
                 }
-
+                
+                for arrayPosition in stride(from: 16, to: 26, by: 2) {
+                    // Just grab the academeic subjects
+                    self.notesByDayOfWeek.append(classroomNotesFromCloud[arrayPosition].string!)
+                }
+                
+                self.spellingWords = classroomNotesFromCloud[26].string!
                 
                 self.tableView.estimatedRowHeight = 300.0
                 self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -90,19 +72,13 @@ class HomeworkDatesTVC: UITableViewController {
                 
                 // This keeps table view from loading until API call is done.
                 self.tableView.dataSource = self
-            
+                
             } else {
                 print("error with rest call")
             }
         }
     }
-
     
-    func reloadTableViewData() {
-        
-        self.tableView.reloadData()
-    }
-
     
     func startActivityIndicatorProcess(activityIndicator:UIActivityIndicatorView) {
         
@@ -116,17 +92,16 @@ class HomeworkDatesTVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         startActivityIndicatorProcess(activityIndicator: activityIndicator)
         
-        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+        fetchClassroomNotes()
         
-        tableView.dataSource = nil
-        tableView.delegate = self
-        
-        fetchColumnHeaders()
-        fetchGradeHomeworkDates()
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -138,37 +113,56 @@ class HomeworkDatesTVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return self.hwDictionary["date"]!.count
-
+        // #warning Incomplete implementation, return the number of rows
+        switch (section) {
+        case 0: return 1
+        case 1: return self.notesBySubject.count
+        case 2: return self.notesByDayOfWeek.count
+        case 3: return 1
+        default: return 0
+        }
+        
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        var sectionTitle = "not set"
+        
+        switch (section) {
+        case 0: sectionTitle = "Teacher Notes"
+        case 1: sectionTitle = "Student Subjects"
+        case 2: sectionTitle = "Week at a Glance..."
+        case 3: sectionTitle = "Spelling Words"
+        default: sectionTitle = "default"
+        }
+        return sectionTitle
+        
     }
 
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "homeworkDate", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "primaryClassNotes", for: indexPath)
 
         // Configure the cell...
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.date(from: self.hwDictionary["date"]![indexPath.row])
-        
-        dateFormatter.dateFormat = "EEEE, MMMM d"
-        let parentFriendlyDate = dateFormatter.string(from: date!)
-        
-        
-        cell.textLabel?.text = parentFriendlyDate
-        
+        switch (indexPath.section) {
+        case 0:
+            cell.textLabel?.text = self.teacherNote
+        case 1:
+            cell.textLabel?.text = self.notesBySubject[indexPath.row]
+        case 2:
+            cell.textLabel?.text = self.notesByDayOfWeek[indexPath.row]
+        case 3:
+            cell.textLabel?.text = self.spellingWords
+        default:
+            cell.textLabel?.text = "default section"
+        }
+
         return cell
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        NSLog("You selected cell number: \(indexPath.row)!")
-        self.performSegue(withIdentifier: "showHomeworkDetails", sender: self)
     }
  
 
@@ -207,32 +201,14 @@ class HomeworkDatesTVC: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        
-        if segue.identifier == "showHomeworkDetails" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let controller = segue.destination as! HomeworkDetailsTVC
-                let value = hwDictionary["date"]![indexPath.row]
-                
-                controller.hwDetails = self.hwDictionary
-                controller.subjectColumnNames = self.subjectNamesFromCloud
-                controller.hwIndex = indexPath.row
-                print(self.hwDictionary["date"]![indexPath.row])
-                
-                controller.homeworkDate = value
-                
-                controller.gradeRequested = gradeRequested
-            }
-        }
     }
- 
-    @IBAction func doneLookingAtHomework(_ segue: UIStoryboardSegue) {
-    }
+    */
+
 }
