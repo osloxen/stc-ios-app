@@ -27,39 +27,31 @@ class RestApiManager {
     struct RestAPI {
         struct url {
             
-                        //TODO: Set all of these to prodblue
             
-            
-            
-            static let getLunches = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/lunch"
-            
-            static let getColumnHeadings = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/columns"
-            
-            
-            static let getSchoolSchedule = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/school-schedule"
-            
-            static let getEvents = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/events"
-            
+            static let getAd = "https://tp6pumul78.execute-api.us-east-1.amazonaws.com/prodblue/ad/ios"
 
-            static let homework = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/homework/"
+            static let getLunches = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/lunch"
             
+            static let getColumnHeadings = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/columns/"
             
-//            static let sports = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/sports/"
+            static let getSchoolSchedule = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/school-schedule"
             
+            static let getEvents = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/events"
             
-            static let sports = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/dev/stc/sports/latest/"
+            static let homework = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/homework/"
             
-            static let staff = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prod/stc/staff"
+            static let sports =   "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/sports/"
             
-            // I don't think I use this call for anything.  Find out.
-            static let staffDetails = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-school/classinfo/"
+            static let staff = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/staff"
             
-            static let speechUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/dev/stc/activities/speech"
-            
-            static let activitiesUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/dev/stc/activities/"
+            static let activitiesUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/activities/"
             
             static let classroomNotes = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/classroom/notes/"
             
+            // I don't think I use this call for anything.  Find out.
+            //            static let staffDetails = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-school/classinfo/"
+            
+            //            static let speechUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/activities/speech"
         }
     }
     
@@ -108,14 +100,16 @@ class RestApiManager {
         return urlToUse
     }
     
-    
-    // 
-    // Speech!  More Speech!
     //
-    func getSpeechUrl() -> String {
+    // Get ads
+    //
+    func getAdUrl() -> String {
         
-        return RestAPI.url.speechUrl
+        return RestAPI.url.getAd
     }
+    
+    
+
     
     //
     // LUNCHES!!!
@@ -149,7 +143,7 @@ class RestApiManager {
         
         let trimmedParameter = self.normalizeTheStringForRestApi(unfilteredUrl: grade)
         
-        let urlForRestApi = ScheduleBaseUrl+"/"+trimmedParameter
+        let urlForRestApi = ScheduleBaseUrl+trimmedParameter
         
         return urlForRestApi
     }

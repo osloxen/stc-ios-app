@@ -52,7 +52,7 @@ class NotesTVC: UITableViewController {
                 
                 self.teacherNote = classroomNotesFromCloud[1].string!
                 
-                for arrayPosition in stride(from: 4, to: 14, by: 2) {
+                for arrayPosition in stride(from: 4, to: 16, by: 2) {
                     // Just grab the academeic subjects
                     self.notesBySubject.append(classroomNotesFromCloud[arrayPosition].string!)
                 }
@@ -135,7 +135,7 @@ class NotesTVC: UITableViewController {
         
         switch (section) {
         case 0: sectionTitle = "Teacher Notes"
-        case 1: sectionTitle = "Student Subjects"
+        case 1: sectionTitle = "Academic Subjects"
         case 2: sectionTitle = "Week at a Glance..."
         case 3: sectionTitle = "Spelling Words"
         default: sectionTitle = "default"
@@ -153,9 +153,25 @@ class NotesTVC: UITableViewController {
         case 0:
             cell.textLabel?.text = self.teacherNote
         case 1:
-            cell.textLabel?.text = self.notesBySubject[indexPath.row]
+            switch (indexPath.row) {
+            case 0: cell.textLabel?.text = "Math: " + self.notesBySubject[indexPath.row]
+            case 1: cell.textLabel?.text = "Reading: " + self.notesBySubject[indexPath.row]
+            case 2: cell.textLabel?.text = "Language Arts: " + self.notesBySubject[indexPath.row]
+            case 3: cell.textLabel?.text = "Science: " + self.notesBySubject[indexPath.row]
+            case 4: cell.textLabel?.text = "Social Studies: " + self.notesBySubject[indexPath.row]
+            case 5: cell.textLabel?.text = "Religion: " + self.notesBySubject[indexPath.row]
+            default: cell.textLabel?.text = "Other: "
+            }
+            
         case 2:
-            cell.textLabel?.text = self.notesByDayOfWeek[indexPath.row]
+            switch (indexPath.row) {
+            case 0: cell.textLabel?.text = "Monday: " + self.notesByDayOfWeek[indexPath.row]
+            case 1: cell.textLabel?.text = "Tuesday: " + self.notesByDayOfWeek[indexPath.row]
+            case 2: cell.textLabel?.text = "Wednesday: " + self.notesByDayOfWeek[indexPath.row]
+            case 3: cell.textLabel?.text = "Thursday: " + self.notesByDayOfWeek[indexPath.row]
+            case 4: cell.textLabel?.text = "Friday: " + self.notesByDayOfWeek[indexPath.row]
+            default: cell.textLabel?.text = "Other: "
+            }
         case 3:
             cell.textLabel?.text = self.spellingWords
         default:

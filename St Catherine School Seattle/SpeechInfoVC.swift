@@ -26,7 +26,7 @@ class SpeechInfoVC: UIViewController {
         
         let restApiManager = RestApiManager();
         
-        let urlForSpeech = restApiManager.getSpeechUrl()
+        let urlForSpeech = restApiManager.getActivitiesUrl(activity: "speech")
         
         print("*******************")
         print(urlForSpeech)
