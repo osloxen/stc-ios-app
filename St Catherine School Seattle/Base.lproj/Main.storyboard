@@ -1351,81 +1351,105 @@ Seattle, WA 98115</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Production News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ng-qj-fiA">
-                                <rect key="frame" x="16" y="72" width="343" height="18"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcn-OJ-jRn">
-                                <rect key="frame" x="16" y="97" width="343" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cast Notes and Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90k-ld-inj">
-                                <rect key="frame" x="16" y="122" width="343" height="18"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYF-7o-eof">
-                                <rect key="frame" x="16" y="147" width="343" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rehersal Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zne-I1-VuA">
-                                <rect key="frame" x="16" y="172" width="343" height="18"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVc-31-6B7">
-                                <rect key="frame" x="16" y="197" width="343" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhM-2z-kKE">
-                                <rect key="frame" x="16" y="247" width="343" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXl-oD-9QG">
-                                <rect key="frame" x="16" y="222" width="343" height="18"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNf-8L-X9V">
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcR-bg-d0x">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhM-2z-kKE">
+                                                <rect key="frame" x="8" y="205" width="330" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXl-oD-9QG">
+                                                <rect key="frame" x="8" y="179" width="137.5" height="18"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVc-31-6B7">
+                                                <rect key="frame" x="8" y="154" width="330" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rehersal Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zne-I1-VuA">
+                                                <rect key="frame" x="8" y="128" width="343" height="18"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYF-7o-eof">
+                                                <rect key="frame" x="8" y="103" width="330" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Cast Notes and Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90k-ld-inj">
+                                                <rect key="frame" x="8" y="70" width="343" height="18"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcn-OJ-jRn">
+                                                <rect key="frame" x="8" y="45" width="330" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Production News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ng-qj-fiA">
+                                                <rect key="frame" x="8" y="8" width="343" height="18"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="90k-ld-inj" firstAttribute="leading" secondItem="CcR-bg-d0x" secondAttribute="leading" constant="8" id="0UL-Ew-3lc"/>
+                                            <constraint firstItem="90k-ld-inj" firstAttribute="top" secondItem="kcn-OJ-jRn" secondAttribute="bottom" constant="8" id="0g2-k2-7fe"/>
+                                            <constraint firstItem="yVc-31-6B7" firstAttribute="leading" secondItem="CcR-bg-d0x" secondAttribute="leading" constant="8" id="0nT-Ay-sZl"/>
+                                            <constraint firstAttribute="trailing" secondItem="90k-ld-inj" secondAttribute="trailing" constant="24" id="3NM-J2-6pM"/>
+                                            <constraint firstItem="GhM-2z-kKE" firstAttribute="leading" secondItem="CcR-bg-d0x" secondAttribute="leading" constant="8" id="6Y0-bK-nz2"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zne-I1-VuA" secondAttribute="trailing" constant="24" id="6Zd-hz-Vk1"/>
+                                            <constraint firstItem="Zne-I1-VuA" firstAttribute="leading" secondItem="CcR-bg-d0x" secondAttribute="leading" constant="8" id="AAK-cR-OV6"/>
+                                            <constraint firstItem="7Ng-qj-fiA" firstAttribute="leading" secondItem="CcR-bg-d0x" secondAttribute="leading" constant="8" id="AaH-7R-6hx"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Ng-qj-fiA" secondAttribute="trailing" constant="24" id="FGQ-ZO-5aY"/>
+                                            <constraint firstItem="kcn-OJ-jRn" firstAttribute="leading" secondItem="CcR-bg-d0x" secondAttribute="leading" constant="8" id="Io3-Kh-ptz"/>
+                                            <constraint firstItem="DXl-oD-9QG" firstAttribute="leading" secondItem="CcR-bg-d0x" secondAttribute="leading" constant="8" id="LHW-LL-nKM"/>
+                                            <constraint firstItem="DXl-oD-9QG" firstAttribute="top" secondItem="yVc-31-6B7" secondAttribute="bottom" constant="8" id="ReF-od-AOZ"/>
+                                            <constraint firstItem="kcn-OJ-jRn" firstAttribute="top" secondItem="7Ng-qj-fiA" secondAttribute="bottom" constant="19" id="VgT-YM-hV4"/>
+                                            <constraint firstItem="Zne-I1-VuA" firstAttribute="top" secondItem="WYF-7o-eof" secondAttribute="bottom" constant="8" id="eZ7-Qy-hXi"/>
+                                            <constraint firstItem="yVc-31-6B7" firstAttribute="top" secondItem="Zne-I1-VuA" secondAttribute="bottom" constant="8" id="ijf-Fu-DWU"/>
+                                            <constraint firstItem="7Ng-qj-fiA" firstAttribute="top" secondItem="CcR-bg-d0x" secondAttribute="top" constant="8" id="skm-Px-civ"/>
+                                            <constraint firstItem="WYF-7o-eof" firstAttribute="leading" secondItem="CcR-bg-d0x" secondAttribute="leading" constant="8" id="v8s-yo-ixy"/>
+                                            <constraint firstItem="GhM-2z-kKE" firstAttribute="top" secondItem="DXl-oD-9QG" secondAttribute="bottom" constant="8" id="wJW-Aw-gAP"/>
+                                            <constraint firstItem="WYF-7o-eof" firstAttribute="top" secondItem="90k-ld-inj" secondAttribute="bottom" constant="15" id="yb8-2h-6BI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CcR-bg-d0x" secondAttribute="trailing" id="6Mj-pI-QES"/>
+                                    <constraint firstItem="CcR-bg-d0x" firstAttribute="top" secondItem="XNf-8L-X9V" secondAttribute="top" id="FPN-QP-Gtq"/>
+                                    <constraint firstAttribute="bottom" secondItem="CcR-bg-d0x" secondAttribute="bottom" id="PLR-jZ-Sk9"/>
+                                    <constraint firstItem="CcR-bg-d0x" firstAttribute="leading" secondItem="XNf-8L-X9V" secondAttribute="leading" id="kPD-2t-xeV"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="kcn-OJ-jRn" secondAttribute="leading" id="3pG-mq-IGY"/>
-                            <constraint firstItem="DXl-oD-9QG" firstAttribute="top" secondItem="yVc-31-6B7" secondAttribute="bottom" constant="8" id="8OJ-DH-J72"/>
-                            <constraint firstItem="yVc-31-6B7" firstAttribute="top" secondItem="Zne-I1-VuA" secondAttribute="bottom" constant="7.5" id="A7F-xS-xPV"/>
-                            <constraint firstItem="DXl-oD-9QG" firstAttribute="leading" secondItem="X5z-pu-6oa" secondAttribute="leadingMargin" id="AOY-zX-76n"/>
-                            <constraint firstItem="Zne-I1-VuA" firstAttribute="top" secondItem="WYF-7o-eof" secondAttribute="bottom" constant="8" id="BfX-eS-3T1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7Ng-qj-fiA" secondAttribute="trailing" id="CYJ-8n-aWI"/>
-                            <constraint firstItem="7Ng-qj-fiA" firstAttribute="leading" secondItem="X5z-pu-6oa" secondAttribute="leadingMargin" id="Kd5-Vd-7jK"/>
-                            <constraint firstItem="WYF-7o-eof" firstAttribute="top" secondItem="90k-ld-inj" secondAttribute="bottom" constant="7.5" id="N3b-Xl-8U2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GhM-2z-kKE" secondAttribute="trailing" id="QLj-0b-rlB"/>
-                            <constraint firstItem="GhM-2z-kKE" firstAttribute="top" secondItem="DXl-oD-9QG" secondAttribute="bottom" constant="7.5" id="Qti-Qb-Dgr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DXl-oD-9QG" secondAttribute="trailing" id="T79-xU-tpA"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="GhM-2z-kKE" secondAttribute="leading" id="VIx-XR-LDW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yVc-31-6B7" secondAttribute="trailing" id="d4a-NF-kph"/>
-                            <constraint firstItem="7Ng-qj-fiA" firstAttribute="top" secondItem="bpw-Ih-yqd" secondAttribute="bottom" constant="8" id="fP3-hF-N0M"/>
-                            <constraint firstItem="kcn-OJ-jRn" firstAttribute="top" secondItem="7Ng-qj-fiA" secondAttribute="bottom" constant="7.5" id="iCn-pb-Yxf"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="yVc-31-6B7" secondAttribute="leading" id="iVf-24-Z6L"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zne-I1-VuA" secondAttribute="trailing" id="ld1-q8-Ny1"/>
-                            <constraint firstItem="90k-ld-inj" firstAttribute="leading" secondItem="X5z-pu-6oa" secondAttribute="leadingMargin" id="p6R-bx-8eb"/>
-                            <constraint firstItem="90k-ld-inj" firstAttribute="top" secondItem="kcn-OJ-jRn" secondAttribute="bottom" constant="8" id="siy-lf-DV7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="90k-ld-inj" secondAttribute="trailing" id="tL7-jJ-Vjt"/>
-                            <constraint firstItem="Zne-I1-VuA" firstAttribute="leading" secondItem="X5z-pu-6oa" secondAttribute="leadingMargin" id="unS-nj-DxS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WYF-7o-eof" secondAttribute="trailing" id="xA7-y0-cMZ"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="WYF-7o-eof" secondAttribute="leading" id="xlq-LT-flN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kcn-OJ-jRn" secondAttribute="trailing" id="y3n-Ug-ev8"/>
+                            <constraint firstItem="XNf-8L-X9V" firstAttribute="trailing" secondItem="X5z-pu-6oa" secondAttribute="trailingMargin" id="3Gk-XK-RU3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kcn-OJ-jRn" secondAttribute="trailing" constant="5" id="6kh-Vv-HTl"/>
+                            <constraint firstItem="XNf-8L-X9V" firstAttribute="top" secondItem="bpw-Ih-yqd" secondAttribute="bottom" id="FMQ-Zq-4hG"/>
+                            <constraint firstItem="CcR-bg-d0x" firstAttribute="width" secondItem="X5z-pu-6oa" secondAttribute="width" id="Ftz-xb-xbA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yVc-31-6B7" secondAttribute="trailing" constant="5" id="Q5c-Wf-zFO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WYF-7o-eof" secondAttribute="trailing" constant="5" id="QRD-eW-vRU"/>
+                            <constraint firstItem="CcR-bg-d0x" firstAttribute="height" secondItem="X5z-pu-6oa" secondAttribute="height" id="RTO-1J-WbH"/>
+                            <constraint firstItem="XNf-8L-X9V" firstAttribute="leading" secondItem="X5z-pu-6oa" secondAttribute="leadingMargin" id="Wl4-SM-apw"/>
+                            <constraint firstItem="6aE-Kp-9Pe" firstAttribute="top" secondItem="XNf-8L-X9V" secondAttribute="bottom" id="bfB-Bq-elO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GhM-2z-kKE" secondAttribute="trailing" constant="5" id="thb-0S-4m8"/>
                         </constraints>
                     </view>
                     <connections>
