@@ -12,6 +12,10 @@ import SwiftyJSON
 
 class DramaVC: UIViewController {
     
+    @IBOutlet weak var localLinkAd: UILabel!
+    
+    @IBOutlet weak var adText: UILabel!
+    
     @IBOutlet weak var labelDirectorNotes: UILabel!
     
     @IBOutlet weak var labelStageDirectorNotes: UILabel!
@@ -19,6 +23,33 @@ class DramaVC: UIViewController {
     @IBOutlet weak var labelRehersalSchedule: UILabel!
     
     @IBOutlet weak var labelShowSchedule: UILabel!
+    
+    let restApiManager = RestApiManager();
+    
+    var adDisplay: [String:String] = [
+        "business"     :"not set",
+        "adText"       :"not set"
+    ]
+
+    func fetchAd() {
+        
+        let adUrl = restApiManager.getAdUrl()
+        
+        Alamofire.request(adUrl).responseJSON { response in
+            
+            if let MYJSON = response.result.value {
+                print("JSON: \(MYJSON)")
+                let json = JSON(MYJSON)
+                self.adDisplay["business"] = json["business"].stringValue
+                self.adDisplay["adText"] = json["adText"].stringValue
+                
+                self.localLinkAd.text = self.adDisplay["business"]
+                self.adText.text = self.adDisplay["adText"]
+                
+                //self.activityIndicator.stopAnimating()
+            }
+        }
+    }
     
     
     func fetchDramaInfo() {
@@ -55,6 +86,7 @@ class DramaVC: UIViewController {
         super.viewDidLoad()
 
         fetchDramaInfo()
+        fetchAd()
     }
 
     override func didReceiveMemoryWarning() {
