@@ -24,34 +24,36 @@ extension Date {
 
 class RestApiManager {
     
+    let environment = "dev"
+//    let environment = "prodgreen"
+    
     struct RestAPI {
         struct url {
             
             
-            static let getAd = "https://tp6pumul78.execute-api.us-east-1.amazonaws.com/prodblue/ad/ios"
+            static let getAd = "https://tp6pumul78.execute-api.us-east-1.amazonaws.com/prodgreen/ad/ios"
 
-            static let getLunches = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/lunch"
+            static let getLunches = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodgreen/stc/lunch"
             
-            static let getColumnHeadings = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/columns/"
+            static let getColumnHeadings = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodgreen/stc/columns/"
             
-            static let getSchoolSchedule = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/school-schedule"
+            static let getSchoolSchedule = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodgreen/stc/school-schedule"
             
-            static let getEvents = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/events"
+            static let getEvents = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodgreen/stc/events"
             
-            static let homework = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/homework/"
+            static let homework = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodgreen/stc/homework/"
+     
             
-            static let sports =   "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/sports/"
+//            static let sports =   "https://telbelahfa.execute-api.us-east-1.amazonaws.com/dev/stc/sports/latest/"
+            static let sports =   "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodgreen/stc/sports/"
             
-            static let staff = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/staff"
             
-            static let activitiesUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/activities/"
+            static let staff = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodgreen/stc/staff"
             
-            static let classroomNotes = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/classroom/notes/"
+            static let activitiesUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodgreen/stc/activities/"
             
-            // I don't think I use this call for anything.  Find out.
-            //            static let staffDetails = "https://afe1vbusyj.execute-api.us-east-1.amazonaws.com/beta/st-catherine-school/classinfo/"
+            static let classroomNotes = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodgreen/stc/classroom/notes/"
             
-            //            static let speechUrl = "https://telbelahfa.execute-api.us-east-1.amazonaws.com/prodblue/stc/activities/speech"
         }
     }
     

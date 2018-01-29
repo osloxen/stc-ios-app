@@ -113,7 +113,7 @@ class LunchDatesTVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "lunchInfo", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lunchInfo", for: indexPath) as! LunchTableViewCell
 
         // Configure the cell...
         
@@ -124,11 +124,151 @@ class LunchDatesTVC: UITableViewController {
         dateFormatter.dateFormat = "EEEE, MMMM d"
         let parentFriendlyDate = dateFormatter.string(from: date!)
         
-        cell.textLabel?.text = parentFriendlyDate
+        cell.dateLabel?.text = parentFriendlyDate
         
-        cell.detailTextLabel?.text = lunchMenuArray[indexPath.row]
+        cell.menuItemLabel?.text = lunchMenuArray[indexPath.row]
+        
+        switch lunchMenuArray[indexPath.row] {
+        case "Meatball Sub":
+            let image = UIImage(named: "meatballsub")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+            
+        case "French Toast Sticks":
+            let image = UIImage(named: "french-toast")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+            
+        case "Chicken Teriyaki":
+            let image = UIImage(named: "chicken-teriyaki")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+            
+        case "Chicken Nuggets":
+            let image = UIImage(named: "chicken-nuggets")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
 
-        return cell
+        case "Hot Dog":
+            let image = UIImage(named: "hot-dog")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+
+        case "Tacos":
+            let image = UIImage(named: "tacos")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+
+        case "Mini Corn Dogs":
+            let image = UIImage(named: "minicorndogs")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+
+        case "Orange Chicken":
+            let image = UIImage(named: "orange-chicken")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+
+        case "Waffels":
+            let image = UIImage(named: "waffels")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+
+        case "Tacos":
+            let image = UIImage(named: "tacos")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+            
+        case "Spaghetti":
+            let image = UIImage(named: "spaghetti")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+
+        case "Ham(Cheese)burger":
+            let image = UIImage(named: "cheeseburger")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+
+        case "Fish Sticks":
+            let image = UIImage(named: "fish-sticks")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+
+        case "Chicken Fettuccine Alfredo":
+            let image = UIImage(named: "alfredo")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+
+        case "Pizza":
+            let image = UIImage(named: "pizza")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+            
+        case "no lunch":
+            let image = UIImage(named: "no")
+            cell.menuImage?.image = image
+            cell.menuImage.layer.cornerRadius = cell.menuImage.frame.height / 2
+            cell.menuImage.layer.masksToBounds = true
+            return cell
+            
+        default:
+            let image = UIImage(named: "lunch")
+            cell.menuImage?.image = image
+            
+            return cell
+        }
+
+/*
+        if (lunchMenuArray[indexPath.row] == "Meatball Sub") {
+            
+            let image = UIImage(named: "meatballsub")
+            cell.menuImage?.image = image
+            
+            //*****
+            // "maskToBounds" makes image dissapear :(
+            //cell.menuImage?.layer.cornerRadius = (image?.size.width)!/2
+            //cell.imageView?.layer.masksToBounds = true
+            */
+            return cell
+        } else {
+
+            let image = UIImage(named: "meatballsub")
+            cell.menuImage?.image = image
+
+            return cell
+        }
+*/
+
     }
  
 

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D30440621F665BDE00D082D3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30440611F665BDE00D082D3 /* TableViewCell.swift */; };
+		D30440621F665BDE00D082D3 /* LunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30440611F665BDE00D082D3 /* LunchTableViewCell.swift */; };
 		D30440771FB91AAE007562C0 /* fairytale-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D30440761FB91AAE007562C0 /* fairytale-25.png */; };
 		D30440871FB91B35007562C0 /* ActivitiesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30440861FB91B35007562C0 /* ActivitiesTVC.swift */; };
 		D304641F1F4F2C4D0056C204 /* ShowEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304641E1F4F2C4D0056C204 /* ShowEventsCell.swift */; };
@@ -65,6 +65,24 @@
 		D326031D1CBDDE6B00C2FB08 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */; };
 		D326031F1CBDDE7500C2FB08 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326031E1CBDDE7500C2FB08 /* MessageUI.framework */; };
 		D32603231CBDDE8800C2FB08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */; };
+		D340A180201B09A200003AE1 /* meatballsub in Resources */ = {isa = PBXBuildFile; fileRef = D340A17F201B09A200003AE1 /* meatballsub */; };
+		D340A183201D3E1000003AE1 /* AdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340A181201D3E1000003AE1 /* AdCell.swift */; };
+		D340A184201D3E1000003AE1 /* AdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D340A182201D3E1000003AE1 /* AdCell.xib */; };
+		D340A191201D67CA00003AE1 /* alfredo in Resources */ = {isa = PBXBuildFile; fileRef = D340A185201D67CA00003AE1 /* alfredo */; };
+		D340A192201D67CA00003AE1 /* cheeseburger in Resources */ = {isa = PBXBuildFile; fileRef = D340A186201D67CA00003AE1 /* cheeseburger */; };
+		D340A193201D67CA00003AE1 /* chicken-nuggets in Resources */ = {isa = PBXBuildFile; fileRef = D340A187201D67CA00003AE1 /* chicken-nuggets */; };
+		D340A194201D67CA00003AE1 /* fish-sticks in Resources */ = {isa = PBXBuildFile; fileRef = D340A188201D67CA00003AE1 /* fish-sticks */; };
+		D340A195201D67CA00003AE1 /* french-toast in Resources */ = {isa = PBXBuildFile; fileRef = D340A189201D67CA00003AE1 /* french-toast */; };
+		D340A196201D67CA00003AE1 /* hot-dog in Resources */ = {isa = PBXBuildFile; fileRef = D340A18A201D67CA00003AE1 /* hot-dog */; };
+		D340A197201D67CA00003AE1 /* minicorndogs in Resources */ = {isa = PBXBuildFile; fileRef = D340A18B201D67CA00003AE1 /* minicorndogs */; };
+		D340A198201D67CA00003AE1 /* orange-chicken in Resources */ = {isa = PBXBuildFile; fileRef = D340A18C201D67CA00003AE1 /* orange-chicken */; };
+		D340A199201D67CA00003AE1 /* pizza in Resources */ = {isa = PBXBuildFile; fileRef = D340A18D201D67CA00003AE1 /* pizza */; };
+		D340A19A201D67CA00003AE1 /* spaghetti in Resources */ = {isa = PBXBuildFile; fileRef = D340A18E201D67CA00003AE1 /* spaghetti */; };
+		D340A19B201D67CA00003AE1 /* tacos in Resources */ = {isa = PBXBuildFile; fileRef = D340A18F201D67CA00003AE1 /* tacos */; };
+		D340A19C201D67CA00003AE1 /* waffels in Resources */ = {isa = PBXBuildFile; fileRef = D340A190201D67CA00003AE1 /* waffels */; };
+		D340A19E201D697900003AE1 /* lunch in Resources */ = {isa = PBXBuildFile; fileRef = D340A19D201D697900003AE1 /* lunch */; };
+		D340A1A0201D6CD400003AE1 /* no.png in Resources */ = {isa = PBXBuildFile; fileRef = D340A19F201D6CD400003AE1 /* no.png */; };
+		D340A1A2201D6E8100003AE1 /* chicken-teriyaki in Resources */ = {isa = PBXBuildFile; fileRef = D340A1A1201D6E8100003AE1 /* chicken-teriyaki */; };
 		D35052421FBD532C007BA831 /* ClubInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052411FBD532C007BA831 /* ClubInfoVC.swift */; };
 		D35052521FBD5A73007BA831 /* SpeechInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052511FBD5A73007BA831 /* SpeechInfoVC.swift */; };
 		D35052541FBD66C4007BA831 /* DramaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35052531FBD66C4007BA831 /* DramaVC.swift */; };
@@ -92,6 +110,7 @@
 		D3C385AC1ED6B8D900123625 /* apple-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C385AB1ED6B8D900123625 /* apple-25.png */; };
 		D3F721571ED29C1D0075629F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D7D26C1ED29B4C00430AAB /* SwiftyJSON.framework */; };
 		D3F721581ED29C1D0075629F /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3D7D26C1ED29B4C00430AAB /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3F8C2182019C487007C57E1 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F8C2172019C487007C57E1 /* AdManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,7 +251,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D30440611F665BDE00D082D3 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D30440611F665BDE00D082D3 /* LunchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchTableViewCell.swift; sourceTree = "<group>"; };
 		D30440761FB91AAE007562C0 /* fairytale-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fairytale-25.png"; sourceTree = "<group>"; };
 		D30440861FB91B35007562C0 /* ActivitiesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTVC.swift; sourceTree = "<group>"; };
 		D304641E1F4F2C4D0056C204 /* ShowEventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventsCell.swift; sourceTree = "<group>"; };
@@ -291,6 +310,24 @@
 		D326031C1CBDDE6B00C2FB08 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D326031E1CBDDE7500C2FB08 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D32603221CBDDE8800C2FB08 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D340A17F201B09A200003AE1 /* meatballsub */ = {isa = PBXFileReference; lastKnownFileType = file; path = meatballsub; sourceTree = "<group>"; };
+		D340A181201D3E1000003AE1 /* AdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdCell.swift; sourceTree = "<group>"; };
+		D340A182201D3E1000003AE1 /* AdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdCell.xib; sourceTree = "<group>"; };
+		D340A185201D67CA00003AE1 /* alfredo */ = {isa = PBXFileReference; lastKnownFileType = file; path = alfredo; sourceTree = "<group>"; };
+		D340A186201D67CA00003AE1 /* cheeseburger */ = {isa = PBXFileReference; lastKnownFileType = file; path = cheeseburger; sourceTree = "<group>"; };
+		D340A187201D67CA00003AE1 /* chicken-nuggets */ = {isa = PBXFileReference; lastKnownFileType = file; path = "chicken-nuggets"; sourceTree = "<group>"; };
+		D340A188201D67CA00003AE1 /* fish-sticks */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fish-sticks"; sourceTree = "<group>"; };
+		D340A189201D67CA00003AE1 /* french-toast */ = {isa = PBXFileReference; lastKnownFileType = file; path = "french-toast"; sourceTree = "<group>"; };
+		D340A18A201D67CA00003AE1 /* hot-dog */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hot-dog"; sourceTree = "<group>"; };
+		D340A18B201D67CA00003AE1 /* minicorndogs */ = {isa = PBXFileReference; lastKnownFileType = file; path = minicorndogs; sourceTree = "<group>"; };
+		D340A18C201D67CA00003AE1 /* orange-chicken */ = {isa = PBXFileReference; lastKnownFileType = file; path = "orange-chicken"; sourceTree = "<group>"; };
+		D340A18D201D67CA00003AE1 /* pizza */ = {isa = PBXFileReference; lastKnownFileType = file; path = pizza; sourceTree = "<group>"; };
+		D340A18E201D67CA00003AE1 /* spaghetti */ = {isa = PBXFileReference; lastKnownFileType = file; path = spaghetti; sourceTree = "<group>"; };
+		D340A18F201D67CA00003AE1 /* tacos */ = {isa = PBXFileReference; lastKnownFileType = file; path = tacos; sourceTree = "<group>"; };
+		D340A190201D67CA00003AE1 /* waffels */ = {isa = PBXFileReference; lastKnownFileType = file; path = waffels; sourceTree = "<group>"; };
+		D340A19D201D697900003AE1 /* lunch */ = {isa = PBXFileReference; lastKnownFileType = file; path = lunch; sourceTree = "<group>"; };
+		D340A19F201D6CD400003AE1 /* no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no.png; sourceTree = "<group>"; };
+		D340A1A1201D6E8100003AE1 /* chicken-teriyaki */ = {isa = PBXFileReference; lastKnownFileType = file; path = "chicken-teriyaki"; sourceTree = "<group>"; };
 		D35052411FBD532C007BA831 /* ClubInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubInfoVC.swift; sourceTree = "<group>"; };
 		D35052511FBD5A73007BA831 /* SpeechInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechInfoVC.swift; sourceTree = "<group>"; };
 		D35052531FBD66C4007BA831 /* DramaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaVC.swift; sourceTree = "<group>"; };
@@ -319,6 +356,7 @@
 		D3C385A91ED6B8CD00123625 /* megaphone-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "megaphone-25.png"; sourceTree = "<group>"; };
 		D3C385AB1ED6B8D900123625 /* apple-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-25.png"; sourceTree = "<group>"; };
 		D3D7D2601ED29B4C00430AAB /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
+		D3F8C2172019C487007C57E1 /* AdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +449,7 @@
 		D3091FAC1C56E4C6007CF290 /* St Catherine School Seattle */ = {
 			isa = PBXGroup;
 			children = (
+				D3F8C2082019C35D007C57E1 /* Ad Manager */,
 				D30440881FB91B40007562C0 /* Activities */,
 				D323E3CF1F74E16900D81AC0 /* School Schedule */,
 				D3513C361F4D63F300ACBF31 /* Events */,
@@ -436,6 +475,7 @@
 		D3091FCC1C56E5A3007CF290 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D340A170201B08C900003AE1 /* Lunch Menu Images */,
 				D30440761FB91AAE007562C0 /* fairytale-25.png */,
 				D323E3BF1F74DB3F00D81AC0 /* calendar-25.png */,
 				D3C385971ED6B86700123625 /* apple-25.png */,
@@ -490,6 +530,29 @@
 			name = "School Schedule";
 			sourceTree = "<group>";
 		};
+		D340A170201B08C900003AE1 /* Lunch Menu Images */ = {
+			isa = PBXGroup;
+			children = (
+				D340A1A1201D6E8100003AE1 /* chicken-teriyaki */,
+				D340A19F201D6CD400003AE1 /* no.png */,
+				D340A19D201D697900003AE1 /* lunch */,
+				D340A185201D67CA00003AE1 /* alfredo */,
+				D340A186201D67CA00003AE1 /* cheeseburger */,
+				D340A187201D67CA00003AE1 /* chicken-nuggets */,
+				D340A188201D67CA00003AE1 /* fish-sticks */,
+				D340A189201D67CA00003AE1 /* french-toast */,
+				D340A18A201D67CA00003AE1 /* hot-dog */,
+				D340A18B201D67CA00003AE1 /* minicorndogs */,
+				D340A18C201D67CA00003AE1 /* orange-chicken */,
+				D340A18D201D67CA00003AE1 /* pizza */,
+				D340A18E201D67CA00003AE1 /* spaghetti */,
+				D340A18F201D67CA00003AE1 /* tacos */,
+				D340A190201D67CA00003AE1 /* waffels */,
+				D340A17F201B09A200003AE1 /* meatballsub */,
+			);
+			name = "Lunch Menu Images";
+			sourceTree = "<group>";
+		};
 		D348995D1EC405050045D4FB /* staff */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,7 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				D3513C341F4A9BD000ACBF31 /* LunchDatesTVC.swift */,
-				D30440611F665BDE00D082D3 /* TableViewCell.swift */,
+				D30440611F665BDE00D082D3 /* LunchTableViewCell.swift */,
 			);
 			name = Lunch;
 			sourceTree = "<group>";
@@ -595,6 +658,16 @@
 				D3D7D2781ED29B4C00430AAB /* SwiftyJSON tvOS Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D3F8C2082019C35D007C57E1 /* Ad Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D3F8C2172019C487007C57E1 /* AdManager.swift */,
+				D340A181201D3E1000003AE1 /* AdCell.swift */,
+				D340A182201D3E1000003AE1 /* AdCell.xib */,
+			);
+			name = "Ad Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -806,19 +879,34 @@
 				D30920131C56E6C3007CF290 /* Main.storyboard in Resources */,
 				D3C385AA1ED6B8CD00123625 /* megaphone-25.png in Resources */,
 				D31FE6901CA310E600233E64 /* Assets.xcassets in Resources */,
+				D340A180201B09A200003AE1 /* meatballsub in Resources */,
 				D3C385A81ED6B88100123625 /* megaphone-25.png in Resources */,
 				D3091FEA1C56E5A3007CF290 /* StCicon152x152-01.png in Resources */,
+				D340A19A201D67CA00003AE1 /* spaghetti in Resources */,
 				D3091FCA1C56E54A007CF290 /* TwitterKitResources.bundle in Resources */,
 				D3091FE91C56E5A3007CF290 /* stCicon120x120.png in Resources */,
+				D340A1A2201D6E8100003AE1 /* chicken-teriyaki in Resources */,
+				D340A193201D67CA00003AE1 /* chicken-nuggets in Resources */,
+				D340A194201D67CA00003AE1 /* fish-sticks in Resources */,
 				D30920121C56E6C3007CF290 /* LaunchScreen.storyboard in Resources */,
 				D3C385AC1ED6B8D900123625 /* apple-25.png in Resources */,
+				D340A197201D67CA00003AE1 /* minicorndogs in Resources */,
 				D30440771FB91AAE007562C0 /* fairytale-25.png in Resources */,
+				D340A184201D3E1000003AE1 /* AdCell.xib in Resources */,
+				D340A19B201D67CA00003AE1 /* tacos in Resources */,
 				D36FC3241F343AF200132DED /* marker_pen_filled-25.png in Resources */,
+				D340A195201D67CA00003AE1 /* french-toast in Resources */,
 				D3091FE41C56E5A3007CF290 /* staff-25.png in Resources */,
+				D340A198201D67CA00003AE1 /* orange-chicken in Resources */,
+				D340A196201D67CA00003AE1 /* hot-dog in Resources */,
+				D340A192201D67CA00003AE1 /* cheeseburger in Resources */,
+				D340A1A0201D6CD400003AE1 /* no.png in Resources */,
 				D31D8DE71F3910CE007E5669 /* running_filled-25.png in Resources */,
 				D3091FDF1C56E5A3007CF290 /* chat_filled-25.png in Resources */,
+				D340A19C201D67CA00003AE1 /* waffels in Resources */,
 				D3091FBA1C56E4C6007CF290 /* LaunchScreen.storyboard in Resources */,
 				D317DD131ED3FB6F00182575 /* Info.plist in Resources */,
+				D340A19E201D697900003AE1 /* lunch in Resources */,
 				D317DD151ED3FD8800182575 /* Default-568h@2x.png in Resources */,
 				D323E3C01F74DB3F00D81AC0 /* calendar-25.png in Resources */,
 				D3091FED1C56E5A3007CF290 /* StCicon80x80-01.png in Resources */,
@@ -826,7 +914,9 @@
 				D3091FF01C56E5A3007CF290 /* warehouse_filled-25.png in Resources */,
 				D3091FEE1C56E5A3007CF290 /* StCicons87x87-01.png in Resources */,
 				D3C385981ED6B86700123625 /* apple-25.png in Resources */,
+				D340A191201D67CA00003AE1 /* alfredo in Resources */,
 				D3091FB51C56E4C6007CF290 /* Main.storyboard in Resources */,
+				D340A199201D67CA00003AE1 /* pizza in Resources */,
 				D3091FE71C56E5A3007CF290 /* stcBuilding_skinny.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -867,6 +957,7 @@
 				D3B5385F1EAEEA2A00C1854D /* ClassroomsTableViewController.swift in Sources */,
 				D36FC3341F34482900132DED /* HomeworkDatesTVC.swift in Sources */,
 				D30920241C56E6C3007CF290 /* Utilities.swift in Sources */,
+				D340A183201D3E1000003AE1 /* AdCell.swift in Sources */,
 				D30920191C56E6C3007CF290 /* ListOfStaff.swift in Sources */,
 				D381B7B61EB518D0002D7CD2 /* RestApiManager.swift in Sources */,
 				D309201A1C56E6C3007CF290 /* NotificationList.swift in Sources */,
@@ -881,12 +972,13 @@
 				D3A93E581F66100100464A1A /* RegistrationAnnouncement.swift in Sources */,
 				D30920221C56E6C3007CF290 /* StaffDetails.swift in Sources */,
 				D309201C1C56E6C3007CF290 /* PinsOnMap.swift in Sources */,
-				D30440621F665BDE00D082D3 /* TableViewCell.swift in Sources */,
+				D30440621F665BDE00D082D3 /* LunchTableViewCell.swift in Sources */,
 				D31D8DEC1F3915A0007E5669 /* GradesBySportTVC.swift in Sources */,
 				D35052541FBD66C4007BA831 /* DramaVC.swift in Sources */,
 				D31D8DEE1F391DA0007E5669 /* SportsScheduleTVC.swift in Sources */,
 				D3513C351F4A9BD000ACBF31 /* LunchDatesTVC.swift in Sources */,
 				D30920211C56E6C3007CF290 /* Staff.swift in Sources */,
+				D3F8C2182019C487007C57E1 /* AdManager.swift in Sources */,
 				D309200F1C56E6C3007CF290 /* AnnouncementsList.swift in Sources */,
 				D31D8DD71F38E304007E5669 /* HomeworkDayDetailsTableViewCell.swift in Sources */,
 				D35052561FBDE9F8007BA831 /* RoboticsVC.swift in Sources */,

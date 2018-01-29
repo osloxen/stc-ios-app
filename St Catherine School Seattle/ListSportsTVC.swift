@@ -66,11 +66,11 @@ class ListSportsTVC: UITableViewController {
         
         switch sportsAtSchool[indexPath.row] {
         case "Soccer":
-            registrationInfo = "Soccer online registration begins May 1st"
+            registrationInfo = "Soccer online registration begins May 1st.  Yes, 4 months early."
             self.performSegue(withIdentifier: "registrationMessage", sender: self)
             
         case "Cross Country":
-            registrationInfo = "Basketball online registration begins October 1st"
+            registrationInfo = "Cross Country online registration begins May 1st.  Yes, 4 months early."
             self.performSegue(withIdentifier: "registrationMessage", sender: self)
             
         case "Basketball":
@@ -78,15 +78,15 @@ class ListSportsTVC: UITableViewController {
             
         case "Volleyball":
             registrationInfo = "Volleyball online registration begins January 1st"
-            self.performSegue(withIdentifier: "registrationMessage", sender: self)
+            self.performSegue(withIdentifier: "showGradesBySport", sender: self)
             
         case "Baseball":
             registrationInfo = "Baseball online registration begins March 1st"
-            self.performSegue(withIdentifier: "registrationMessage", sender: self)
+            self.performSegue(withIdentifier: "showGradesBySport", sender: self)
 
         case "Track":
-            registrationInfo = "Basketball online registration begins May 1st"
-            self.performSegue(withIdentifier: "registrationMessage", sender: self)
+            registrationInfo = "Track online registration begins March 1st"
+            self.performSegue(withIdentifier: "showGradesBySport", sender: self)
 
         default:
             self.performSegue(withIdentifier: "showSportNotAvailable", sender: self)

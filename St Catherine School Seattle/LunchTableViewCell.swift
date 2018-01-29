@@ -8,10 +8,17 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class LunchTableViewCell: UITableViewCell {
     
     
+    @IBOutlet weak var menuImage: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var menuItemLabel: UILabel!
     
+    
+    override func prepareForReuse() {
+        menuImage.image = nil
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

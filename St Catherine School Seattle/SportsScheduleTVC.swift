@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class SportsScheduleTVC: UITableViewController {
     
+    let adManager = AdManager();
+    
     var gradeSelected:String = "not set"
     var genderSelected:String = "not set"
     var sportSelected:String = "not set"
@@ -27,9 +29,11 @@ class SportsScheduleTVC: UITableViewController {
     var sportSchedLocationNameArray = [String]()
     var sportSchedLocationAddressArray = [String]()
     
+    let restApiManager = RestApiManager();
+    
+
     func fetchSportSchedule() {
-        
-        let restApiManager = RestApiManager();
+    
        
         let urlForSportsSchedule = restApiManager.getCYOSportsDatesUrl(classroom: gradeSelected, sport: sportSelected, gender: genderSelected)
         
@@ -117,33 +121,40 @@ class SportsScheduleTVC: UITableViewController {
         return 1
     }
 
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return sportSchedDateArray.count
+        
+            return sportSchedDateArray.count
+            
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "sportSchedDetailsCell", for: indexPath) as! SportsEventCell
+
 
         // Configure the cell...
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.date(from: sportSchedDateArray[indexPath.row])
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date = dateFormatter.date(from: sportSchedDateArray[indexPath.row])
+            
+            dateFormatter.dateFormat = "EEEE, MMM d"
+            let parentFriendlyDate = dateFormatter.string(from: date!)
+            
+            
+            cell.eventDate?.text = parentFriendlyDate
+            cell.eventType?.text = sportSchedEventTypeArray[indexPath.row]
+            cell.eventNotes?.text = sportSchedNotesArray[indexPath.row]
+            cell.eventLocationName?.text = sportSchedLocationNameArray[indexPath.row]
+            cell.eventLocationAddress?.text = sportSchedLocationAddressArray[indexPath.row]
+            cell.eventStartTime?.text = sportSchedStartTimeArray[indexPath.row]
+            
+            return cell
+            
         
-        dateFormatter.dateFormat = "EEEE, MMM d"
-        let parentFriendlyDate = dateFormatter.string(from: date!)
-
-        
-        cell.eventDate?.text = parentFriendlyDate
-        cell.eventType?.text = sportSchedEventTypeArray[indexPath.row]
-        cell.eventNotes?.text = sportSchedNotesArray[indexPath.row]
-        cell.eventLocationName?.text = sportSchedLocationNameArray[indexPath.row]
-        cell.eventLocationAddress?.text = sportSchedLocationAddressArray[indexPath.row]
-        cell.eventStartTime?.text = sportSchedStartTimeArray[indexPath.row]
-        
-        return cell
     }
  
 

@@ -40,9 +40,6 @@ class HomeworkDetailsTVC: UITableViewController {
         let adUrl = restApiManager.getAdUrl()
         
         Alamofire.request(adUrl).responseJSON { response in
-
-        
-//        Alamofire.request("https://tp6pumul78.execute-api.us-east-1.amazonaws.com/prod/version1/ad").responseJSON { response in
             
             if let MYJSON = response.result.value {
                 print("JSON: \(MYJSON)")
